@@ -1,0 +1,1682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Homecare Solutions | Duluth, GA In-Home Care Agency</title>
+<meta name="description" content="Compassionate in-home care services in Duluth, GA. Homecare Solutions provides personal care, companion care, dementia care, and more across Gwinnett County." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root {
+   --cream: #F7FAF8;
+    --warm-white: #FFFEF9;
+    --sage: #1A5C45;
+    --sage-light: #5BA584;
+    --sage-dark: #0F3D2E;
+    --gold: #D4A843;
+    --gold-light: #EDD080;
+    --charcoal: #2C2C2C;
+    --mid: #5C5C5C;
+    --light-border: #E8E0D4;
+    --card-bg: #FFFFFF;
+    --section-alt: #EFF5F1;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--charcoal);
+    background: var(--warm-white);
+    font-size: 16px;
+    line-height: 1.7;
+  }
+  h1, h2, h3, h4 { font-family: 'Playfair Display', serif; line-height: 1.25; }
+  a { color: inherit; text-decoration: none; }
+  img { display: block; max-width: 100%; }
+
+  /* ── PAGES ── */
+  .page { display: none; }
+  .page.active { display: block; }
+
+  /* ── NAV ── */
+  nav {
+    background: var(--warm-white);
+    border-bottom: 1px solid var(--light-border);
+    position: sticky; top: 0; z-index: 100;
+    padding: 0 2rem;
+  }
+  .nav-inner {
+    max-width: 1200px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 72px; gap: 1rem;
+  }
+  .nav-logo {
+    display: flex; align-items: center; gap: 0.5rem;
+    cursor: pointer;
+  }
+  .nav-logo-mark {
+    width: 38px; height: 38px; background: var(--sage);
+    border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    color: white; font-size: 18px;
+  }
+  .nav-logo-text { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--charcoal); font-weight: 600; }
+  .nav-logo-sub { font-size: 0.7rem; color: var(--mid); font-family: 'DM Sans', sans-serif; letter-spacing: 0.05em; display: block; }
+  .nav-links { display: flex; gap: 0.25rem; align-items: center; }
+  .nav-link {
+    padding: 0.4rem 0.75rem; border-radius: 6px;
+    font-size: 0.88rem; font-weight: 500; color: var(--mid);
+    cursor: pointer; transition: color 0.2s, background 0.2s;
+  }
+  .nav-link:hover { color: var(--sage); background: var(--cream); }
+  .nav-ctas { display: flex; gap: 0.5rem; align-items: center; }
+  .btn-outline {
+    border: 1.5px solid var(--sage); color: var(--sage);
+    padding: 0.45rem 1rem; border-radius: 6px; font-size: 0.85rem; font-weight: 600;
+    cursor: pointer; transition: background 0.2s, color 0.2s;
+  }
+  .btn-outline:hover { background: var(--sage); color: white; }
+  .btn-primary {
+    background: var(--gold); color: white;
+    padding: 0.5rem 1.1rem; border-radius: 6px; font-size: 0.85rem; font-weight: 600;
+    cursor: pointer; border: none; transition: background 0.2s;
+  }
+  .btn-primary:hover { background: #b07d3c; }
+
+  /* ── HERO ── */
+  .hero {
+    background: linear-gradient(135deg, var(--sage-dark) 0%, var(--sage) 60%, #7a9c8a 100%);
+    color: white; padding: 5rem 2rem 4rem;
+    position: relative; overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+  .hero-inner { max-width: 1200px; margin: 0 auto; position: relative; }
+  .hero-tag {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 100px; padding: 0.3rem 1rem;
+    font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase;
+    margin-bottom: 1.5rem;
+  }
+  .hero-tag::before { content: '●'; color: var(--gold-light); font-size: 0.6rem; }
+  .hero h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); font-weight: 700; max-width: 700px; margin-bottom: 1.25rem; }
+  .hero h1 em { font-style: normal; color: var(--gold-light); }
+  .hero-sub { font-size: 1.1rem; opacity: 0.9; max-width: 560px; margin-bottom: 2.5rem; font-weight: 300; }
+  .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .btn-hero-primary {
+    background: var(--gold); color: white;
+    padding: 0.9rem 1.8rem; border-radius: 8px; font-size: 1rem; font-weight: 600;
+    cursor: pointer; border: none; transition: background 0.2s, transform 0.15s;
+    box-shadow: 0 4px 20px rgba(200,146,74,0.4);
+  }
+  .btn-hero-primary:hover { background: #b07d3c; transform: translateY(-1px); }
+  .btn-hero-outline {
+    border: 2px solid rgba(255,255,255,0.7); color: white;
+    padding: 0.9rem 1.8rem; border-radius: 8px; font-size: 1rem; font-weight: 600;
+    cursor: pointer; background: transparent; transition: background 0.2s;
+  }
+  .btn-hero-outline:hover { background: rgba(255,255,255,0.15); }
+  .hero-badges {
+    display: flex; gap: 2rem; flex-wrap: wrap; margin-top: 3rem;
+    padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.2);
+  }
+  .hero-badge { display: flex; align-items: center; gap: 0.6rem; font-size: 0.85rem; opacity: 0.9; }
+  .hero-badge-icon { font-size: 1.2rem; }
+
+  /* ── TRUST STRIP ── */
+  .trust-strip {
+    background: var(--cream); border-bottom: 1px solid var(--light-border);
+    padding: 1.25rem 2rem;
+  }
+  .trust-strip-inner {
+    max-width: 1200px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: center; gap: 3rem; flex-wrap: wrap;
+  }
+  .trust-item { display: flex; align-items: center; gap: 0.6rem; font-size: 0.9rem; font-weight: 500; color: var(--mid); }
+  .trust-icon { font-size: 1.1rem; }
+  .stars { color: var(--gold); letter-spacing: -2px; }
+  .trust-divider { width: 1px; height: 28px; background: var(--light-border); }
+
+  /* ── SECTIONS ── */
+  .section { padding: 5rem 2rem; }
+  .section-alt { background: var(--section-alt); }
+  .section-inner { max-width: 1200px; margin: 0 auto; }
+  .section-label {
+    font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--sage); font-weight: 600; margin-bottom: 0.75rem;
+  }
+  .section-title { font-size: clamp(1.8rem, 3vw, 2.6rem); color: var(--charcoal); margin-bottom: 1rem; }
+  .section-sub { font-size: 1.05rem; color: var(--mid); max-width: 580px; line-height: 1.75; }
+  .section-header { margin-bottom: 3rem; }
+  .section-header.centered { text-align: center; }
+  .section-header.centered .section-sub { margin: 0 auto; }
+
+  /* ── FEATURE CARDS ── */
+  .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+  .feature-card {
+    background: var(--card-bg); border: 1px solid var(--light-border);
+    border-radius: 12px; padding: 2rem;
+    transition: box-shadow 0.2s, transform 0.2s;
+  }
+  .feature-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.08); transform: translateY(-2px); }
+  .feature-icon {
+    width: 52px; height: 52px; background: var(--cream);
+    border-radius: 12px; display: flex; align-items: center; justify-content: center;
+    font-size: 1.5rem; margin-bottom: 1.25rem;
+    border: 1px solid var(--light-border);
+  }
+  .feature-card h3 { font-size: 1.15rem; margin-bottom: 0.6rem; }
+  .feature-card p { font-size: 0.9rem; color: var(--mid); line-height: 1.7; }
+
+  /* ── SERVICES GRID ── */
+  .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem; }
+  .service-card {
+    background: var(--card-bg); border: 1px solid var(--light-border);
+    border-radius: 10px; padding: 1.75rem;
+    cursor: pointer; transition: border-color 0.2s, box-shadow 0.2s;
+    display: flex; flex-direction: column; gap: 0.75rem;
+  }
+  .service-card:hover { border-color: var(--sage); box-shadow: 0 6px 24px rgba(94,122,107,0.12); }
+  .service-card-icon { font-size: 1.75rem; }
+  .service-card h3 { font-size: 1.05rem; color: var(--charcoal); }
+  .service-card p { font-size: 0.85rem; color: var(--mid); line-height: 1.65; flex: 1; }
+  .service-card-link { font-size: 0.82rem; color: var(--sage); font-weight: 600; }
+
+  /* ── TESTIMONIALS ── */
+  .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+  .testimonial-card {
+    background: var(--card-bg); border: 1px solid var(--light-border);
+    border-radius: 12px; padding: 1.75rem;
+  }
+  .testimonial-stars { color: var(--gold); font-size: 0.9rem; margin-bottom: 0.75rem; }
+  .testimonial-text { font-size: 0.92rem; color: var(--mid); line-height: 1.75; margin-bottom: 1.25rem; font-style: italic; }
+  .testimonial-author { font-weight: 600; font-size: 0.88rem; color: var(--charcoal); }
+  .testimonial-meta { font-size: 0.8rem; color: var(--sage); }
+
+  /* ── CTA BLOCK ── */
+  .cta-block {
+    background: linear-gradient(135deg, var(--sage-dark), var(--sage));
+    color: white; padding: 4rem 2rem; text-align: center;
+  }
+  .cta-block h2 { font-size: clamp(1.8rem, 3vw, 2.4rem); margin-bottom: 1rem; }
+  .cta-block p { font-size: 1.05rem; opacity: 0.9; max-width: 520px; margin: 0 auto 2rem; }
+  .cta-block-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+  /* ── LONG FORM CONTENT ── */
+  .content-prose { max-width: 760px; }
+  .content-prose h2 { font-size: 1.7rem; color: var(--charcoal); margin: 2.5rem 0 0.75rem; }
+  .content-prose p { color: var(--mid); margin-bottom: 1.25rem; }
+  .content-prose ul { list-style: none; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 0.4rem; margin-bottom: 1.25rem; }
+  .content-prose ul li { padding: 0.35rem 0; color: var(--mid); font-size: 0.92rem; }
+  .content-prose ul li::before { content: '✓ '; color: var(--sage); font-weight: 700; }
+
+  /* ── AREAS GRID ── */
+  .areas-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 0.75rem; }
+  .area-chip {
+    background: var(--card-bg); border: 1px solid var(--light-border);
+    border-radius: 8px; padding: 1rem; text-align: center;
+    cursor: pointer; transition: border-color 0.2s, background 0.2s;
+    font-size: 0.9rem; font-weight: 500;
+  }
+  .area-chip:hover { border-color: var(--sage); background: var(--cream); }
+  .area-chip.featured { border-color: var(--sage); background: var(--cream); }
+  .area-chip-icon { font-size: 1.25rem; display: block; margin-bottom: 0.3rem; }
+
+  /* ── RELATED TIPS ── */
+  .tips-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; }
+  .tip-card {
+    background: var(--card-bg); border: 1px solid var(--light-border);
+    border-radius: 10px; overflow: hidden; cursor: pointer;
+    transition: box-shadow 0.2s;
+  }
+  .tip-card:hover { box-shadow: 0 6px 24px rgba(0,0,0,0.08); }
+  .tip-card-img {
+    height: 140px; display: flex; align-items: center; justify-content: center;
+    font-size: 3rem; background: var(--cream);
+  }
+  .tip-card-body { padding: 1.25rem; }
+  .tip-card-tag { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--sage); font-weight: 600; margin-bottom: 0.4rem; }
+  .tip-card h3 { font-size: 1rem; margin-bottom: 0.4rem; }
+  .tip-card p { font-size: 0.85rem; color: var(--mid); }
+
+  /* ── CONTACT FORM ── */
+  .contact-form { display: grid; gap: 1.25rem; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+  .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+  .form-group label { font-size: 0.85rem; font-weight: 600; color: var(--charcoal); }
+  .form-group input, .form-group select, .form-group textarea {
+    border: 1.5px solid var(--light-border); border-radius: 8px;
+    padding: 0.7rem 0.9rem; font-family: inherit; font-size: 0.9rem;
+    background: var(--warm-white); color: var(--charcoal);
+    transition: border-color 0.2s;
+    outline: none;
+  }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    border-color: var(--sage);
+  }
+  .form-group textarea { resize: vertical; min-height: 120px; }
+  .form-success {
+    background: #ecf7f0; border: 1px solid #5E7A6B; border-radius: 10px;
+    padding: 1.5rem; text-align: center; color: var(--sage-dark);
+    display: none;
+  }
+  .form-success.show { display: block; }
+  .form-hidden { display: none; }
+
+  /* ── ABOUT ── */
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+  .about-visual {
+    background: linear-gradient(135deg, var(--sage-dark), var(--sage));
+    border-radius: 16px; padding: 3rem; color: white; text-align: center;
+    display: flex; flex-direction: column; align-items: center; gap: 1.5rem;
+  }
+  .about-visual-icon { font-size: 4rem; }
+  .about-visual h3 { font-size: 1.5rem; }
+  .about-stat-row { display: flex; gap: 2rem; justify-content: center; width: 100%; }
+  .about-stat { text-align: center; }
+  .about-stat-num { font-size: 2rem; font-weight: 700; font-family: 'Playfair Display', serif; color: var(--gold-light); }
+  .about-stat-lbl { font-size: 0.8rem; opacity: 0.85; }
+  .about-text h2 { font-size: 2rem; margin-bottom: 1rem; }
+  .about-text p { color: var(--mid); margin-bottom: 1rem; }
+  .about-values { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.6rem; margin-top: 1.5rem; }
+  .about-values li { display: flex; align-items: center; gap: 0.6rem; font-size: 0.92rem; }
+  .about-values li::before { content: '●'; color: var(--sage); font-size: 0.6rem; }
+
+  /* ── CAREERS ── */
+  .careers-list { display: grid; gap: 1rem; }
+  .career-item {
+    background: var(--card-bg); border: 1px solid var(--light-border);
+    border-radius: 10px; padding: 1.5rem 2rem;
+    display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;
+  }
+  .career-item h3 { font-size: 1.05rem; margin-bottom: 0.25rem; }
+  .career-item p { font-size: 0.85rem; color: var(--mid); }
+  .career-badge { background: var(--cream); color: var(--sage); font-size: 0.75rem; font-weight: 600; padding: 0.25rem 0.6rem; border-radius: 100px; border: 1px solid var(--sage-light); }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--charcoal); color: #ccc;
+    padding: 4rem 2rem 2rem;
+  }
+  .footer-grid {
+    max-width: 1200px; margin: 0 auto;
+    display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem;
+    margin-bottom: 3rem;
+  }
+  .footer-brand h3 { font-family: 'Playfair Display', serif; color: white; font-size: 1.2rem; margin-bottom: 0.75rem; }
+  .footer-brand p { font-size: 0.85rem; line-height: 1.7; margin-bottom: 1rem; }
+  .footer-contact-info { font-size: 0.85rem; display: flex; flex-direction: column; gap: 0.35rem; }
+  .footer-contact-info a { color: var(--gold-light); }
+  .footer-col h4 { color: white; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 1rem; font-family: 'DM Sans', sans-serif; font-weight: 600; }
+  .footer-links { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.4rem; }
+  .footer-links li a, .footer-links li span { font-size: 0.83rem; cursor: pointer; transition: color 0.2s; }
+  .footer-links li a:hover, .footer-links li span:hover { color: white; }
+  .footer-bottom {
+    max-width: 1200px; margin: 0 auto;
+    border-top: 1px solid #444; padding-top: 1.5rem;
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
+    font-size: 0.78rem; color: #888;
+  }
+  .footer-legal { display: flex; gap: 1.5rem; }
+  .footer-legal span { cursor: pointer; transition: color 0.2s; }
+  .footer-legal span:hover { color: #ccc; }
+
+  /* ── SERVICE DETAIL ── */
+  .service-detail-hero {
+    background: var(--cream); padding: 4rem 2rem 3rem;
+    border-bottom: 1px solid var(--light-border);
+  }
+  .service-detail-hero-inner { max-width: 800px; margin: 0 auto; }
+  .breadcrumb { font-size: 0.82rem; color: var(--mid); margin-bottom: 1.5rem; display: flex; gap: 0.4rem; align-items: center; }
+  .breadcrumb span { cursor: pointer; }
+  .breadcrumb span:hover { color: var(--sage); }
+  .service-detail-body { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; display: grid; grid-template-columns: 1fr 340px; gap: 3rem; }
+  .service-sidebar { background: var(--cream); border: 1px solid var(--light-border); border-radius: 12px; padding: 2rem; height: fit-content; position: sticky; top: 90px; }
+  .service-sidebar h3 { font-size: 1.1rem; margin-bottom: 1.25rem; }
+  .sidebar-services { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.4rem; }
+  .sidebar-services li { font-size: 0.88rem; cursor: pointer; padding: 0.4rem 0.6rem; border-radius: 6px; transition: background 0.15s; }
+  .sidebar-services li:hover { background: white; }
+  .sidebar-services li.active { background: white; color: var(--sage); font-weight: 600; }
+  .sidebar-cta { margin-top: 1.5rem; border-top: 1px solid var(--light-border); padding-top: 1.5rem; }
+  .sidebar-cta h4 { font-size: 0.95rem; margin-bottom: 0.5rem; }
+  .sidebar-cta p { font-size: 0.82rem; color: var(--mid); margin-bottom: 1rem; }
+  .btn-full { display: block; text-align: center; width: 100%; padding: 0.75rem; border-radius: 8px; font-weight: 600; font-size: 0.9rem; cursor: pointer; margin-bottom: 0.5rem; transition: opacity 0.2s; }
+  .btn-full:hover { opacity: 0.88; }
+
+  /* ── UTILITY ── */
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+  .inline-link { color: var(--sage); cursor: pointer; font-weight: 500; }
+  .inline-link:hover { text-decoration: underline; }
+  .mt-1 { margin-top: 0.5rem; }
+  .mt-2 { margin-top: 1rem; }
+  .mt-3 { margin-top: 1.5rem; }
+  .gap-badge { display: inline-flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 0.75rem; }
+  .badge { background: var(--cream); color: var(--sage-dark); border: 1px solid var(--light-border); border-radius: 100px; padding: 0.25rem 0.75rem; font-size: 0.78rem; font-weight: 500; }
+
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .form-row { grid-template-columns: 1fr; }
+    .two-col, .about-grid, .footer-grid { grid-template-columns: 1fr; }
+    .service-detail-body { grid-template-columns: 1fr; }
+    .service-sidebar { position: static; }
+    .content-prose ul { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════ NAV ═══════════════════════════════════════════ -->
+<nav>
+  <div class="nav-inner">
+    <div class="nav-logo" onclick="showPage('home')">
+      <div class="nav-logo-mark">🏠</div>
+      <div>
+        <div class="nav-logo-text">Homecare Solutions</div>
+        <span class="nav-logo-sub">Most Counties in GA</span>
+      </div>
+    </div>
+    <div class="nav-links">
+      <span class="nav-link" onclick="showPage('home')">Home</span>
+      <span class="nav-link" onclick="showPage('services')">Services</span>
+      <span class="nav-link" onclick="showPage('areas')">Areas We Serve</span>
+      <span class="nav-link" onclick="showPage('about')">About</span>
+      <span class="nav-link" onclick="showPage('careers')">Careers</span>
+      <span class="nav-link" onclick="showPage('contact')">Contact</span>
+    </div>
+    <div class="nav-ctas">
+      <button class="btn-outline" onclick="showPage('contact')">Get Care Today</button>
+      <button class="btn-primary" onclick="window.location.href='tel:+14045285327'">📞 (404) 528-5327</button>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════ PAGE: HOME ═══════════════════════════════ -->
+<div id="page-home" class="page active">
+  <!-- Hero with photo background -->
+  <section class="hero" style="background: linear-gradient(135deg, rgba(8,45,35,0.50) 0%, rgba(15,65,50,0.65) 50%, rgba(8,45,35,0.50) 100%), url('data:image/jpeg;base64,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') center center / cover no-repeat; min-height: 520px; display: flex; align-items: center;">
+    <div class="hero-inner">
+      <div class="hero-tag">Serving Gwinnett County & Beyond</div>
+      <h1>Compassionate Home Care<br>in <em>Duluth, Georgia</em></h1>
+      <p class="hero-sub">Helping seniors and adults with disabilities live safely and comfortably at home — with caregivers you can truly trust.</p>
+      <div class="hero-ctas">
+        <button class="btn-hero-primary" onclick="showPage('contact')">Schedule a Free Care Assessment</button>
+        <button class="btn-hero-outline" onclick="window.location.href='tel:+17705550100'">📞 Call (770) 555-0100</button>
+      </div>
+      <div class="hero-badges">
+        <div class="hero-badge"><span class="hero-badge-icon">✅</span> Background-Checked Caregivers</div>
+        <div class="hero-badge"><span class="hero-badge-icon">🕐</span> Available 24/7</div>
+        <div class="hero-badge"><span class="hero-badge-icon">💛</span> Family-Centered Care</div>
+        <div class="hero-badge"><span class="hero-badge-icon">📋</span> Personalized Care Plans</div>
+      </div>
+    </div>
+  </section>
+<!-- ═══════════════════════════════ PAGE: AREAS WE SERVE ═══════════════════════════════ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Homecare Solutions – Counties We Serve</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
+<style>
+  :root {
+    --cream: #FAF7F2;
+    --sage: #5E7A6B;
+    --sage-dark: #3D5248;
+    --gold: #C8924A;
+    --charcoal: #2C2C2C;
+    --mid: #5C5C5C;
+    --border: #E8E0D4;
+
+    /* Region colors */
+    --r1: #4E7FA3;   /* Northwest GA – steel blue */
+    --r2: #7B9E6B;   /* GA Mtns – forest green */
+    --r3: #C8924A;   /* Atlanta Regional – gold */
+    --r4: #9B6B9B;   /* Three Rivers – purple */
+    --r5: #5BA0A0;   /* Northeast GA – teal */
+    --r7: #D4845A;   /* Middle GA – terracotta */
+    --r8: #8B7355;   /* Central Savannah – warm brown */
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--charcoal); }
+
+  header {
+    background: linear-gradient(135deg, var(--sage-dark), var(--sage));
+    color: white; padding: 2rem 2rem 1.75rem;
+    text-align: center;
+  }
+  header h1 { font-family: 'Playfair Display', serif; font-size: clamp(1.6rem, 3vw, 2.4rem); margin-bottom: 0.4rem; }
+  header p { font-size: 0.95rem; opacity: 0.88; }
+  .header-stats {
+    display: flex; justify-content: center; gap: 2.5rem; margin-top: 1.25rem;
+    flex-wrap: wrap;
+  }
+  .stat { text-align: center; }
+  .stat-num { font-family: 'Playfair Display', serif; font-size: 1.8rem; color: #E8B878; font-weight: 700; }
+  .stat-lbl { font-size: 0.75rem; opacity: 0.8; letter-spacing: 0.06em; text-transform: uppercase; }
+
+  .main { max-width: 1300px; margin: 0 auto; padding: 2rem 1.5rem; display: grid; grid-template-columns: 1fr 320px; gap: 2rem; align-items: start; }
+
+  /* MAP */
+  .map-wrap {
+    background: white; border-radius: 16px; border: 1px solid var(--border);
+    padding: 1.25rem; box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+    position: sticky; top: 1rem;
+  }
+  .map-title { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--mid); font-weight: 600; margin-bottom: 0.75rem; text-align: center; }
+  #map-svg { width: 100%; height: auto; display: block; }
+
+  .county-path {
+    stroke: #fff; stroke-width: 0.8px;
+    transition: opacity 0.15s, filter 0.15s;
+    cursor: pointer;
+  }
+  .county-path:hover { opacity: 0.78; filter: brightness(1.1); }
+  .county-path.unserviced { fill: #E8E4DC; stroke: #ccc; cursor: default; }
+  .county-path.unserviced:hover { opacity: 1; filter: none; }
+
+  /* TOOLTIP */
+  #tooltip {
+    position: fixed; background: var(--charcoal); color: white;
+    padding: 0.5rem 0.9rem; border-radius: 8px; font-size: 0.82rem;
+    pointer-events: none; opacity: 0; transition: opacity 0.15s;
+    z-index: 999; max-width: 200px; line-height: 1.5;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+  }
+  #tooltip .tt-name { font-weight: 700; font-size: 0.9rem; }
+  #tooltip .tt-region { opacity: 0.75; font-size: 0.78rem; margin-top: 0.15rem; }
+  #tooltip .tt-star { color: #E8B878; font-size: 0.75rem; margin-top: 0.15rem; }
+
+  /* SIDEBAR */
+  .sidebar { display: flex; flex-direction: column; gap: 1rem; }
+
+  .legend-card {
+    background: white; border-radius: 12px; border: 1px solid var(--border);
+    padding: 1.25rem; box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  }
+  .legend-card h3 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--mid); font-weight: 600; margin-bottom: 0.9rem; }
+
+  .region-item {
+    display: flex; align-items: center; gap: 0.6rem; padding: 0.45rem 0.5rem;
+    border-radius: 7px; cursor: pointer; transition: background 0.15s;
+    margin-bottom: 0.15rem;
+  }
+  .region-item:hover { background: var(--cream); }
+  .region-item.active { background: var(--cream); }
+  .region-dot { width: 14px; height: 14px; border-radius: 3px; flex-shrink: 0; }
+  .region-name { font-size: 0.85rem; font-weight: 500; flex: 1; }
+  .region-count { font-size: 0.75rem; color: var(--mid); background: #f0ece5; padding: 0.1rem 0.45rem; border-radius: 100px; }
+
+  .county-list-card {
+    background: white; border-radius: 12px; border: 1px solid var(--border);
+    padding: 1.25rem; box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+    max-height: 420px; overflow-y: auto;
+  }
+  .county-list-card h3 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--mid); font-weight: 600; margin-bottom: 0.9rem; position: sticky; top: 0; background: white; padding-bottom: 0.5rem; }
+  .county-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.25rem; }
+  .county-list li {
+    display: flex; align-items: center; gap: 0.5rem; font-size: 0.84rem;
+    padding: 0.3rem 0.4rem; border-radius: 5px; cursor: pointer;
+    transition: background 0.12s;
+  }
+  .county-list li:hover { background: var(--cream); }
+  .county-list li .c-dot { width: 10px; height: 10px; border-radius: 2px; flex-shrink: 0; }
+  .county-list li .c-star { color: var(--gold); font-size: 0.7rem; margin-left: auto; }
+
+  .info-card {
+    background: linear-gradient(135deg, var(--sage-dark), var(--sage));
+    color: white; border-radius: 12px; padding: 1.25rem;
+  }
+  .info-card h3 { font-family: 'Playfair Display', serif; font-size: 1rem; margin-bottom: 0.5rem; }
+  .info-card p { font-size: 0.82rem; opacity: 0.88; margin-bottom: 0.9rem; }
+  .info-card a {
+    display: inline-block; background: var(--gold); color: white;
+    padding: 0.5rem 1.1rem; border-radius: 7px; font-size: 0.83rem; font-weight: 600;
+    cursor: pointer; text-decoration: none;
+  }
+
+  .star-note { font-size: 0.75rem; color: var(--mid); margin-top: 0.5rem; padding: 0.6rem; background: var(--cream); border-radius: 6px; }
+  .star-note span { color: var(--gold); }
+
+  @media (max-width: 900px) {
+    .main { grid-template-columns: 1fr; }
+    .map-wrap { position: static; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Counties We Serve Across Georgia</h1>
+  <p>Homecare Solutions · Duluth, GA · Gwinnett County & Beyond</p>
+  <div class="header-stats">
+    <div class="stat"><div class="stat-num">55</div><div class="stat-lbl">Counties</div></div>
+    <div class="stat"><div class="stat-num">7</div><div class="stat-lbl">Regions</div></div>
+    <div class="stat"><div class="stat-num">159</div><div class="stat-lbl">GA Counties Total</div></div>
+  </div>
+</header>
+
+<div id="tooltip">
+  <div class="tt-name" id="tt-name"></div>
+  <div class="tt-region" id="tt-region"></div>
+  <div class="tt-star" id="tt-star"></div>
+</div>
+
+<div class="main">
+  <div class="map-wrap">
+    <div class="map-title">Click a region in the legend to highlight · Hover counties for details</div>
+    <svg id="map-svg" viewBox="0 0 800 700"></svg>
+  </div>
+
+  <div class="sidebar">
+    <!-- Legend -->
+    <div class="legend-card">
+      <h3>Regions</h3>
+      <div id="region-legend"></div>
+      <div class="star-note"><span>★</span> starred counties indicate priority service areas</div>
+    </div>
+
+    <!-- County list -->
+    <div class="county-list-card">
+      <h3 id="list-title">All Serviced Counties</h3>
+      <ul class="county-list" id="county-list"></ul>
+    </div>
+
+    <!-- CTA -->
+    <div class="info-card">
+      <h3>Is Your County Listed?</h3>
+      <p>We're expanding our service area. Call us to confirm availability in your area.</p>
+      <a href="tel:+14045285327">📞 (404) 528-5327</a>
+    </div>
+  </div>
+</div>
+
+<script>
+// ── DATA ──────────────────────────────────────────────────────────────────────
+const regions = [
+  {
+    id: 'r1', name: 'Region 1: Northwest GA', color: '#4E7FA3',
+    counties: ['Bartow','Chattooga','Floyd','Gordon','Haralson','Paulding','Pickens','Polk'],
+    starred:  ['Bartow','Floyd','Pickens','Polk']
+  },
+  {
+    id: 'r2', name: 'Region 2: GA Mountains', color: '#7B9E6B',
+    counties: ['Banks','Dawson','Forsyth','Franklin','Habersham','Hall','Hart','Lumpkin','Stephens','White'],
+    starred:  ['Forsyth','Franklin','Habersham','Hall','Hart','Stephens','White']
+  },
+  {
+    id: 'r3', name: 'Region 3: Atlanta Regional', color: '#C8924A',
+    counties: ['Gwinnett','DeKalb','Cobb','Fulton','Clayton','Cherokee','Henry','Rockdale','Douglas','Fayette'],
+    starred:  ['Gwinnett','DeKalb','Cobb','Fulton','Douglas']
+  },
+  {
+    id: 'r4', name: 'Region 4: Three Rivers', color: '#9B6B9B',
+    counties: ['Butts','Carroll','Coweta','Spalding'],
+    starred:  []
+  },
+  {
+    id: 'r5', name: 'Region 5: Northeast GA', color: '#5BA0A0',
+    counties: ['Barrow','Clarke','Elbert','Greene','Jackson','Jasper','Madison','Morgan','Newton','Oconee','Oglethorpe','Walton'],
+    starred:  ['Barrow','Clarke','Elbert','Jackson','Morgan','Newton','Oglethorpe','Walton']
+  },
+  {
+    id: 'r7', name: 'Region 7: Middle GA', color: '#D4845A',
+    counties: ['Putnam'],
+    starred:  []
+  },
+  {
+    id: 'r8', name: 'Region 8: Central Savannah', color: '#8B7355',
+    counties: ['Columbia','Glasscock','Hancock','Lincoln','McDuffie','Richmond','Taliaferro','Warren','Wilkes'],
+    starred:  []
+  }
+];
+
+// Build lookup maps
+const countyRegion = {};
+const countyStarred = {};
+regions.forEach(r => {
+  r.counties.forEach(c => {
+    countyRegion[c.toLowerCase()] = r;
+    countyStarred[c.toLowerCase()] = r.starred.map(s => s.toLowerCase()).includes(c.toLowerCase());
+  });
+});
+
+// ── LEGEND ────────────────────────────────────────────────────────────────────
+const legendEl = document.getElementById('region-legend');
+let activeRegion = null;
+
+regions.forEach(r => {
+  const div = document.createElement('div');
+  div.className = 'region-item';
+  div.id = 'legend-' + r.id;
+  div.innerHTML = `
+    <div class="region-dot" style="background:${r.color}"></div>
+    <span class="region-name">${r.name}</span>
+    <span class="region-count">${r.counties.length}</span>
+  `;
+  div.addEventListener('click', () => toggleRegion(r.id));
+  legendEl.appendChild(div);
+});
+
+function toggleRegion(rid) {
+  if (activeRegion === rid) {
+    activeRegion = null;
+    document.querySelectorAll('.region-item').forEach(el => el.classList.remove('active'));
+    updateCountyList(null);
+    highlightRegion(null);
+  } else {
+    activeRegion = rid;
+    document.querySelectorAll('.region-item').forEach(el => el.classList.remove('active'));
+    document.getElementById('legend-' + rid).classList.add('active');
+    const r = regions.find(x => x.id === rid);
+    updateCountyList(r);
+    highlightRegion(rid);
+  }
+}
+
+// ── COUNTY LIST ───────────────────────────────────────────────────────────────
+function updateCountyList(region) {
+  const listEl = document.getElementById('county-list');
+  const titleEl = document.getElementById('list-title');
+  listEl.innerHTML = '';
+
+  const items = region
+    ? region.counties.map(c => ({ name: c, region, starred: countyStarred[c.toLowerCase()] }))
+    : regions.flatMap(r => r.counties.map(c => ({ name: c, region: r, starred: countyStarred[c.toLowerCase()] })));
+
+  titleEl.textContent = region ? region.name : 'All Serviced Counties';
+
+  items.sort((a, b) => a.name.localeCompare(b.name)).forEach(item => {
+    const li = document.createElement('li');
+    li.innerHTML = `
+      <div class="c-dot" style="background:${item.region.color}"></div>
+      ${item.name} County
+      ${item.starred ? '<span class="c-star">★</span>' : ''}
+    `;
+    li.addEventListener('mouseenter', () => flashCounty(item.name));
+    listEl.appendChild(li);
+  });
+}
+updateCountyList(null);
+
+// ── MAP ───────────────────────────────────────────────────────────────────────
+const svg = d3.select('#map-svg');
+const tooltip = document.getElementById('tooltip');
+
+// Georgia FIPS = 13; counties are 13001–13321
+// We'll fetch US counties topojson and filter to Georgia
+const TOPO_URL = 'https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/package.json';
+
+// Use a reliable public TopoJSON source for US counties
+fetch('https://cdn.jsdelivr.net/npm/us-atlas@3/counties-10m.json')
+  .then(r => r.json())
+  .then(us => {
+    const counties = topojson.feature(us, us.objects.counties);
+    // Filter to Georgia (FIPS starts with 13)
+    const gaCounties = counties.features.filter(f => f.id.toString().startsWith('13'));
+
+    // FIPS to name map (Georgia counties)
+    const fipsToName = {
+      '13001':'Appling','13003':'Atkinson','13005':'Bacon','13007':'Baker','13009':'Baldwin',
+      '13011':'Banks','13013':'Barrow','13015':'Bartow','13017':'Ben Hill','13019':'Berrien',
+      '13021':'Bibb','13023':'Bleckley','13025':'Brantley','13027':'Brooks','13029':'Bryan',
+      '13031':'Bulloch','13033':'Burke','13035':'Butts','13037':'Calhoun','13039':'Camden',
+      '13043':'Candler','13045':'Carroll','13047':'Catoosa','13049':'Charlton','13051':'Chatham',
+      '13053':'Chattahoochee','13055':'Chattooga','13057':'Cherokee','13059':'Clarke',
+      '13061':'Clay','13063':'Clayton','13065':'Clinch','13067':'Cobb','13069':'Coffee',
+      '13071':'Colquitt','13073':'Columbia','13075':'Cook','13077':'Coweta','13079':'Crawford',
+      '13081':'Crisp','13083':'Dade','13085':'Dawson','13087':'Decatur','13089':'DeKalb',
+      '13091':'Dodge','13093':'Dooly','13095':'Dougherty','13097':'Douglas','13099':'Early',
+      '13101':'Echols','13103':'Effingham','13105':'Elbert','13107':'Emanuel','13109':'Evans',
+      '13111':'Fannin','13113':'Fayette','13115':'Floyd','13117':'Forsyth','13119':'Franklin',
+      '13121':'Fulton','13123':'Gilmer','13125':'Glascock','13127':'Glynn','13129':'Gordon',
+      '13131':'Grady','13133':'Greene','13135':'Gwinnett','13137':'Habersham','13139':'Hall',
+      '13141':'Hancock','13143':'Haralson','13145':'Harris','13147':'Hart','13149':'Heard',
+      '13151':'Henry','13153':'Houston','13155':'Irwin','13157':'Jackson','13159':'Jasper',
+      '13161':'Jeff Davis','13163':'Jefferson','13165':'Jenkins','13167':'Johnson',
+      '13169':'Jones','13171':'Lamar','13173':'Lanier','13175':'Laurens','13177':'Lee',
+      '13179':'Liberty','13181':'Lincoln','13183':'Long','13185':'Lowndes','13187':'Lumpkin',
+      '13189':'McDuffie','13191':'McIntosh','13193':'Macon','13195':'Madison','13197':'Marion',
+      '13199':'Meriwether','13201':'Miller','13205':'Mitchell','13207':'Monroe',
+      '13209':'Montgomery','13211':'Morgan','13213':'Murray','13215':'Muscogee',
+      '13217':'Newton','13219':'Oconee','13221':'Oglethorpe','13223':'Paulding',
+      '13225':'Peach','13227':'Pickens','13229':'Pierce','13231':'Pike','13233':'Polk',
+      '13235':'Pulaski','13237':'Putnam','13239':'Quitman','13241':'Rabun','13243':'Randolph',
+      '13245':'Richmond','13247':'Rockdale','13249':'Schley','13251':'Screven',
+      '13253':'Seminole','13255':'Spalding','13257':'Stephens','13259':'Stewart',
+      '13261':'Sumter','13263':'Talbot','13265':'Taliaferro','13267':'Tattnall',
+      '13269':'Taylor','13271':'Telfair','13273':'Terrell','13275':'Thomas','13277':'Tift',
+      '13279':'Toombs','13281':'Towns','13283':'Treutlen','13285':'Troup','13287':'Turner',
+      '13289':'Twiggs','13291':'Union','13293':'Upson','13295':'Walker','13297':'Walton',
+      '13299':'Ware','13301':'Warren','13303':'Washington','13305':'Wayne','13307':'Webster',
+      '13309':'Wheeler','13311':'White','13313':'Whitfield','13315':'Wilcox','13317':'Wilkes',
+      '13319':'Wilkinson','13321':'Worth',
+      // fix Glasscock
+      '13125':'Glasscock'
+    };
+
+    const projection = d3.geoMercator().fitSize([800, 700], { type: 'FeatureCollection', features: gaCounties });
+    const path = d3.geoPath().projection(projection);
+
+    svg.selectAll('path.county-path')
+      .data(gaCounties)
+      .enter()
+      .append('path')
+      .attr('class', d => {
+        const name = fipsToName[d.id.toString()];
+        return 'county-path' + (name && countyRegion[name.toLowerCase()] ? '' : ' unserviced');
+      })
+      .attr('d', path)
+      .attr('fill', d => {
+        const name = fipsToName[d.id.toString()];
+        if (!name) return '#E8E4DC';
+        const r = countyRegion[name.toLowerCase()];
+        return r ? r.color : '#E8E4DC';
+      })
+      .attr('data-name', d => fipsToName[d.id.toString()] || '')
+      .on('mousemove', function(event, d) {
+        const name = fipsToName[d.id.toString()];
+        if (!name) return;
+        const r = countyRegion[name.toLowerCase()];
+        if (!r) {
+          document.getElementById('tt-name').textContent = name + ' County';
+          document.getElementById('tt-region').textContent = 'Not currently serviced';
+          document.getElementById('tt-star').textContent = '';
+        } else {
+          document.getElementById('tt-name').textContent = name + ' County';
+          document.getElementById('tt-region').textContent = r.name;
+          document.getElementById('tt-star').textContent = countyStarred[name.toLowerCase()] ? '★ Priority service area' : '';
+        }
+        tooltip.style.opacity = '1';
+        tooltip.style.left = (event.clientX + 14) + 'px';
+        tooltip.style.top = (event.clientY - 10) + 'px';
+      })
+      .on('mouseleave', function() {
+        tooltip.style.opacity = '0';
+      })
+      .on('click', function(event, d) {
+        const name = fipsToName[d.id.toString()];
+        if (!name) return;
+        const r = countyRegion[name.toLowerCase()];
+        if (r) toggleRegion(r.id);
+      });
+
+    // State outline
+    svg.append('path')
+      .datum(topojson.mesh(us, us.objects.states, (a, b) => a === b))
+      .attr('d', path)
+      .attr('fill', 'none')
+      .attr('stroke', '#999')
+      .attr('stroke-width', '1.5px');
+
+  })
+  .catch(err => {
+    console.error('Map load error:', err);
+    svg.append('text')
+      .attr('x', 400).attr('y', 350)
+      .attr('text-anchor', 'middle')
+      .attr('fill', '#888')
+      .text('Map requires internet connection to load');
+  });
+
+// Flash county on hover from list
+function flashCounty(name) {
+  svg.selectAll('path.county-path')
+    .filter(function() { return d3.select(this).attr('data-name') === name; })
+    .raise()
+    .transition().duration(100)
+    .attr('stroke', '#fff')
+    .attr('stroke-width', '2.5px')
+    .transition().duration(300)
+    .attr('stroke-width', '0.8px');
+}
+
+// Highlight region on map
+function highlightRegion(rid) {
+  if (!rid) {
+    svg.selectAll('path.county-path').attr('opacity', 1);
+    return;
+  }
+  const r = regions.find(x => x.id === rid);
+  const names = new Set(r.counties.map(c => c.toLowerCase()));
+  svg.selectAll('path.county-path').attr('opacity', function() {
+    const name = d3.select(this).attr('data-name');
+    if (!name) return 0.25;
+    return names.has(name.toLowerCase()) ? 1 : 0.2;
+  });
+}
+</script>
+</body>
+</html>
+
+<!-- ═══════════════════════════════ PAGE: DULUTH (FLAGSHIP) ═══════════════════════════════ -->
+<div id="page-duluth" class="page">
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-tag">Most Counties in GA</div>
+      <h1>Home Care Services<br>in <em>Duluth, Georgia</em></h1>
+      <p class="hero-sub">Homecare Solutions delivers trusted, compassionate in-home care for seniors and adults throughout Duluth and the surrounding Gwinnett County area.</p>
+      <div class="hero-ctas">
+        <button class="btn-hero-primary" onclick="showPage('contact')">Schedule a Free Care Assessment</button>
+        <button class="btn-hero-outline" onclick="window.location.href='tel:+14045285327'">📞 Call (404) 528-5327</button>
+      </div>
+      <div class="hero-badges">
+        <div class="hero-badge"><span class="hero-badge-icon">✅</span> Background-Checked Caregivers</div>
+        <div class="hero-badge"><span class="hero-badge-icon">🕐</span> Available 24/7</div>
+        <div class="hero-badge"><span class="hero-badge-icon">📍</span> Serving 50+ Counties throughout GA</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Strip -->
+  <div class="trust-strip">
+    <div class="trust-strip-inner">
+      <div class="trust-item"><span class="trust-icon">🏅</span> Trusted Local Caregivers</div>
+      <div class="trust-divider"></div>
+      <div class="trust-item"><span class="stars">★★★★★</span> 5-Star Rated</div>
+      <div class="trust-divider"></div>
+      <div class="trust-item"><span class="trust-icon">🔍</span> Background-Checked</div>
+      <div class="trust-divider"></div>
+      <div class="trust-item"><span class="trust-icon">🏥</span> Licensed & Insured</div>
+    </div>
+  </div>
+
+  <!-- Feature Cards -->
+  <section class="section">
+    <div class="section-inner">
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-icon">📋</div>
+          <h3>Customized Care Plans</h3>
+          <p>Each client in Duluth receives a fully individualized care plan designed around their health needs, daily routine, and personal preferences — revisited regularly as needs change.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🤝</div>
+          <h3>Carefully Matched Caregivers</h3>
+          <p>We spend time getting to know both clients and caregivers to ensure the right match — not just in skills, but in personality and communication style.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🏡</div>
+          <h3>Home Care Advantage</h3>
+          <p>There's no place like home. Studies consistently show that individuals who receive care in their own environment enjoy better outcomes, greater comfort, and stronger emotional well-being.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Long-Form Content -->
+  <section class="section section-alt">
+    <div class="section-inner two-col">
+      <div class="content-prose">
+        <div class="section-label">Duluth, GA Home Care by Homecare Solutions</div>
+        <h2 class="section-title" style="margin-bottom:1rem;">Serving Duluth Families with Heart</h2>
+
+        <h2>Local Commitment & Quality Care</h2>
+        <p>Homecare Solutions is proud to be a trusted partner for families throughout Duluth, Georgia. As a locally rooted agency, we understand the community we serve — from the close-knit neighborhoods near Chattahoochee Pointe to the vibrant developments along Pleasant Hill Road. Our caregivers aren't just professionals; many of them live right here in Gwinnett County and share your neighbors' values of family, respect, and community.</p>
+        <p>We believe quality care starts with accountability. Every caregiver on our team is personally interviewed, thoroughly screened, and continuously trained to uphold the highest standards of in-home support. When a Homecare Solutions caregiver enters your home, you can feel confident they've earned that trust.</p>
+
+        <h2>Personalized In-Home Care Plans</h2>
+        <p>No two people age in exactly the same way, and no two care plans should look alike. When you contact Homecare Solutions, a care coordinator will visit your home — at no cost or obligation — to conduct a full assessment. We listen to your loved one's preferences, review any physician recommendations, and collaborate with your family to build a plan that fits your life, not someone else's template.</p>
+        <p>Our services in Duluth include:</p>
+        <ul>
+          <li>Personal care & hygiene assistance</li>
+          <li>Companionship & social engagement</li>
+          <li>Dementia & Alzheimer's support</li>
+          <li>Post-hospital transition care</li>
+          <li>Respite care for family caregivers</li>
+          <li>24-hour & overnight care</li>
+          <li>Meal preparation & nutrition support</li>
+          <li>Light housekeeping & errands</li>
+        </ul>
+
+        <h2>Expert & Compassionate Caregivers</h2>
+        <p>Every member of our caregiving team passes a rigorous multi-step vetting process that includes a criminal background check, reference verification, and a structured skills assessment. But we go beyond credentials — we look for the warmth, patience, and reliability that you can't teach in a classroom. Caregiver training is ongoing, ensuring our team stays current with best practices in senior care and safety.</p>
+
+        <h2>Why Families in Duluth Choose Us</h2>
+        <p>Families across Duluth turn to Homecare Solutions because we treat every client the way we'd want our own family treated — with kindness, attentiveness, and genuine care. Our care coordinators remain involved throughout the client relationship, checking in regularly to make sure the care plan is working and adjusting it whenever life changes.</p>
+        <p>Whether your loved one needs a few hours of companion care each week or full-time support following a hospital stay, Homecare Solutions is here to help you navigate the journey with confidence.</p>
+        <p><strong>Schedule your free care assessment today</strong> — there's no commitment, no pressure, just an honest conversation about how we can help.</p>
+      </div>
+      <div>
+        <div style="background:var(--card-bg); border:1px solid var(--light-border); border-radius:12px; padding:2rem; position:sticky; top:90px;">
+          <h3 style="font-size:1.1rem; margin-bottom:1rem;">Get a Free Care Assessment</h3>
+          <p style="font-size:0.85rem; color:var(--mid); margin-bottom:1.5rem;">Speak with a Duluth-area care coordinator at no cost or obligation. We'll help you understand your options.</p>
+          <button class="btn-full btn-hero-primary" onclick="showPage('contact')" style="border-radius:8px; margin-bottom:0.75rem;">📋 Schedule Assessment</button>
+          <button class="btn-full btn-outline" onclick="window.location.href='tel:+14045285327'" style="display:block; text-align:center; padding:0.7rem; border-radius:8px; font-weight:600; cursor:pointer;">📞 (404) 528-5327</button>
+          <div style="margin-top:1.5rem; padding-top:1.5rem; border-top:1px solid var(--light-border);">
+            <p style="font-size:0.8rem; font-weight:600; color:var(--charcoal); margin-bottom:0.6rem;">Nearby service areas:</p>
+            <div class="gap-badge">
+              <span class="badge">Suwanee</span>
+              <span class="badge">Johns Creek</span>
+              <span class="badge">Lawrenceville</span>
+              <span class="badge">Norcross</span>
+              <span class="badge">Sugar Hill</span>
+              <span class="badge">Buford</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Grid -->
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-header">
+        <div class="section-label">Our Services in Duluth, GA</div>
+        <h2 class="section-title">In-Home Care Services</h2>
+      </div>
+      <div class="services-grid">
+        <div class="service-card" onclick="showServiceDetail('personal-care')">
+          <div class="service-card-icon">👐</div>
+          <h3>Personal Care</h3>
+          <p>Bathing, grooming, dressing, and daily hygiene assistance — delivered with dignity.</p>
+          <span class="service-card-link">Learn more →</span>
+        </div>
+        <div class="service-card" onclick="showServiceDetail('companion-care')">
+          <div class="service-card-icon">💬</div>
+          <h3>Companion Care</h3>
+          <p>Meaningful social engagement, light activities, and emotional support.</p>
+          <span class="service-card-link">Learn more →</span>
+        </div>
+        <div class="service-card" onclick="showServiceDetail('dementia-alzheimers-care')">
+          <div class="service-card-icon">🧠</div>
+          <h3>Dementia & Alzheimer's Care</h3>
+          <p>Specialized, patient memory care support for clients and their families.</p>
+          <span class="service-card-link">Learn more →</span>
+        </div>
+        <div class="service-card" onclick="showServiceDetail('post-hospital-transition-care')">
+          <div class="service-card-icon">🏥</div>
+          <h3>Post-Hospital Transition</h3>
+          <p>Expert home support after surgery or hospitalization to reduce readmission risks.</p>
+          <span class="service-card-link">Learn more →</span>
+        </div>
+        <div class="service-card" onclick="showServiceDetail('respite-care')">
+          <div class="service-card-icon">☀️</div>
+          <h3>Respite Care</h3>
+          <p>Temporary relief for family caregivers who need time to rest and recharge.</p>
+          <span class="service-card-link">Learn more →</span>
+        </div>
+        <div class="service-card" onclick="showServiceDetail('24-hour-care')">
+          <div class="service-card-icon">🌙</div>
+          <h3>24-Hour Care</h3>
+          <p>Around-the-clock support for those who need continuous care and supervision.</p>
+          <span class="service-card-link">Learn more →</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section section-alt">
+    <div class="section-inner">
+      <div class="section-header centered">
+        <div class="section-label">Client Stories</div>
+        <h2 class="section-title">What Duluth Families Are Saying</h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"After years of trying to manage on our own, we finally reached out to Homecare Solutions. Best decision we ever made. My mother's caregiver is like part of our family now."</p>
+          <div class="testimonial-author">Catherine M.</div>
+          <div class="testimonial-meta">Duluth, GA · Companion & Personal Care</div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"The 24-hour care team handled my father's complex needs with total confidence. I slept through the night for the first time in months knowing he was in good hands."</p>
+          <div class="testimonial-author">Anthony R.</div>
+          <div class="testimonial-meta">Duluth, GA · 24-Hour Care</div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"The memory care support for my wife has been phenomenal. They don't just manage — they connect. Her quality of life has genuinely improved since Homecare Solutions came on board."</p>
+          <div class="testimonial-author">Robert K.</div>
+          <div class="testimonial-meta">Duluth, GA · Dementia Care</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Tips -->
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-header">
+        <div class="section-label">Home Care Resources</div>
+        <h2 class="section-title">Helpful Tips for Families</h2>
+      </div>
+      <div class="tips-grid">
+        <div class="tip-card">
+          <div class="tip-card-img">💡</div>
+          <div class="tip-card-body">
+            <div class="tip-card-tag">Family Caregiving</div>
+            <h3>5 Signs Your Loved One May Need More Support at Home</h3>
+            <p>Recognizing when it's time to explore professional care options can be difficult. Here's what to watch for.</p>
+          </div>
+        </div>
+        <div class="tip-card">
+          <div class="tip-card-img">🧠</div>
+          <div class="tip-card-body">
+            <div class="tip-card-tag">Memory Care</div>
+            <h3>How to Talk to a Parent About an Alzheimer's Diagnosis</h3>
+            <p>Practical guidance on navigating one of the most challenging conversations a family can face.</p>
+          </div>
+        </div>
+        <div class="tip-card">
+          <div class="tip-card-img">🏥</div>
+          <div class="tip-card-body">
+            <div class="tip-card-tag">Recovery</div>
+            <h3>Coming Home After Surgery: What to Prepare</h3>
+            <p>A simple checklist to make sure your home is safe and ready before your loved one returns from the hospital.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <div class="cta-block">
+    <h2>Ready to Get Started in Duluth, GA?</h2>
+    <p>Our care coordinators are standing by to answer your questions and schedule your free, no-obligation assessment.</p>
+    <div class="cta-block-btns">
+      <button class="btn-hero-primary" onclick="showPage('contact')">Schedule a Free Care Assessment</button>
+      <button class="btn-hero-outline" onclick="window.location.href='tel:+14045285327'">📞 (404) 528-5327</button>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════ PAGE: SERVICES ═══════════════════════════════ -->
+<div id="page-services" class="page">
+  <section class="hero" style="padding: 3.5rem 2rem;">
+    <div class="hero-inner">
+      <div class="hero-tag">Non-Medical In-Home Care</div>
+      <h1>Our Home Care <em>Services</em></h1>
+      <p class="hero-sub">From a few hours a week to full-time support — we offer a complete range of in-home care services designed around the person, not a package.</p>
+      <div class="hero-ctas">
+        <button class="btn-hero-primary" onclick="showPage('contact')">Schedule a Free Assessment</button>
+        <button class="btn-hero-outline" onclick="window.location.href='tel:+14045285327'">📞 (404) 528-5327</button>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="section-inner">
+      <div class="services-grid">
+        <div class="service-card" onclick="showServiceDetail('personal-care')">
+          <div class="service-card-icon">👐</div>
+          <h3>Personal Care</h3>
+          <p>Hands-on assistance with bathing, grooming, dressing, and daily hygiene — delivered with dignity and respect for your loved one's independence.</p>
+          <span class="service-card-link">Learn more →</span>
+        </div>
+        <div class="service-card" onclick="showServiceDetail('companion-care')">
+          <div class="service-card-icon">💬</div>
+          <h3>Companion Care</h3>
+          <p>Meaningful conversation, light activities, outings, and social engagement to support emotional well-being and prevent isolation.</p>
+          <span class="service-card-link">Learn more →</span>
+        </div>
+        <div class="service-card" onclick="showServiceDetail('dementia-alzheimers-care')">
+          <div class="service-card-icon">🧠</div>
+          <h3>Dementia & Alzheimer's Care</h3>
+          <p>Specialized, patient-centered support for clients with memory conditions — and the family members who love them.</p>
+          <span class="service-card-link">Learn more →</span>
+        </div>
+        <div class="service-card" onclick="showServiceDetail('post-hospital-transition-care')">
+          <div class="service-card-icon">🏥</div>
+          <h3>Post-Hospital Transition Care</h3>
+          <p>Expert at-home support following a hospital stay or surgical procedure, focused on safe recovery and reducing readmission risk.</p>
+          <span class="service-card-link">Learn more →</span>
+        </div>
+        <div class="service-card" onclick="showServiceDetail('respite-care')">
+          <div class="service-card-icon">☀️</div>
+          <h3>Respite Care</h3>
+          <p>Temporary relief for primary family caregivers who need time to rest, handle responsibilities, or simply recharge.</p>
+          <span class="service-card-link">Learn more →</span>
+        </div>
+        <div class="service-card" onclick="showServiceDetail('24-hour-care')">
+          <div class="service-card-icon">🌙</div>
+          <h3>24-Hour Care</h3>
+          <p>Continuous care and supervision for individuals who need constant support, day and night, in the comfort of their own home.</p>
+          <span class="service-card-link">Learn more →</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="cta-block">
+    <h2>Not Sure Which Service Is Right?</h2>
+    <p>That's what we're here for. Call us or request a free assessment — we'll help you figure out exactly what your loved one needs.</p>
+    <div class="cta-block-btns">
+      <button class="btn-hero-primary" onclick="showPage('contact')">Request a Free Assessment</button>
+      <button class="btn-hero-outline" onclick="window.location.href='tel:+14045285327'">📞 (404) 528-5327</button>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════ PAGE: SERVICE DETAIL ═══════════════════════════════ -->
+<div id="page-service-detail" class="page">
+  <div class="service-detail-hero">
+    <div class="service-detail-hero-inner">
+      <div class="breadcrumb">
+        <span onclick="showPage('home')">Home</span>
+        <span>›</span>
+        <span onclick="showPage('services')">Services</span>
+        <span>›</span>
+        <span id="service-breadcrumb">Personal Care</span>
+      </div>
+      <div id="service-icon" style="font-size:3rem; margin-bottom:1rem;">👐</div>
+      <h1 id="service-title" style="font-size:2.4rem; margin-bottom:0.75rem;">Personal Care Services</h1>
+      <p id="service-subtitle" style="color:var(--mid); font-size:1.05rem; max-width:600px;">Dignified, compassionate assistance with daily personal hygiene and grooming for seniors in Duluth and Gwinnett County.</p>
+    </div>
+  </div>
+  <div class="service-detail-body">
+    <div>
+      <div id="service-body"></div>
+      <div style="margin-top:3rem; padding:2rem; background:var(--cream); border-radius:12px; border:1px solid var(--light-border);">
+        <h3 style="font-size:1.2rem; margin-bottom:0.75rem;">Ready to Learn More?</h3>
+        <p style="color:var(--mid); font-size:0.92rem; margin-bottom:1.25rem;">Our care coordinators are happy to answer your questions and help determine if this service is the right fit for your loved one.</p>
+        <button class="btn-hero-primary" onclick="showPage('contact')" style="border:none; padding:0.8rem 1.5rem; border-radius:8px; font-size:0.95rem; cursor:pointer;">Schedule a Free Care Assessment</button>
+      </div>
+    </div>
+    <div class="service-sidebar">
+      <h3>All Services</h3>
+      <ul class="sidebar-services" id="sidebar-services-list"></ul>
+      <div class="sidebar-cta">
+        <h4>Need Help Now?</h4>
+        <p>Our team is available around the clock to answer your questions.</p>
+        <button class="btn-full" style="background:var(--gold);color:white;border:none;" onclick="showPage('contact')">📋 Free Assessment</button>
+        <button class="btn-full" style="border:1.5px solid var(--sage);color:var(--sage);background:transparent;" onclick="window.location.href='tel:+14045285327'">📞 (404) 528-5327</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════ PAGE: ABOUT ═══════════════════════════════ -->
+<div id="page-about" class="page">
+  <section class="hero" style="padding:3.5rem 2rem;">
+    <div class="hero-inner">
+      <div class="hero-tag">Our Story</div>
+      <h1>About <em>Homecare Solutions</em></h1>
+      <p class="hero-sub">A locally owned agency founded on the belief that every person deserves compassionate, high-quality care — in the place they love most: home.</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="section-inner about-grid">
+      <div class="about-visual">
+        <div class="about-visual-icon">🏠</div>
+        <h3>Serving Gwinnett County Since 2015</h3>
+        <div class="about-stat-row">
+          <div class="about-stat"><div class="about-stat-num">500+</div><div class="about-stat-lbl">Families Served</div></div>
+          <div class="about-stat"><div class="about-stat-num">12+</div><div class="about-stat-lbl">Cities Covered</div></div>
+          <div class="about-stat"><div class="about-stat-num">100+</div><div class="about-stat-lbl">Caregivers</div></div>
+        </div>
+      </div>
+      <div class="about-text">
+        <h2>Rooted in Community, Driven by Purpose</h2>
+        <p>Homecare Solutions was founded in Duluth, Georgia with a simple mission: to provide the kind of in-home care that we'd want for our own families. What started as a small team of dedicated caregivers has grown into one of Gwinnett County's most trusted home care agencies — without losing the personal touch that sets us apart.</p>
+        <p>Our founders recognized a gap in the market: too many agencies treated clients as care recipients rather than individuals. We built Homecare Solutions to be different — an agency where care coordinators genuinely know their clients, where caregivers are matched thoughtfully, and where families feel heard at every step.</p>
+        <p>Today, we serve over 500 families across Duluth, Suwanee, Johns Creek, Lawrenceville, Norcross, Peachtree Corners, Sugar Hill, Buford, and beyond.</p>
+        <ul class="about-values">
+          <li>Dignity: Every interaction honors the whole person</li>
+          <li>Reliability: We show up, every time, as promised</li>
+          <li>Transparency: Clear communication with clients and families</li>
+          <li>Excellence: Continuous training and quality improvement</li>
+          <li>Community: Deep roots in Gwinnett County</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <div class="cta-block">
+    <h2>Meet Our Team</h2>
+    <p>We'd love to introduce you to the people who make Homecare Solutions special. Schedule a free assessment and meet your care coordinator in person.</p>
+    <div class="cta-block-btns">
+      <button class="btn-hero-primary" onclick="showPage('contact')">Schedule a Free Assessment</button>
+      <button class="btn-hero-outline" onclick="window.location.href='tel:+14045285327'">📞 (404) 528-5327</button>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════ PAGE: CONTACT ═══════════════════════════════ -->
+<div id="page-contact" class="page">
+  <section class="hero" style="padding:3.5rem 2rem;">
+    <div class="hero-inner">
+      <div class="hero-tag">We're Here to Help</div>
+      <h1>Get in <em>Touch</em></h1>
+      <p class="hero-sub">Reach out by phone, email, or fill out the form below. A care coordinator will respond within 24 hours — often much sooner.</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="section-inner two-col" style="gap:3rem; align-items:start;">
+      <div>
+        <h2 style="font-size:1.8rem; margin-bottom:0.5rem;">Schedule a Free Assessment</h2>
+        <p style="color:var(--mid); margin-bottom:2rem;">Fill out the form below and a Homecare Solutions care coordinator will be in touch to discuss your needs — no commitment required.</p>
+        
+        <div class="form-success" id="contact-success">
+          <div style="font-size:2.5rem; margin-bottom:0.75rem;">✅</div>
+          <h3 style="font-size:1.2rem; margin-bottom:0.5rem;">Thank You!</h3>
+          <p>We've received your request and a care coordinator will reach out within 24 hours. For immediate assistance, please call <strong>(404) 528-5327</strong>.</p>
+        </div>
+
+        <form class="contact-form" id="contact-form" onsubmit="handleContactSubmit(event)">
+          <!-- Honeypot -->
+          <input type="text" name="website" class="form-hidden" tabindex="-1" autocomplete="off" />
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Full Name *</label>
+              <input type="text" id="name" name="name" required placeholder="Jane Smith" />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" required placeholder="jane@example.com" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone">Phone Number *</label>
+              <input type="tel" id="phone" name="phone" required placeholder="(770) 555-0000" />
+            </div>
+            <div class="form-group">
+              <label for="start-date">Preferred Start Date</label>
+              <input type="date" id="start-date" name="startDate" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="service">Service Needed</label>
+            <select id="service" name="service">
+              <option value="">— Select a service —</option>
+              <option>Personal Care</option>
+              <option>Companion Care</option>
+              <option>Dementia & Alzheimer's Care</option>
+              <option>Post-Hospital Transition Care</option>
+              <option>Respite Care</option>
+              <option>24-Hour Care</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Tell Us About Your Situation</label>
+            <textarea id="message" name="message" placeholder="Share any details that would help us prepare for your assessment — including location, care recipient's needs, or any questions you have."></textarea>
+          </div>
+          <button type="submit" class="btn-hero-primary" style="border:none; padding:0.9rem 2rem; border-radius:8px; font-size:1rem; cursor:pointer;">Send Message →</button>
+        </form>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:1.5rem;">
+        <div style="background:var(--cream); border:1px solid var(--light-border); border-radius:12px; padding:2rem;">
+          <h3 style="font-size:1.05rem; margin-bottom:1.25rem;">Contact Information</h3>
+          <div style="display:flex; flex-direction:column; gap:0.9rem; font-size:0.9rem;">
+            <div style="display:flex; gap:0.75rem; align-items:start;">
+              <span style="font-size:1.1rem;">📞</span>
+              <div><strong>(404) 528-5327</strong><br><span style="color:var(--mid); font-size:0.82rem;">Available 24/7 for inquiries</span></div>
+            </div>
+            <div style="display:flex; gap:0.75rem; align-items:start;">
+              <span style="font-size:1.1rem;">✉️</span>
+              <div><strong>homecaresolutionsllc@gmail.com</strong><br><span style="color:var(--mid); font-size:0.82rem;">Response within 24 hours</span></div>
+            </div>
+            <div style="display:flex; gap:0.75rem; align-items:start;">
+              <span style="font-size:1.1rem;">📍</span>
+              <div><strong>Duluth, GA 30096</strong><br><span style="color:var(--mid); font-size:0.82rem;">Serving all of Gwinnett County</span></div>
+            </div>
+            <div style="display:flex; gap:0.75rem; align-items:start;">
+              <span style="font-size:1.1rem;">🕐</span>
+              <div><strong>Office Hours</strong><br><span style="color:var(--mid); font-size:0.82rem;">Mon–Fri 8am–6pm · Sat 9am–2pm</span></div>
+            </div>
+          </div>
+        </div>
+        <div style="background:var(--cream); border:1px solid var(--light-border); border-radius:12px; padding:2rem;">
+          <h3 style="font-size:1.05rem; margin-bottom:0.75rem;">What to Expect</h3>
+          <div style="display:flex; flex-direction:column; gap:0.6rem; font-size:0.88rem; color:var(--mid);">
+            <div style="display:flex; gap:0.6rem;"><span>1️⃣</span> <span>We'll reach out within 24 hours to schedule your free assessment</span></div>
+            <div style="display:flex; gap:0.6rem;"><span>2️⃣</span> <span>A care coordinator visits your home at no charge or obligation</span></div>
+            <div style="display:flex; gap:0.6rem;"><span>3️⃣</span> <span>We build a personalized care plan together</span></div>
+            <div style="display:flex; gap:0.6rem;"><span>4️⃣</span> <span>Care begins — often within a few days of your assessment</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ═══════════════════════════════ PAGE: CAREERS ═══════════════════════════════ -->
+<div id="page-careers" class="page">
+  <section class="hero" style="padding:3.5rem 2rem;">
+    <div class="hero-inner">
+      <div class="hero-tag">Join Our Team</div>
+      <h1>Careers at<br><em>Homecare Solutions</em></h1>
+      <p class="hero-sub">We're always looking for compassionate, reliable caregivers who want to make a real difference in people's lives. Join a team that values you.</p>
+      <div class="hero-ctas">
+        <button class="btn-hero-primary" onclick="showPage('contact')">Apply Now</button>
+        <button class="btn-hero-outline" onclick="window.location.href='tel:+14045285327'">📞 (404) 528-5327</button>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-header">
+        <div class="section-label">Open Positions</div>
+        <h2 class="section-title">Current Openings in Gwinnett County</h2>
+        <p class="section-sub">We offer competitive pay, flexible scheduling, and a supportive team environment where your work truly matters.</p>
+      </div>
+      <div class="careers-list">
+        <div class="career-item">
+          <div>
+            <h3>Certified Nursing Assistant (CNA)</h3>
+            <p>Duluth, GA · Full-time & Part-time available</p>
+          </div>
+          <div style="display:flex; gap:0.75rem; align-items:center;">
+            <span class="career-badge">Full-time</span>
+            <button class="btn-primary" onclick="showPage('contact')">Apply</button>
+          </div>
+        </div>
+        <div class="career-item">
+          <div>
+            <h3>Personal Care Aide</h3>
+            <p>Multiple locations · Flexible scheduling</p>
+          </div>
+          <div style="display:flex; gap:0.75rem; align-items:center;">
+            <span class="career-badge">Flexible</span>
+            <button class="btn-primary" onclick="showPage('contact')">Apply</button>
+          </div>
+        </div>
+        <div class="career-item">
+          <div>
+            <h3>Care Coordinator</h3>
+            <p>Duluth office · Administrative + client-facing role</p>
+          </div>
+          <div style="display:flex; gap:0.75rem; align-items:center;">
+            <span class="career-badge">Full-time</span>
+            <button class="btn-primary" onclick="showPage('contact')">Apply</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section section-alt">
+    <div class="section-inner">
+      <div class="section-header centered">
+        <div class="section-label">Benefits & Culture</div>
+        <h2 class="section-title">Why Work With Us?</h2>
+      </div>
+      <div class="feature-grid">
+        <div class="feature-card"><div class="feature-icon">💰</div><h3>Competitive Pay</h3><p>We pay above market rates because we believe great caregivers deserve great compensation.</p></div>
+        <div class="feature-card"><div class="feature-icon">📅</div><h3>Flexible Scheduling</h3><p>Full-time, part-time, weekdays, weekends — we work with your availability, not against it.</p></div>
+        <div class="feature-card"><div class="feature-icon">📚</div><h3>Ongoing Training</h3><p>Free continuing education and specialized training — including memory care and post-hospital care certification.</p></div>
+        <div class="feature-card"><div class="feature-icon">🌟</div><h3>Caregiver Recognition</h3><p>We celebrate our team with regular recognition programs, bonuses, and meaningful appreciation.</p></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ═══════════════════════════════ FOOTER ═══════════════════════════════ -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <h3>🏠 Homecare Solutions</h3>
+      <p>Compassionate, professional in-home care for seniors and adults across most major counties in GA. Locally owned and family-centered since 2015.</p>
+      <div class="footer-contact-info">
+        <span>📞 <a href="tel:+14045285327">(404) 528-5327</a></span>
+        <span>✉️ homecaresolutionsllc@gmail.com</span>
+        <span>📍 3235 Satellite Blvd, Bldg 400,<b>
+                  Ste 300<b>
+                  Duluth, GA 30096</span>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul class="footer-links">
+        <li><span onclick="showServiceDetail('personal-care')">Personal Care</span></li>
+        <li><span onclick="showServiceDetail('companion-care')">Companion Care</span></li>
+        <li><span onclick="showServiceDetail('dementia-alzheimers-care')">Dementia Care</span></li>
+        <li><span onclick="showServiceDetail('post-hospital-transition-care')">Post-Hospital Care</span></li>
+        <li><span onclick="showServiceDetail('respite-care')">Respite Care</span></li>
+        <li><span onclick="showServiceDetail('24-hour-care')">24-Hour Care</span></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Areas We Serve</h4>
+      <ul class="footer-links">
+        <li><span onclick="showPage('duluth')">Duluth, GA</span></li>
+        <li><span onclick="showPage('areas')">Suwanee</span></li>
+        <li><span onclick="showPage('areas')">Johns Creek</span></li>
+        <li><span onclick="showPage('areas')">Lawrenceville</span></li>
+        <li><span onclick="showPage('areas')">Norcross</span></li>
+        <li><span onclick="showPage('areas')">Peachtree Corners</span></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul class="footer-links">
+        <li><span onclick="showPage('about')">About Us</span></li>
+        <li><span onclick="showPage('careers')">Careers</span></li>
+        <li><span onclick="showPage('contact')">Contact</span></li>
+        <li><span onclick="showPage('contact')">Privacy Policy</span></li>
+        <li><span onclick="showPage('contact')">Accessibility</span></li>
+        <li><span onclick="showPage('contact')">HIPAA Disclaimer</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Homecare Solutions of Duluth, GA. All rights reserved.</span>
+    <div class="footer-legal">
+      <span>Privacy Policy</span>
+      <span>Terms of Service</span>
+      <span>Accessibility</span>
+      <span>HIPAA Disclaimer</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ─── DATA ───────────────────────────────────────────────────────
+const services = {
+  'personal-care': {
+    icon: '👐',
+    title: 'Personal Care Services',
+    subtitle: 'Dignified, compassionate assistance with daily personal hygiene and grooming for seniors in Duluth and Gwinnett County.',
+    body: `
+      <h2 style="font-size:1.6rem; margin-bottom:0.75rem;">What is Personal Care?</h2>
+      <p style="color:var(--mid); margin-bottom:1rem;">Personal care refers to hands-on assistance with the activities of daily living (ADLs) that many seniors and adults find increasingly difficult to manage independently. Our caregivers provide this support with patience, professionalism, and a deep respect for each client's dignity and preferences.</p>
+      <h2 style="font-size:1.3rem; margin:1.5rem 0 0.5rem;">Services Include</h2>
+      <ul style="list-style:none;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:0.4rem;margin-bottom:1.25rem;">
+        <li style="padding:0.35rem 0;color:var(--mid);font-size:0.92rem;">✓ Bathing & shower assistance</li>
+        <li style="padding:0.35rem 0;color:var(--mid);font-size:0.92rem;">✓ Dressing & grooming help</li>
+        <li style="padding:0.35rem 0;color:var(--mid);font-size:0.92rem;">✓ Oral hygiene & skin care</li>
+        <li style="padding:0.35rem 0;color:var(--mid);font-size:0.92rem;">✓ Toileting & continence care</li>
+        <li style="padding:0.35rem 0;color:var(--mid);font-size:0.92rem;">✓ Mobility & transfer assistance</li>
+        <li style="padding:0.35rem 0;color:var(--mid);font-size:0.92rem;">✓ Medication reminders</li>
+        <li style="padding:0.35rem 0;color:var(--mid);font-size:0.92rem;">✓ Meal preparation</li>
+        <li style="padding:0.35rem 0;color:var(--mid);font-size:0.92rem;">✓ Light housekeeping</li>
+      </ul>
+      <h2 style="font-size:1.3rem; margin:1.5rem 0 0.5rem;">Our Approach</h2>
+      <p style="color:var(--mid); margin-bottom:1rem;">Every personal care client in Duluth, GA receives a tailored care plan developed in collaboration with their family and, when appropriate, their physician. We believe that receiving personal assistance should never feel clinical or impersonal — it should feel supportive, warm, and respectful of the individual's autonomy.</p>
+      <p style="color:var(--mid);">Our caregivers are trained in safe handling techniques, infection prevention, and compassionate communication. They understand how to provide assistance while encouraging as much independence as the client is comfortable with.</p>
+    `
+  },
+  'companion-care': {
+    icon: '💬',
+    title: 'Companion Care Services',
+    subtitle: 'Meaningful social engagement and emotional support to help seniors thrive — not just survive — at home.',
+    body: `
+      <h2 style="font-size:1.6rem; margin-bottom:0.75rem;">The Power of Connection</h2>
+      <p style="color:var(--mid); margin-bottom:1rem;">Loneliness and social isolation are among the most significant health risks facing older adults today — comparable in impact to smoking and obesity. Companion care directly addresses this by providing consistent, meaningful human connection for seniors who live alone or whose families can't be present every day.</p>
+      <h2 style="font-size:1.3rem; margin:1.5rem 0 0.5rem;">Services Include</h2>
+      <ul style="list-style:none;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:0.4rem;margin-bottom:1.25rem;">
+        <li style="padding:0.35rem 0;color:var(--mid);font-size:0.92rem;">✓ Friendly conversation & listening</li>
+        <li style="padding:0.35rem 0;color:var(--mid);font-size:0.92rem;">✓ Card games, puzzles, hobbies</li>
+        <li style="padding:0.35rem 0;color:var(--mid);font-size:0.92rem;">✓ Walks & gentle outings</li>
+        <li style="padding:0.35rem 0;color:var(--mid);font-size:0.92rem;">✓ Appointment accompaniment</li>
+        <li style="padding:0.35rem 0;color:var(--mid);font-size:0.92rem;">✓ Reading & music activities</li>
+        <li style="padding:0.35rem 0;color:var(--mid);font-size:0.92rem;">✓ Grocery shopping & errands</li>
+        <li style="padding:0.35rem 0;color:var(--mid);font-size:0.92rem;">✓ Technology help (video calls)</li>
+        <li style="padding:0.35rem 0;color:var(--mid);font-size:0.92rem;">✓ Holiday & event company</li>
+      </ul>
+      <p style="color:var(--mid);">More than a service, companion care builds genuine friendships. Many of our Duluth-area companion caregivers have worked with the same clients for years, becoming a trusted and beloved presence in their lives.</p>
+    `
+  },
+  'dementia-alzheimers-care': {
+    icon: '🧠',
+    title: "Dementia & Alzheimer's Care",
+    subtitle: "Specialized, patient-centered memory care support for individuals and families navigating cognitive decline.",
+    body: `
+      <h2 style="font-size:1.6rem; margin-bottom:0.75rem;">Understanding Memory Care</h2>
+      <p style="color:var(--mid); margin-bottom:1rem;">Caring for a loved one with Alzheimer's disease or another form of dementia requires a unique set of skills, boundless patience, and specialized knowledge. Our memory care team is trained in dementia-specific techniques that prioritize safety, comfort, and the preservation of dignity throughout every stage of the condition.</p>
+      <h2 style="font-size:1.3rem; margin:1.5rem 0 0.5rem;">Our Memory Care Services Include</h2>
+      <ul style="list-style:none;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:0.4rem;margin-bottom:1.25rem;">
+        <li style="padding:0.35rem 0;color:var(--mid);font-size:0.92rem;">✓ Structured daily routines</li>
+        <li style="padding:0.35rem 0;color:var(--mid);font-size:0.92rem;">✓ Wandering supervision & safety</li>
+        <li style="padding:0.35rem 0;color:var(--mid);font-size:0.92rem;">✓ Cognitive engagement activities</li>
+        <li style="padding:0.35rem 0;color:var(--mid);font-size:0.92rem;">✓ Behavioral support strategies</li>
+        <li style="padding:0.35rem 0;color:var(--mid);font-size:0.92rem;">✓ Personal care & hygiene</li>
+        <li style="padding:0.35rem 0;color:var(--mid);font-size:0.92rem;">✓ Family caregiver coaching</li>
+        <li style="padding:0.35rem 0;color:var(--mid);font-size:0.92rem;">✓ Communication support</li>
+        <li style="padding:0.35rem 0;color:var(--mid);font-size:0.92rem;">✓ Medication reminders</li>
+      </ul>
+      <p style="color:var(--mid);">We also provide education and emotional support for family caregivers — because the ripple effects of dementia extend to everyone who loves the person living with it.</p>
+    `
+  },
+  'post-hospital-transition-care': {
+    icon: '🏥',
+    title: 'Post-Hospital Transition Care',
+    subtitle: 'Expert at-home support after a hospital stay or surgery — focused on safe recovery and reducing readmission risk.',
+    body: `
+      <h2 style="font-size:1.6rem; margin-bottom:0.75rem;">Bridging Hospital to Home</h2>
+      <p style="color:var(--mid); margin-bottom:1rem;">The days and weeks immediately following a hospital discharge are among the most critical in a person's recovery. Without proper support at home, patients face a significantly elevated risk of complications, falls, and costly hospital readmissions. Homecare Solutions provides expert transition care designed to close that gap.</p>
+      <h2 style="font-size:1.3rem; margin:1.5rem 0 0.5rem;">Post-Hospital Services Include</h2>
+      <ul style="list-style:none;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:0.4rem;margin-bottom:1.25rem;">
+        <li style="padding:0.35rem 0;color:var(--mid);font-size:0.92rem;">✓ Safe discharge transport</li>
+        <li style="padding:0.35rem 0;color:var(--mid);font-size:0.92rem;">✓ Home safety assessment</li>
+        <li style="padding:0.35rem 0;color:var(--mid);font-size:0.92rem;">✓ Medication management reminders</li>
+        <li style="padding:0.35rem 0;color:var(--mid);font-size:0.92rem;">✓ Follow-up appointment support</li>
+        <li style="padding:0.35rem 0;color:var(--mid);font-size:0.92rem;">✓ Wound care observation</li>
+        <li style="padding:0.35rem 0;color:var(--mid);font-size:0.92rem;">✓ Nutritious meal preparation</li>
+        <li style="padding:0.35rem 0;color:var(--mid);font-size:0.92rem;">✓ Mobility & exercise encouragement</li>
+        <li style="padding:0.35rem 0;color:var(--mid);font-size:0.92rem;">✓ Family progress updates</li>
+      </ul>
+      <p style="color:var(--mid);">We coordinate closely with discharge nurses, physical therapists, and physicians to ensure continuity of care from the moment your loved one leaves the hospital to full recovery.</p>
+    `
+  },
+  'respite-care': {
+    icon: '☀️',
+    title: 'Respite Care Services',
+    subtitle: 'Temporary, professional relief for primary family caregivers who need time to rest, recharge, and take care of themselves.',
+    body: `
+      <h2 style="font-size:1.6rem; margin-bottom:0.75rem;">Every Caregiver Needs a Break</h2>
+      <p style="color:var(--mid); margin-bottom:1rem;">Family caregiving is one of the most demanding roles a person can take on. Burnout is not a sign of weakness — it's a predictable result of sustained, intensive caregiving without adequate support. Respite care gives primary caregivers the space to rest, tend to their own health, and return to their role with renewed energy.</p>
+      <h2 style="font-size:1.3rem; margin:1.5rem 0 0.5rem;">Respite Care Includes</h2>
+      <ul style="list-style:none;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:0.4rem;margin-bottom:1.25rem;">
+        <li style="padding:0.35rem 0;color:var(--mid);font-size:0.92rem;">✓ A few hours to several days of relief</li>
+        <li style="padding:0.35rem 0;color:var(--mid);font-size:0.92rem;">✓ Consistent, familiar caregivers</li>
+        <li style="padding:0.35rem 0;color:var(--mid);font-size:0.92rem;">✓ Full continuation of care routines</li>
+        <li style="padding:0.35rem 0;color:var(--mid);font-size:0.92rem;">✓ Real-time family check-ins</li>
+        <li style="padding:0.35rem 0;color:var(--mid);font-size:0.92rem;">✓ Emergency & planned respite</li>
+        <li style="padding:0.35rem 0;color:var(--mid);font-size:0.92rem;">✓ Flexible scheduling</li>
+      </ul>
+      <p style="color:var(--mid);">We understand how hard it is to hand off the care of someone you love. That's why we prioritize continuity — using the same caregivers your loved one already knows, and keeping you fully informed throughout.</p>
+    `
+  },
+  '24-hour-care': {
+    icon: '🌙',
+    title: '24-Hour Home Care Services',
+    subtitle: 'Around-the-clock care and supervision for individuals who need continuous, attentive support at home.',
+    body: `
+      <h2 style="font-size:1.6rem; margin-bottom:0.75rem;">Continuous Care, Day and Night</h2>
+      <p style="color:var(--mid); margin-bottom:1rem;">Some individuals require more than periodic visits — they need a caregiver present throughout the day and night to ensure their safety, meet complex needs, or simply provide peace of mind for their families. Our 24-hour care program delivers just that, with a structured team approach to ensure consistent, quality care around the clock.</p>
+      <h2 style="font-size:1.3rem; margin:1.5rem 0 0.5rem;">24-Hour Care Includes</h2>
+      <ul style="list-style:none;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:0.4rem;margin-bottom:1.25rem;">
+        <li style="padding:0.35rem 0;color:var(--mid);font-size:0.92rem;">✓ Full daytime & overnight coverage</li>
+        <li style="padding:0.35rem 0;color:var(--mid);font-size:0.92rem;">✓ Rotating caregiver teams</li>
+        <li style="padding:0.35rem 0;color:var(--mid);font-size:0.92rem;">✓ Emergency response readiness</li>
+        <li style="padding:0.35rem 0;color:var(--mid);font-size:0.92rem;">✓ Fall prevention & supervision</li>
+        <li style="padding:0.35rem 0;color:var(--mid);font-size:0.92rem;">✓ Nighttime toileting assistance</li>
+        <li style="padding:0.35rem 0;color:var(--mid);font-size:0.92rem;">✓ All personal care & ADL support</li>
+        <li style="padding:0.35rem 0;color:var(--mid);font-size:0.92rem;">✓ Coordinated care planning</li>
+        <li style="padding:0.35rem 0;color:var(--mid);font-size:0.92rem;">✓ Daily family updates</li>
+      </ul>
+      <p style="color:var(--mid);">We carefully assemble and train caregiver teams for 24-hour clients, ensuring smooth handoffs and consistent care quality across every shift. Your loved one will always have a familiar, trusted face nearby.</p>
+    `
+  }
+};
+
+// ─── NAVIGATION ─────────────────────────────────────────────────
+function showPage(pageId) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  const page = document.getElementById('page-' + pageId);
+  if (page) {
+    page.classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+}
+
+function showServiceDetail(slug) {
+  const svc = services[slug];
+  if (!svc) return;
+  
+  document.getElementById('service-breadcrumb').textContent = svc.title;
+  document.getElementById('service-icon').textContent = svc.icon;
+  document.getElementById('service-title').textContent = svc.title;
+  document.getElementById('service-subtitle').textContent = svc.subtitle;
+  document.getElementById('service-body').innerHTML = svc.body;
+  
+  // Build sidebar
+  const list = document.getElementById('sidebar-services-list');
+  list.innerHTML = Object.entries(services).map(([s, d]) => 
+    `<li class="${s === slug ? 'active' : ''}" onclick="showServiceDetail('${s}')">${d.icon} ${d.title.replace(' Services','').replace(' Care Services','').replace(' Care','')}</li>`
+  ).join('');
+  
+  showPage('service-detail');
+}
+
+// ─── CONTACT FORM ───────────────────────────────────────────────
+async function handleContactSubmit(e) {
+  e.preventDefault();
+  const form = e.target;
+  const honeypot = form.querySelector('input[name="website"]').value;
+  if (honeypot) return;
+
+  const name = form.querySelector('#name').value.trim();
+  const email = form.querySelector('#email').value.trim();
+  const phone = form.querySelector('#phone').value.trim();
+
+  if (!name || !email || !phone) {
+    alert('Please fill in all required fields.');
+    return;
+  }
+
+  const submitBtn = form.querySelector('button[type="submit"]');
+  submitBtn.textContent = 'Sending...';
+  submitBtn.disabled = true;
+
+  try {
+    const response = await fetch('https://formspree.io/f/mgolqnzo', {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: new FormData(form)
+    });
+
+    if (response.ok) {
+      form.style.display = 'none';
+      document.getElementById('contact-success').classList.add('show');
+    } else {
+      const data = await response.json();
+      const msg = data.errors ? data.errors.map(e => e.message).join(', ') : 'Something went wrong. Please call us directly.';
+      alert(msg);
+      submitBtn.textContent = 'Send Message →';
+      submitBtn.disabled = false;
+    }
+  } catch (err) {
+    alert('Network error — please try again or call us at (404) 528-5327.');
+    submitBtn.textContent = 'Send Message →';
+    submitBtn.disabled = false;
+  }
+}
+
+// init
+showPage('home');
+</script>
+</body>
+</html>
