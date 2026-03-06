@@ -248,19 +248,98 @@ footer{background:#111;color:#ccc;padding:4rem 2rem 2rem;}
 .footer-links li span:hover{color:white;}
 .footer-bottom{max-width:1200px;margin:0 auto;border-top:1px solid #333;padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;font-size:0.78rem;color:#666;}
 
-/* MOBILE */
+/* HAMBURGER BUTTON */
+.nav-hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;background:none;border:none;cursor:pointer;padding:8px;border-radius:6px;flex-shrink:0;}
+.nav-hamburger span{display:block;width:22px;height:2px;background:var(--text);border-radius:2px;transition:all 0.25s;}
+.nav-hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.nav-hamburger.open span:nth-child(2){opacity:0;}
+.nav-hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+
+/* MOBILE DRAWER */
+.mobile-menu{display:none;position:fixed;top:72px;left:0;right:0;bottom:0;background:white;z-index:99;overflow-y:auto;padding:1rem 0 2rem;border-top:1px solid var(--border);}
+.mobile-menu.open{display:block;}
+.mobile-menu-link{display:block;padding:1rem 1.5rem;font-size:1rem;font-weight:500;color:var(--text);border-bottom:1px solid var(--border);cursor:pointer;}
+.mobile-menu-link:active{background:var(--red-pale);}
+.mobile-menu-ctas{display:flex;flex-direction:column;gap:0.75rem;padding:1.25rem 1.5rem;}
+
+/* TABLET 900px */
 @media(max-width:900px){
-  .hero-inner{grid-template-columns:1fr;} .hero-badges{display:none;} .nav-links{display:none;}
-  .about-grid,.careers-intro,.contact-grid{grid-template-columns:1fr;}
-  .map-container{grid-template-columns:1fr;} .footer-grid{grid-template-columns:1fr 1fr;} .form-row{grid-template-columns:1fr;}
-  .photo-feature{grid-template-columns:1fr;} .photo-feature-img img{min-height:280px;height:280px;}
-  .photo-row{grid-template-columns:1fr;gap:1.5rem;} .photo-row.reverse{direction:ltr;}
-  .photo-mosaic{grid-template-columns:1fr 1fr;grid-template-rows:auto;} .photo-mosaic-cell:first-child{grid-row:span 1;} .photo-mosaic-cell img{height:180px;}
-  .photo-strip-inner{overflow-x:auto;-webkit-overflow-scrolling:touch;scroll-snap-type:x mandatory;}
-  .photo-strip-card{flex:0 0 200px;scroll-snap-align:start;} .photo-strip-card img{height:150px;}
+  .nav-links{display:none;}
+  .nav-ctas{display:none;}
+  .nav-hamburger{display:flex;}
+  .nav-logo-text{font-size:0.88rem;}
+  .nav-logo-sub{font-size:0.62rem;}
+  .hero{padding:4rem 1.25rem 3rem;}
+  .hero-inner{grid-template-columns:1fr;}
+  .hero-badges{display:none;}
+  .hero-ctas{flex-direction:column;}
+  .btn-hero-primary,.btn-hero-outline{width:100%;text-align:center;}
+  .trust-bar-inner{gap:1rem;}
+  .trust-item{font-size:0.78rem;}
+  .section{padding:3.5rem 1.25rem;}
+  .section-alt{padding:3.5rem 1.25rem;}
+  .photo-feature{grid-template-columns:1fr;}
+  .photo-feature-img img{min-height:260px;height:260px;}
+  .photo-feature-content{padding:2rem 1.5rem;}
+  .photo-strip{padding:2.5rem 0;}
+  .photo-strip-header{padding:0 1.25rem 1.25rem;}
+  .photo-strip-inner{overflow-x:auto;-webkit-overflow-scrolling:touch;scroll-snap-type:x mandatory;padding:0 1.25rem;justify-content:flex-start;}
+  .photo-strip-card{flex:0 0 180px;scroll-snap-align:start;}
+  .photo-strip-card img{height:150px;}
+  .photo-row{grid-template-columns:1fr;gap:1.5rem;margin-bottom:3rem;}
+  .photo-row.reverse{direction:ltr;}
+  .photo-row img{height:260px;}
+  .photo-mosaic{grid-template-columns:1fr 1fr;grid-template-rows:auto;}
+  .photo-mosaic-cell:first-child{grid-row:span 1;}
+  .photo-mosaic-cell img{height:160px;}
+  .about-grid,.careers-intro,.contact-grid{grid-template-columns:1fr;gap:2rem;}
+  .map-container{grid-template-columns:1fr;}
+  .form-row{grid-template-columns:1fr;}
+  .goals-grid{grid-template-columns:1fr 1fr;}
+  .career-perks{grid-template-columns:1fr 1fr;}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:2rem;}
+  footer{padding:3rem 1.25rem 1.5rem;}
+  .cta-block{padding:3.5rem 1.25rem;}
+  .cta-block-btns{flex-direction:column;align-items:center;}
+  .cta-block-btns button{width:100%;max-width:340px;}
+  .map-hero{padding:3rem 1.25rem 2rem;}
+  .map-stats{gap:1.5rem;}
+  .services-grid{grid-template-columns:1fr;}
 }
+
+/* MOBILE 600px */
 @media(max-width:600px){
-  .footer-grid{grid-template-columns:1fr;} .goals-grid{grid-template-columns:1fr;} .photo-feature-content{padding:2.5rem 1.5rem;}
+  .nav-inner{height:64px;}
+  .nav-logo img{height:36px;}
+  .mobile-menu{top:64px;}
+  .hero{padding:3rem 1rem 2.5rem;}
+  .hero h1{font-size:1.6rem;}
+  .hero-sub{font-size:0.95rem;}
+  .trust-bar{display:none;}
+  .section,.section-alt{padding:2.5rem 1rem;}
+  .section-title{font-size:1.6rem;}
+  .card-grid{grid-template-columns:1fr;}
+  .card{padding:1.25rem;}
+  .info-cards{grid-template-columns:1fr 1fr;}
+  .photo-feature-content{padding:1.75rem 1rem;}
+  .photo-feature-img img{height:220px;min-height:220px;}
+  .photo-row img{height:220px;}
+  .photo-mosaic-cell img{height:130px;}
+  .form-group input,.form-group select,.form-group textarea{font-size:16px;}
+  .careers-form-section{padding:1.5rem 1rem;}
+  .goals-grid{grid-template-columns:1fr;}
+  .career-perks{grid-template-columns:1fr;}
+  .about-visual{padding:2rem 1.5rem;}
+  .contact-info-box{padding:1.75rem 1.25rem;}
+  .footer-grid{grid-template-columns:1fr;gap:1.5rem;}
+  .footer-bottom{flex-direction:column;text-align:center;gap:0.5rem;}
+  .cta-block{padding:3rem 1rem;}
+  .cta-block h2{font-size:1.5rem;}
+  .map-hero h1{font-size:1.6rem;}
+  .map-stat-num{font-size:1.8rem;}
+  .map-container{padding:1rem;}
+  .reviews-grid{grid-template-columns:1fr;}
+  .section-header.centered{margin-bottom:2rem;}
 }
 </style>
 </head>
@@ -285,8 +364,24 @@ footer{background:#111;color:#ccc;padding:4rem 2rem 2rem;}
       <button class="btn-outline" onclick="showPage('contact')">Get Care</button>
       <button class="btn-primary" onclick="window.location.href='tel:+14045285327'">&#9742; (404) 528-5327</button>
     </div>
+    <button class="nav-hamburger" id="hamburger" aria-label="Open menu" onclick="toggleMobileMenu()">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
+<div class="mobile-menu" id="mobile-menu">
+  <span class="mobile-menu-link" onclick="navTo('home')">Home</span>
+  <span class="mobile-menu-link" onclick="navTo('about')">About Us</span>
+  <span class="mobile-menu-link" onclick="navTo('services')">Our Services</span>
+  <span class="mobile-menu-link" onclick="navTo('coverage')">Coverage Map</span>
+  <span class="mobile-menu-link" onclick="navTo('reviews')">Reviews</span>
+  <span class="mobile-menu-link" onclick="navTo('careers')">Careers</span>
+  <span class="mobile-menu-link" onclick="navTo('contact')">Contact</span>
+  <div class="mobile-menu-ctas">
+    <button class="btn-submit" onclick="navTo('contact')" style="border-radius:8px;">Request Free Assessment</button>
+    <button class="btn-primary" onclick="window.location.href='tel:+14045285327';closeMobileMenu();" style="padding:0.9rem;font-size:1rem;border-radius:8px;">&#9742; (404) 528-5327</button>
+  </div>
+</div>
 
 <!-- HOME -->
 <div id="page-home" class="page active">
@@ -682,6 +777,9 @@ footer{background:#111;color:#ccc;padding:4rem 2rem 2rem;}
 </footer>
 
 <script>
+function toggleMobileMenu(){const h=document.getElementById('hamburger');const m=document.getElementById('mobile-menu');h.classList.toggle('open');m.classList.toggle('open');document.body.style.overflow=m.classList.contains('open')?'hidden':'';}
+function closeMobileMenu(){const h=document.getElementById('hamburger');const m=document.getElementById('mobile-menu');h.classList.remove('open');m.classList.remove('open');document.body.style.overflow='';}
+function navTo(id){closeMobileMenu();showPage(id);}
 function showPage(id){document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));const el=document.getElementById('page-'+id);if(el){el.classList.add('active');window.scrollTo({top:0,behavior:'smooth'});}}
 function handleContactSubmit(e){e.preventDefault();const form=e.target;const data=new FormData(form);fetch('https://api.web3forms.com/submit',{method:'POST',body:data}).then(r=>r.json()).then(d=>{if(d.success){form.style.display='none';document.getElementById('contact-success').classList.add('show');}else{alert('Something went wrong. Please call us at (404) 528-5327.');}}).catch(()=>alert('Something went wrong. Please call us at (404) 528-5327.'));}
 function handleCareersSubmit(e){e.preventDefault();const form=e.target;const data=new FormData(form);fetch('https://api.web3forms.com/submit',{method:'POST',body:data}).then(r=>r.json()).then(d=>{if(d.success){form.style.display='none';document.getElementById('careers-success').classList.add('show');}else{alert('Something went wrong. Please call us at (404) 528-5327.');}}).catch(()=>alert('Something went wrong. Please call us at (404) 528-5327.'));}
