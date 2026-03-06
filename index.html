@@ -9,7 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 <style>
 :root {
-  --red: #C0272D; --red-dark: #8B1A1E; --red-light: #E8474C; --red-pale: #FFF0F0;
+  --red: #A8353A; --red-dark: #7A2226; --red-light: #C94449; --red-pale: #FFF2F2;
   --white: #FFFFFF; --off-white: #FAFAFA; --light-gray: #F5F5F5; --border: #E5E5E5;
   --text: #1A1A1A; --text-mid: #555; --text-light: #888; --gold: #D4A843;
 }
@@ -25,7 +25,7 @@ img{display:block;max-width:100%;}
 nav{background:var(--white);border-bottom:3px solid var(--red);position:sticky;top:0;z-index:100;padding:0 2rem;box-shadow:0 2px 12px rgba(0,0,0,0.08);}
 .nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:72px;gap:1rem;}
 .nav-logo{display:flex;align-items:center;gap:0.6rem;cursor:pointer;}
-.nav-logo-mark{width:42px;height:42px;background:var(--red);border-radius:8px;display:flex;align-items:center;justify-content:center;color:white;font-size:20px;font-weight:700;}
+.nav-logo img{height:44px;width:auto;display:block;}
 .nav-logo-text{font-family:'Merriweather',serif;font-size:1rem;color:var(--text);font-weight:700;}
 .nav-logo-sub{font-size:0.68rem;color:var(--text-mid);display:block;}
 .nav-links{display:flex;gap:0.2rem;align-items:center;}
@@ -38,7 +38,7 @@ nav{background:var(--white);border-bottom:3px solid var(--red);position:sticky;t
 .btn-primary:hover{background:var(--red-dark);}
 
 /* HERO */
-.hero{background:linear-gradient(135deg,var(--red-dark) 0%,var(--red) 60%,#E05050 100%);color:white;padding:5.5rem 2rem 4.5rem;position:relative;overflow:hidden;}
+.hero{background:linear-gradient(135deg,var(--red-dark) 0%,var(--red) 60%,#C05055 100%);color:white;padding:5.5rem 2rem 4.5rem;position:relative;overflow:hidden;}
 .hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.04' fill-rule='evenodd'%3E%3Ccircle cx='40' cy='40' r='2'/%3E%3C/g%3E%3C/svg%3E");}
 .hero-inner{max-width:1200px;margin:0 auto;position:relative;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;}
 .hero-tag{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);border-radius:100px;padding:0.3rem 1rem;font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:1.25rem;}
@@ -73,14 +73,14 @@ nav{background:var(--white);border-bottom:3px solid var(--red);position:sticky;t
 /* CARDS */
 .card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;}
 .card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:2rem;transition:box-shadow 0.2s,transform 0.2s,border-color 0.2s;cursor:pointer;}
-.card:hover{box-shadow:0 8px 32px rgba(192,39,45,0.1);transform:translateY(-2px);border-color:#FFDADA;}
+.card:hover{box-shadow:0 8px 32px rgba(168,53,58,0.1);transform:translateY(-2px);border-color:#FFDADA;}
 .card-icon{width:52px;height:52px;background:var(--red-pale);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:1.25rem;border:1px solid #FFDADA;}
 .card h3{font-size:1.1rem;margin-bottom:0.6rem;} .card p{font-size:0.88rem;color:var(--text-mid);line-height:1.7;}
 
 /* SERVICES */
 .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:2rem;}
 .service-card{background:var(--white);border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:box-shadow 0.2s,transform 0.2s;}
-.service-card:hover{box-shadow:0 12px 40px rgba(192,39,45,0.12);transform:translateY(-3px);}
+.service-card:hover{box-shadow:0 12px 40px rgba(168,53,58,0.12);transform:translateY(-3px);}
 .service-card-img{height:220px;overflow:hidden;background:var(--red-pale);display:flex;align-items:center;justify-content:center;font-size:5rem;}
 .service-card-img img{width:100%;height:220px;object-fit:cover;display:block;}
 .service-card-body{padding:1.75rem;}
@@ -218,7 +218,7 @@ nav{background:var(--white);border-bottom:3px solid var(--red);position:sticky;t
 .radio-group{display:flex;gap:1.5rem;flex-wrap:wrap;}
 .radio-option{display:flex;align-items:center;gap:0.4rem;font-size:0.88rem;cursor:pointer;}
 .radio-option input{accent-color:var(--red);}
-.form-success{background:#FFF0F0;border:2px solid var(--red);border-radius:12px;padding:2rem;text-align:center;color:var(--red-dark);display:none;font-weight:600;}
+.form-success{background:#FFF2F2;border:2px solid var(--red);border-radius:12px;padding:2rem;text-align:center;color:var(--red-dark);display:none;font-weight:600;}
 .form-success.show{display:block;} .form-success .success-icon{font-size:3rem;margin-bottom:0.5rem;}
 .btn-submit{background:var(--red);color:white;padding:0.9rem 2rem;border-radius:8px;font-size:1rem;font-weight:700;cursor:pointer;border:none;transition:background 0.2s;width:100%;}
 .btn-submit:hover{background:var(--red-dark);}
@@ -269,8 +269,7 @@ footer{background:#111;color:#ccc;padding:4rem 2rem 2rem;}
 <nav>
   <div class="nav-inner">
     <div class="nav-logo" onclick="showPage('home')">
-      <div class="nav-logo-mark">&#127968;</div>
-      <div><div class="nav-logo-text">Home Care Solutions</div><span class="nav-logo-sub">54 counties in Georgia</span></div>
+      <img src="logo.png" alt="Home Care Solutions logo"/>
     </div>
     <div class="nav-links">
       <span class="nav-link" onclick="showPage('home')">Home</span>
@@ -346,26 +345,11 @@ footer{background:#111;color:#ccc;padding:4rem 2rem 2rem;}
       <h2 style="font-size:1.5rem;color:var(--text);">See the Difference We Make</h2>
     </div>
     <div class="photo-strip-inner">
-      <div class="photo-strip-card">
-        <img src="caregiverclient.png" alt="Caregiver and client side-by-side at home"/>
-        <div class="photo-strip-caption"><strong>Client Engagement</strong><span>Side-by-side at home</span></div>
-      </div>
-      <div class="photo-strip-card">
-        <img src="mealprep.png" alt="Caregiver preparing a meal"/>
-        <div class="photo-strip-caption"><strong>Meal Preparation</strong><span>Caregiver preparing a meal</span></div>
-      </div>
-      <div class="photo-strip-card">
-        <img src="medsupport.png" alt="Nurse reviewing medications with a client"/>
-        <div class="photo-strip-caption"><strong>Medication Reminder</strong><span>Nurse reviewing medications</span></div>
-      </div>
-      <div class="photo-strip-card">
-        <img src="joyfulcomp.png" alt="Client smiling with caregiver"/>
-        <div class="photo-strip-caption"><strong>Joyful Companionship</strong><span>Client smiling with caregiver</span></div>
-      </div>
-      <div class="photo-strip-card">
-        <img src="mobileassist.png" alt="Aide helping client walk safely"/>
-        <div class="photo-strip-caption"><strong>Mobility Assistance</strong><span>Aide helping client walk safely</span></div>
-      </div>
+      <div class="photo-strip-card"><img src="caregiverclient.png" alt="Caregiver and client side-by-side at home"/><div class="photo-strip-caption"><strong>Client Engagement</strong><span>Side-by-side at home</span></div></div>
+      <div class="photo-strip-card"><img src="mealprep.png" alt="Caregiver preparing a meal"/><div class="photo-strip-caption"><strong>Meal Preparation</strong><span>Caregiver preparing a meal</span></div></div>
+      <div class="photo-strip-card"><img src="medsupport.png" alt="Nurse reviewing medications with a client"/><div class="photo-strip-caption"><strong>Medication Reminder</strong><span>Nurse reviewing medications</span></div></div>
+      <div class="photo-strip-card"><img src="joyfulcomp.png" alt="Client smiling with caregiver"/><div class="photo-strip-caption"><strong>Joyful Companionship</strong><span>Client smiling with caregiver</span></div></div>
+      <div class="photo-strip-card"><img src="mobileassist.png" alt="Aide helping client walk safely"/><div class="photo-strip-caption"><strong>Mobility Assistance</strong><span>Aide helping client walk safely</span></div></div>
     </div>
   </div>
 
@@ -444,28 +428,12 @@ footer{background:#111;color:#ccc;padding:4rem 2rem 2rem;}
             <div class="goal-item">Prevent Hospitalization</div>
           </div>
         </div>
-        <!-- PHOTO MOSAIC -->
         <div class="photo-mosaic">
-          <div class="photo-mosaic-cell" style="border-radius:14px 0 0 14px;">
-            <img src="senior.png" alt="Elderly client comfortable in their own home"/>
-            <div class="photo-mosaic-caption"><strong>Senior at Home</strong><span>Comfortable &amp; independent</span></div>
-          </div>
-          <div class="photo-mosaic-cell" style="border-radius:0 14px 0 0;">
-            <img src="nurse.png" alt="Nurse providing in-home care"/>
-            <div class="photo-mosaic-caption"><strong>Skilled Nursing Visit</strong><span>In-home care</span></div>
-          </div>
-          <div class="photo-mosaic-cell">
-            <img src="family.png" alt="Care coordinator with family"/>
-            <div class="photo-mosaic-caption"><strong>Family Meeting</strong><span>Care coordinator with family</span></div>
-          </div>
-          <div class="photo-mosaic-cell">
-            <img src="independent.png" alt="Client doing daily activities"/>
-            <div class="photo-mosaic-caption"><strong>Independence</strong><span>Daily activities</span></div>
-          </div>
-          <div class="photo-mosaic-cell" style="border-radius:0 0 14px 0;">
-            <img src="morning.png" alt="Caregiver and client sharing tea"/>
-            <div class="photo-mosaic-caption"><strong>Morning Routine</strong><span>Caregiver &amp; client sharing tea</span></div>
-          </div>
+          <div class="photo-mosaic-cell" style="border-radius:14px 0 0 14px;"><img src="senior.png" alt="Elderly client comfortable in their own home"/><div class="photo-mosaic-caption"><strong>Senior at Home</strong><span>Comfortable &amp; independent</span></div></div>
+          <div class="photo-mosaic-cell" style="border-radius:0 14px 0 0;"><img src="nurse.png" alt="Nurse providing in-home care"/><div class="photo-mosaic-caption"><strong>Skilled Nursing Visit</strong><span>In-home care</span></div></div>
+          <div class="photo-mosaic-cell"><img src="family.png" alt="Care coordinator with family"/><div class="photo-mosaic-caption"><strong>Family Meeting</strong><span>Care coordinator with family</span></div></div>
+          <div class="photo-mosaic-cell"><img src="independent.png" alt="Client doing daily activities"/><div class="photo-mosaic-caption"><strong>Independence</strong><span>Daily activities</span></div></div>
+          <div class="photo-mosaic-cell" style="border-radius:0 0 14px 0;"><img src="morning.png" alt="Caregiver and client sharing tea"/><div class="photo-mosaic-caption"><strong>Morning Routine</strong><span>Caregiver &amp; client sharing tea</span></div></div>
         </div>
       </div>
     </div>
@@ -505,13 +473,12 @@ footer{background:#111;color:#ccc;padding:4rem 2rem 2rem;}
   <section class="section">
     <div class="section-inner">
       <div class="services-grid">
-        <div class="service-card"><div class="service-card-img"><img src="grooming.jpg" alt="Personal Care" onerror="this.parentElement.innerHTML='&#129330;'"/></div><div class="service-card-body"><h3>Personal Care</h3><p>Our personal care services provide compassionate assistance with essential daily activities, helping clients maintain their health, hygiene, and independence in the comfort of their own home.</p><ul><li>Bathing &amp; Grooming Assistance</li><li>Dressing &amp; Personal Hygiene</li><li>Mobility &amp; Transfer Assistance</li><li>Toileting &amp; Incontinence Care</li><li>Medication Reminders</li><li>Meal Preparation</li><li>Light Housekeeping</li><li>Watchful Oversight</li></li></ul></div></div>
-        <div class="service-card"><div class="service-card-img"><img src="companion.jpg" alt="Companionship" onerror="this.parentElement.innerHTML='&#128172;'"/></div><div class="service-card-body"><h3>Companionship</h3><p>Social connection is vital to health and happiness. Our caregivers provide meaningful companionship that reduces loneliness and enriches daily life for our clients.</p><ul><li>Friendly conversation &amp; Activities</li><li>Reading &amp; Games</li><li>Doctor Appointment Accompaniment</li></li><li>Light Errands &amp; Appointments</li><li>Walks &amp; Outings</li><li>Emotional Support</li><li>Family Communication Support</li></ul></div></div>
-        <div class="service-card"><div class="service-card-img"><img src="nurse.jpg" alt="Skilled Nursing" onerror="this.parentElement.innerHTML='&#129658;'"/></div><div class="service-card-body"><h3>Skilled Nursing</h3><p>Our licensed nurses deliver professional medical care at home, ensuring clinical quality while keeping clients comfortable and safe in their familiar environment.</p><ul><li>Medication Management</li><li>Wound Care &amp; Dressing Changes</li><li>Vital Signs Monitoring</li><li>Health Coaching</li><li>Post-Hospital Care Support</li><li>Physician Care Coordination</li><li> General Health &amp; Supervision</li></ul></div></div>
+        <div class="service-card"><div class="service-card-img"><img src="grooming.jpg" alt="Personal Care" onerror="this.parentElement.innerHTML='&#129330;'"/></div><div class="service-card-body"><h3>Personal Care</h3><p>Our personal care services provide compassionate assistance with essential daily activities, helping clients maintain their health, hygiene, and independence in the comfort of their own home.</p><ul><li>Bathing &amp; Grooming Assistance</li><li>Dressing &amp; Personal Hygiene</li><li>Mobility &amp; Transfer Assistance</li><li>Toileting &amp; Incontinence Care</li><li>Medication Reminders</li><li>Meal Preparation</li><li>Light Housekeeping</li><li>Watchful Oversight</li></ul></div></div>
+        <div class="service-card"><div class="service-card-img"><img src="companion.jpg" alt="Companionship" onerror="this.parentElement.innerHTML='&#128172;'"/></div><div class="service-card-body"><h3>Companionship</h3><p>Social connection is vital to health and happiness. Our caregivers provide meaningful companionship that reduces loneliness and enriches daily life for our clients.</p><ul><li>Friendly conversation &amp; Activities</li><li>Reading &amp; Games</li><li>Doctor Appointment Accompaniment</li><li>Light Errands &amp; Appointments</li><li>Walks &amp; Outings</li><li>Emotional Support</li><li>Family Communication Support</li></ul></div></div>
+        <div class="service-card"><div class="service-card-img"><img src="nurse.jpg" alt="Skilled Nursing" onerror="this.parentElement.innerHTML='&#129658;'"/></div><div class="service-card-body"><h3>Skilled Nursing</h3><p>Our licensed nurses deliver professional medical care at home, ensuring clinical quality while keeping clients comfortable and safe in their familiar environment.</p><ul><li>Medication Management</li><li>Wound Care &amp; Dressing Changes</li><li>Vital Signs Monitoring</li><li>Health Coaching</li><li>Post-Hospital Care Support</li><li>Physician Care Coordination</li><li>General Health &amp; Supervision</li></ul></div></div>
       </div>
     </div>
   </section>
-  <!-- PHOTO ROWS -->
   <section class="section section-alt">
     <div class="section-inner">
       <div class="section-header centered">
@@ -521,30 +488,15 @@ footer{background:#111;color:#ccc;padding:4rem 2rem 2rem;}
       </div>
       <div class="photo-row">
         <img src="grooming.jpg" alt="Caregiver helping a senior with morning routine at home"/>
-        <div class="photo-row-text">
-          <div class="section-label">Personal Care</div>
-          <h3>Gentle, Dignified Daily Support</h3>
-          <p>Our personal care aides are trained to assist with bathing, grooming, dressing, and all daily living activities &mdash; always with a warm, respectful approach that honors each person&rsquo;s dignity and independence.</p>
-          <p>Every aide goes through thorough background checks and is matched carefully to each client&rsquo;s personality and needs.</p>
-        </div>
+        <div class="photo-row-text"><div class="section-label">Personal Care</div><h3>Gentle, Dignified Daily Support</h3><p>Our personal care aides are trained to assist with bathing, grooming, dressing, and all daily living activities &mdash; always with a warm, respectful approach that honors each person&rsquo;s dignity and independence.</p><p>Every aide goes through thorough background checks and is matched carefully to each client&rsquo;s personality and needs.</p></div>
       </div>
       <div class="photo-row reverse">
         <img src="companion.jpg" alt="Caregiver and client laughing together in the living room"/>
-        <div class="photo-row-text">
-          <div class="section-label">Companionship</div>
-          <h3>More Than Care &mdash; A True Connection</h3>
-          <p>Loneliness can be as harmful as physical illness. Our companionship services ensure clients have genuine social engagement, emotional support, and the joy of a familiar, caring presence every day.</p>
-          <p>From walks and games to shared meals and conversations, our companions bring warmth and vitality to each visit.</p>
-        </div>
+        <div class="photo-row-text"><div class="section-label">Companionship</div><h3>More Than Care &mdash; A True Connection</h3><p>Loneliness can be as harmful as physical illness. Our companionship services ensure clients have genuine social engagement, emotional support, and the joy of a familiar, caring presence every day.</p><p>From walks and games to shared meals and conversations, our companions bring warmth and vitality to each visit.</p></div>
       </div>
       <div class="photo-row">
         <img src="nurse.jpg" alt="Licensed nurse reviewing medications with a client"/>
-        <div class="photo-row-text">
-          <div class="section-label">Skilled Nursing</div>
-          <h3>Clinical Quality in the Comfort of Home</h3>
-          <p>Our licensed nurses bring professional-level medical care directly to your home &mdash; managing medications, monitoring health indicators, providing wound care, and coordinating with your healthcare team.</p>
-          <p>Skilled nursing at home means fewer hospital visits, better outcomes, and peace of mind for the whole family.</p>
-        </div>
+        <div class="photo-row-text"><div class="section-label">Skilled Nursing</div><h3>Clinical Quality in the Comfort of Home</h3><p>Our licensed nurses bring professional-level medical care directly to your home &mdash; managing medications, monitoring health indicators, providing wound care, and coordinating with your healthcare team.</p><p>Skilled nursing at home means fewer hospital visits, better outcomes, and peace of mind for the whole family.</p></div>
       </div>
     </div>
   </section>
@@ -596,7 +548,6 @@ footer{background:#111;color:#ccc;padding:4rem 2rem 2rem;}
       </div>
     </div>
   </section>
-  <!-- PHOTO BANNER -->
   <div style="background:var(--light-gray);padding:3rem 2rem;">
     <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;">
       <div style="position:relative;border-radius:14px;overflow:hidden;height:220px;"><img src="family2.png" alt="Family moment" style="width:100%;height:100%;object-fit:cover;display:block;"/><div style="position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,0.6));padding:1.25rem 1rem 0.75rem;text-align:center;"><strong style="color:white;font-size:0.85rem;display:block;">Family Moment</strong><span style="color:rgba(255,255,255,0.8);font-size:0.75rem;">Client with family &amp; caregiver</span></div></div>
@@ -640,13 +591,11 @@ footer{background:#111;color:#ccc;padding:4rem 2rem 2rem;}
           <p style="font-size:0.88rem;opacity:0.85;text-align:center;line-height:1.7;">Your compassion and skill can transform someone&rsquo;s day &mdash; and their life. We provide the support and training you need to thrive.</p>
           <div style="background:rgba(255,255,255,0.12);border-radius:10px;padding:1.25rem;font-size:0.85rem;">
             <strong style="display:block;margin-bottom:0.5rem;">We&rsquo;re Looking For:</strong>
-            <div style="display:flex;flex-direction:column;gap:0.3rem;"><span>&#10003; Personal Care Aides</span><span>&#10003; Certified Nursing Aides</span><span>&#10003; Licensed Practical Nurse</span><span>&#10003;  Registered Nurse</span><span>&#10003; Case Workers</span></div>
+            <div style="display:flex;flex-direction:column;gap:0.3rem;"><span>&#10003; Personal Care Aides</span><span>&#10003; Certified Nursing Aides</span><span>&#10003; Licensed Practical Nurse</span><span>&#10003; Registered Nurse</span><span>&#10003; Case Workers</span></div>
           </div>
         </div>
       </div>
-      <div style="margin-bottom:3rem;">
-          <img src="team.png" alt="Our Care Team" style="width:100%;height:300px;object-fit:cover;border-radius:16px;display:block;"/>
-      </div>
+      <div style="margin-bottom:3rem;"><img src="team.png" alt="Our Care Team" style="width:100%;height:300px;object-fit:cover;border-radius:16px;display:block;"/></div>
       <div class="careers-form-section">
         <h3>Employment Application</h3>
         <p>Complete the form below and we&rsquo;ll be in touch within 48 hours. All positions require a background check.</p>
@@ -654,46 +603,22 @@ footer{background:#111;color:#ccc;padding:4rem 2rem 2rem;}
           <div class="form-row"><div class="form-group"><label for="c-firstname">First Name *</label><input type="text" id="c-firstname" name="firstname" required placeholder="First name"/></div><div class="form-group"><label for="c-lastname">Last Name *</label><input type="text" id="c-lastname" name="lastname" required placeholder="Last name"/></div></div>
           <div class="form-row"><div class="form-group"><label for="c-phone">Phone Number *</label><input type="tel" id="c-phone" name="phone" required placeholder="(770) 555-0000"/></div><div class="form-group"><label for="c-email">Email Address *</label><input type="email" id="c-email" name="email" required placeholder="you@email.com"/></div></div>
           <div class="form-group"><label for="c-address">Address *</label><input type="text" id="c-address" name="address" required placeholder="Street address, City, State, ZIP"/></div>
-          <div class="form-group"><label>Are you 18 years or older? *</label><div class="radio-group"><label class="radio-option"><input type="radio" name="citizen" value="Yes" required/> Yes</label><label class="radio-option"><input type="radio" name="citizen" value="No"/> No</label></div></div>
+          <div class="form-group"><label>Are you 18 years or older? *</label><div class="radio-group"><label class="radio-option"><input type="radio" name="age18" value="Yes" required/> Yes</label><label class="radio-option"><input type="radio" name="age18" value="No"/> No</label></div></div>
           <div class="form-group"><label>Are you a US Citizen or Green Card Holder? *</label><div class="radio-group"><label class="radio-option"><input type="radio" name="citizen" value="Yes" required/> Yes</label><label class="radio-option"><input type="radio" name="citizen" value="No"/> No</label></div></div>
           <div class="form-group"><label>Do you have reliable transportation? *</label><div class="radio-group"><label class="radio-option"><input type="radio" name="transportation" value="Yes" required/> Yes</label><label class="radio-option"><input type="radio" name="transportation" value="No"/> No</label></div></div>
           <div class="form-group"><label>Do you have an active driver&rsquo;s license? *</label><div class="radio-group"><label class="radio-option"><input type="radio" name="license" value="Yes" required/> Yes</label><label class="radio-option"><input type="radio" name="license" value="No"/> No</label></div></div>
           <div class="form-group"><label>Can you obtain a TB test with negative result? *</label><div class="radio-group"><label class="radio-option"><input type="radio" name="tbtest" value="Yes" required/> Yes</label><label class="radio-option"><input type="radio" name="tbtest" value="No"/> No</label></div></div>
           <div class="form-group"><label>Can you complete a CPR course and obtain the certificate? *</label><div class="radio-group"><label class="radio-option"><input type="radio" name="cpr" value="Yes" required onchange="document.getElementById('cpr-note').style.display='none'"/> Yes</label><label class="radio-option"><input type="radio" name="cpr" value="No" onchange="document.getElementById('cpr-note').style.display='block'"/> No</label></div>
-          <div id="cpr-note" style="display:none; margin-top:0.6rem; padding:0.65rem 0.9rem; background:#fff8f0; border-left:3px solid #D4943A; border-radius:4px; font-size:0.85rem; color:#555;">
-            You can obtain your CPR certification at <a href="https://www.nationalcprfoundation.com" target="_blank" style="color:#C0272D; font-weight:600;">nationalcprfoundation.com</a> for $12.95. <em>We do not reimburse this cost.</em>
-          </div>
-          </div>
+          <div id="cpr-note" style="display:none;margin-top:0.6rem;padding:0.65rem 0.9rem;background:#fff8f0;border-left:3px solid #D4943A;border-radius:4px;font-size:0.85rem;color:#555;">You can obtain your CPR certification at <a href="https://www.nationalcprfoundation.com" target="_blank" style="color:var(--red);font-weight:600;">nationalcprfoundation.com</a> for $12.95. <em>We do not reimburse this cost.</em></div></div>
           <div class="form-group"><label>Would you pass a background check? *</label><div class="radio-group"><label class="radio-option"><input type="radio" name="bgcheck" value="Yes" required/> Yes</label><label class="radio-option"><input type="radio" name="bgcheck" value="No"/> No</label></div></div>
           <div class="form-group"><label>Do you have prior experience working with the elderly and/or people with disabilities? *</label><div class="radio-group"><label class="radio-option"><input type="radio" name="experience" value="Yes" required/> Yes</label><label class="radio-option"><input type="radio" name="experience" value="No"/> No</label></div></div>
-          <div class="form-group">
-  <label>Availability *</label>
-  <div class="checkbox-group" style="display:flex; flex-wrap:wrap; gap:0.6rem;">
-    <label class="radio-option"><input type="checkbox" name="availability" value="Monday"/> Monday</label>
-    <label class="radio-option"><input type="checkbox" name="availability" value="Tuesday"/> Tuesday</label>
-    <label class="radio-option"><input type="checkbox" name="availability" value="Wednesday"/> Wednesday</label>
-    <label class="radio-option"><input type="checkbox" name="availability" value="Thursday"/> Thursday</label>
-    <label class="radio-option"><input type="checkbox" name="availability" value="Friday"/> Friday</label>
-    <label class="radio-option"><input type="checkbox" name="availability" value="Saturday"/> Saturday</label>
-    <label class="radio-option"><input type="checkbox" name="availability" value="Sunday"/> Sunday</label>
-  </div>
-</div>
-
-<div class="form-group">
-  <label>How far are you willing to travel to work? *</label>
-  <div class="checkbox-group" style="display:flex; flex-wrap:wrap; gap:0.6rem;">
-    <label class="radio-option"><input type="checkbox" name="travel_distance" value="10 miles"/> Up to 10 mi</label>
-    <label class="radio-option"><input type="checkbox" name="travel_distance" value="20 miles"/> Up to 20 mi</label>
-    <label class="radio-option"><input type="checkbox" name="travel_distance" value="30 miles"/> Up to 30 mi</label>
-    <label class="radio-option"><input type="checkbox" name="travel_distance" value="40 miles"/> Up to 40 mi</label>
-    <label class="radio-option"><input type="checkbox" name="travel_distance" value="40+ miles"/> 40+ mi</label>
-  </div>
-</div>
+          <div class="form-group"><label>Availability *</label><div class="checkbox-group" style="display:flex;flex-wrap:wrap;gap:0.6rem;"><label class="radio-option"><input type="checkbox" name="availability" value="Monday"/> Monday</label><label class="radio-option"><input type="checkbox" name="availability" value="Tuesday"/> Tuesday</label><label class="radio-option"><input type="checkbox" name="availability" value="Wednesday"/> Wednesday</label><label class="radio-option"><input type="checkbox" name="availability" value="Thursday"/> Thursday</label><label class="radio-option"><input type="checkbox" name="availability" value="Friday"/> Friday</label><label class="radio-option"><input type="checkbox" name="availability" value="Saturday"/> Saturday</label><label class="radio-option"><input type="checkbox" name="availability" value="Sunday"/> Sunday</label></div></div>
+          <div class="form-group"><label>How far are you willing to travel to work? *</label><div class="checkbox-group" style="display:flex;flex-wrap:wrap;gap:0.6rem;"><label class="radio-option"><input type="checkbox" name="travel_distance" value="10 miles"/> Up to 10 mi</label><label class="radio-option"><input type="checkbox" name="travel_distance" value="20 miles"/> Up to 20 mi</label><label class="radio-option"><input type="checkbox" name="travel_distance" value="30 miles"/> Up to 30 mi</label><label class="radio-option"><input type="checkbox" name="travel_distance" value="40 miles"/> Up to 40 mi</label><label class="radio-option"><input type="checkbox" name="travel_distance" value="40+ miles"/> 40+ mi</label></div></div>
           <div class="form-group"><label for="c-position">Position Applying For</label><select id="c-position" name="position"><option value="">Select a position...</option><option>Personal Care Aide</option><option>Certified Nursing Aide (CNA)</option><option>Licensed Practical Nurse (LPN)</option><option>Registered Nurse (RN)</option><option>Case Workers</option></select></div>
           <div class="form-group"><label for="c-message">Tell us a bit about yourself (optional)</label><textarea id="c-message" name="message" placeholder="Share your experience, availability, or anything else you'd like us to know..."></textarea></div>
           <button type="submit" class="btn-submit">Submit Application &rarr;</button>
         </form>
-        <div class="form-success" id="careers-success"><div class="success-icon">&#127881;</div><div style="font-size:1.2rem;margin-bottom:0.5rem;">Application Received!</div><div style="font-size:0.9rem;font-weight:400;color:var(--text-mid);">Thank you for your interest. We received your information and are reviewing our client profile for locations within your area. We will contact you as soon as there is availability, make them feel</div></div>
+        <div class="form-success" id="careers-success"><div class="success-icon">&#127881;</div><div style="font-size:1.2rem;margin-bottom:0.5rem;">Application Received!</div><div style="font-size:0.9rem;font-weight:400;color:var(--text-mid);">Thank you for your interest. We received your information and are reviewing our client profile for locations within your area. We will contact you as soon as there is availability.</div></div>
       </div>
     </div>
   </section>
@@ -712,19 +637,7 @@ footer{background:#111;color:#ccc;padding:4rem 2rem 2rem;}
           <form class="form-grid" id="contact-form" onsubmit="handleContactSubmit(event)" action="https://api.web3forms.com/submit" method="POST"><input type="hidden" name="access_key" value="15fe735a-ee7b-491a-aa4d-f42b0d797e60"/><input type="hidden" name="subject" value="New Contact Request - Home Care Solutions"/><input type="hidden" name="redirect" value="false"/>
             <div class="form-row"><div class="form-group"><label for="ct-firstname">First Name *</label><input type="text" id="ct-firstname" name="firstname" required placeholder="First name"/></div><div class="form-group"><label for="ct-lastname">Last Name *</label><input type="text" id="ct-lastname" name="lastname" required placeholder="Last name"/></div></div>
             <div class="form-row"><div class="form-group"><label for="ct-phone">Phone Number *</label><input type="tel" id="ct-phone" name="phone" required placeholder="(770) 555-0000"/></div><div class="form-group"><label for="ct-email">Email Address *</label><input type="email" id="ct-email" name="email" required placeholder="you@email.com"/></div></div>
-            <div class="form-group">
-  <label>Which program are you interested in? *</label>
-  <small>Hover over the program to see what each offers.</small>
-  <select name="program_interest" required>
-    <option value="" disabled selected>Select a program</option>
-    <option value="Private Care" title="Private pay home care services not covered by Medicaid or insurance.">Private Care</option>
-    <option value="CCSP" title="Medicaid waiver program providing home and community-based services as an alternative to nursing home care.">Community Care Service Program (CCSP)</option>
-    <option value="SOURCE" title="Medicaid waiver combining primary care and home/community-based services for elderly or disabled individuals.">Service Options for Using Resources in the Community Environment (SOURCE)</option>
-    <option value="SFC" title="Allows a family member or close friend to be paid as a caregiver for a Medicaid-eligible individual.">Structured Family Care (SFC)</option>
-    <option value="IDD" title="Supports individuals with intellectual and developmental disabilities to live independently in their community.">Intellectual and Developmental Disabilities (IDD)</option>
-    <option value="ICWP" title="Medicaid waiver for adults with significant physical disabilities to receive home and community-based care.">Independent Care Waiver Program (ICWP)</option>
-  </select>
-</div>
+            <div class="form-group"><label>Which program are you interested in? *</label><small>Hover over the program to see what each offers.</small><select name="program_interest" required><option value="" disabled selected>Select a program</option><option value="Private Care" title="Private pay home care services not covered by Medicaid or insurance.">Private Care</option><option value="CCSP" title="Medicaid waiver program providing home and community-based services as an alternative to nursing home care.">Community Care Service Program (CCSP)</option><option value="SOURCE" title="Medicaid waiver combining primary care and home/community-based services for elderly or disabled individuals.">Service Options for Using Resources in the Community Environment (SOURCE)</option><option value="SFC" title="Allows a family member or close friend to be paid as a caregiver for a Medicaid-eligible individual.">Structured Family Care (SFC)</option><option value="IDD" title="Supports individuals with intellectual and developmental disabilities to live independently in their community.">Intellectual and Developmental Disabilities (IDD)</option><option value="ICWP" title="Medicaid waiver for adults with significant physical disabilities to receive home and community-based care.">Independent Care Waiver Program (ICWP)</option></select></div>
             <div class="form-group"><label for="ct-message">How can we be of service to you? *</label><textarea id="ct-message" name="message" required placeholder="Tell us about your care needs, questions, or how we can help..."></textarea></div>
             <button type="submit" class="btn-submit">Submit &rarr;</button>
             <p style="font-size:0.8rem;color:var(--text-light);text-align:center;margin-top:-0.5rem;">We will contact you within 48 hours.</p>
@@ -736,7 +649,8 @@ footer{background:#111;color:#ccc;padding:4rem 2rem 2rem;}
             <h3>Contact Information</h3>
             <div class="contact-info-item"><div class="contact-info-icon">&#9742;</div><div><div class="contact-info-label">Phone</div><div class="contact-info-value"><a href="tel:+14045285327" style="color:white;">(404) 528-5327</a></div></div></div>
             <div class="contact-info-item"><div class="contact-info-icon">&#128231;</div><div><div class="contact-info-label">Email</div><div class="contact-info-value">homecaresolutionsllc&#64;gmail&#46;com</div></div></div>
-            <div class="contact-info-item"><div class="contact-info-icon">&#128205;</div><div><div class="contact-info-label">Office Location</div><div class="contact-info-value"><a href="https://www.google.com/maps/dir/?api=1&destination=5555+Windward+Pkwy+Duluth+GA+30096" target="_blank" style="color:inherit; text-decoration:underline;">3235 Satellite Blvd, Ste 300, Bldg 400, Duluth, GA 30096</a></div></div></div>            <div class="contact-info-item"><div class="contact-info-icon">&#128336;</div><div><div class="contact-info-label">Office Hours</div><div class="contact-info-value">Mon&ndash;Fri: 9am&ndash;5pm<br/>After Hours: Call or Text the number below</div></div></div>
+            <div class="contact-info-item"><div class="contact-info-icon">&#128205;</div><div><div class="contact-info-label">Office Location</div><div class="contact-info-value"><a href="https://www.google.com/maps/dir/?api=1&destination=3235+Satellite+Blvd+Duluth+GA+30096" target="_blank" style="color:inherit;text-decoration:underline;">3235 Satellite Blvd, Ste 300, Bldg 400, Duluth, GA 30096</a></div></div></div>
+            <div class="contact-info-item"><div class="contact-info-icon">&#128336;</div><div><div class="contact-info-label">Office Hours</div><div class="contact-info-value">Mon&ndash;Fri: 9am&ndash;5pm<br/>After Hours: Call or Text the number below</div></div></div>
             <div class="response-note">&#128332; <strong>We respond within 48 hours.</strong><br/>For urgent care needs, please call or text us directly at (404) 528-5327.</div>
           </div>
           <div style="background:var(--light-gray);border-radius:12px;padding:1.75rem;margin-top:1.5rem;">
@@ -768,165 +682,31 @@ footer{background:#111;color:#ccc;padding:4rem 2rem 2rem;}
 
 <script>
 function showPage(id){document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));const el=document.getElementById('page-'+id);if(el){el.classList.add('active');window.scrollTo({top:0,behavior:'smooth'});}}
-function handleContactSubmit(e){
-  e.preventDefault();
-  const form=e.target;
-  const data=new FormData(form);
-  fetch('https://api.web3forms.com/submit',{method:'POST',body:data})
-    .then(r=>r.json())
-    .then(d=>{if(d.success){form.style.display='none';document.getElementById('contact-success').classList.add('show');}else{alert('Something went wrong. Please call us at (404) 528-5327.');}})
-    .catch(()=>alert('Something went wrong. Please call us at (404) 528-5327.'));
-}
-function handleCareersSubmit(e){
-  e.preventDefault();
-  const form=e.target;
-  const data=new FormData(form);
-  fetch('https://api.web3forms.com/submit',{method:'POST',body:data})
-    .then(r=>r.json())
-    .then(d=>{if(d.success){form.style.display='none';document.getElementById('careers-success').classList.add('show');}else{alert('Something went wrong. Please call us at (404) 528-5327.');}})
-    .catch(()=>alert('Something went wrong. Please call us at (404) 528-5327.'));
-}
-const regions = [
-{
-id:'r1',
-name:'Northwest Georgia',
-color:'#C0272D',
-counties:['Bartow', 'Chattooga', 'Floyd', 'Gordon', 'Haralson', 'Paulding', 'Pickens', 'Polk'],
-starred:['Polk']
-},
-{
-id:'r2',
-name:'Georgia Mountains',
-color:'#3B82A0',
-counties:['Hall','Forsyth','Dawson','Lumpkin','White','Habersham','Banks','Franklin','Hart','Stephens'],
-starred:['Hall','Forsyth']
-},
-{
-id:'r3',
-name:'Atlanta Regional',
-color:'#2E7D52',
-counties:['Gwinnett','Dekalb','Cobb','Fulton','Clayton','Cherokee','Henry','Rockdale','Douglas','Fayette'],
-starred:['Gwinnett','Cobb','Fulton','Dekalb']
-},
-{
-id:'r4',
-name:'Three Rivers',
-color:'#7B5EA7',
-counties:['Butts','Carroll','Coweta','Spalding'],
-starred:['Coweta']
-},
-{
-id:'r5',
-name:'Northeast Georgia',
-color:'#D4943A',
-counties:['Barrow','Clarke','Elbert','Greene','Jackson','Jasper','Madison','Morgan','Newton','Oconee','Oglethorpe','Walton'],
-starred:['Jasper','Oglethorpe']
-},
-{
-id:'r6',
-name:'Middle Georgia',
-color:'#1E5BA8',
-counties:['Putnam'],
-starred:[]
-},
-{
-id:'r7',
-name:'Central Savannah',
-color:'#5A7A3A',
-counties:['Columbia','Glasscock','Hancock','Lincoln','McDuffie','Richmond','Taliaferro','Warren','Wilkes'],
-starred:['Columbia']
-}
-];const countyRegionMap={};regions.forEach(r=>r.counties.forEach(c=>{countyRegionMap[c.toLowerCase()]=r;}));
+function handleContactSubmit(e){e.preventDefault();const form=e.target;const data=new FormData(form);fetch('https://api.web3forms.com/submit',{method:'POST',body:data}).then(r=>r.json()).then(d=>{if(d.success){form.style.display='none';document.getElementById('contact-success').classList.add('show');}else{alert('Something went wrong. Please call us at (404) 528-5327.');}}).catch(()=>alert('Something went wrong. Please call us at (404) 528-5327.'));}
+function handleCareersSubmit(e){e.preventDefault();const form=e.target;const data=new FormData(form);fetch('https://api.web3forms.com/submit',{method:'POST',body:data}).then(r=>r.json()).then(d=>{if(d.success){form.style.display='none';document.getElementById('careers-success').classList.add('show');}else{alert('Something went wrong. Please call us at (404) 528-5327.');}}).catch(()=>alert('Something went wrong. Please call us at (404) 528-5327.'));}
+const regions=[{id:'r1',name:'Northwest Georgia',color:'#C0272D',counties:['Bartow','Chattooga','Floyd','Gordon','Haralson','Paulding','Pickens','Polk'],starred:['Polk']},{id:'r2',name:'Georgia Mountains',color:'#3B82A0',counties:['Hall','Forsyth','Dawson','Lumpkin','White','Habersham','Banks','Franklin','Hart','Stephens'],starred:['Hall','Forsyth']},{id:'r3',name:'Atlanta Regional',color:'#2E7D52',counties:['Gwinnett','Dekalb','Cobb','Fulton','Clayton','Cherokee','Henry','Rockdale','Douglas','Fayette'],starred:['Gwinnett','Cobb','Fulton','Dekalb']},{id:'r4',name:'Three Rivers',color:'#7B5EA7',counties:['Butts','Carroll','Coweta','Spalding'],starred:['Coweta']},{id:'r5',name:'Northeast Georgia',color:'#D4943A',counties:['Barrow','Clarke','Elbert','Greene','Jackson','Jasper','Madison','Morgan','Newton','Oconee','Oglethorpe','Walton'],starred:['Jasper','Oglethorpe']},{id:'r6',name:'Middle Georgia',color:'#1E5BA8',counties:['Putnam'],starred:[]},{id:'r7',name:'Central Savannah',color:'#5A7A3A',counties:['Columbia','Glasscock','Hancock','Lincoln','McDuffie','Richmond','Taliaferro','Warren','Wilkes'],starred:['Columbia']}];
+const countyRegionMap={};regions.forEach(r=>r.counties.forEach(c=>{countyRegionMap[c.toLowerCase()]=r;}));
 const legendEl=document.getElementById('region-legend');let activeRegion=null;
 if(legendEl){regions.forEach(r=>{const div=document.createElement('div');div.className='region-item';div.id='legend-'+r.id;div.innerHTML=`<div class="region-dot" style="background:${r.color}"></div><span class="region-name">${r.name}</span><span class="region-count">${r.counties.length}</span>`;div.addEventListener('click',()=>toggleRegion(r.id));legendEl.appendChild(div);});}
 function toggleRegion(rid){document.querySelectorAll('.region-item').forEach(el=>el.classList.remove('active'));if(activeRegion===rid){activeRegion=null;highlightCounties(null);updateCountyList(null);}else{activeRegion=rid;document.getElementById('legend-'+rid).classList.add('active');highlightCounties(rid);updateCountyList(rid);}}
 function highlightCounties(rid){document.querySelectorAll('.county-path').forEach(path=>{if(!rid){path.style.opacity='';}else{const r=countyRegionMap[(path.getAttribute('data-name')||'').toLowerCase()];path.style.opacity=(!r||r.id!==rid)?'0.35':'1';}});}
 function updateCountyList(rid){const listEl=document.getElementById('county-list');if(!rid){listEl.innerHTML='<li style="color:var(--text-mid);font-style:italic;padding:1rem 1.25rem;">Click a region above to see counties</li>';return;}const r=regions.find(x=>x.id===rid);if(!r)return;listEl.innerHTML=r.counties.map(c=>`<li><div class="c-dot" style="background:${r.color}"></div>${c} County${r.starred.includes(c)?'<span style="margin-left:auto;color:var(--red);font-size:0.7rem;">&#9733;</span>':''}</li>`).join('');}
-const allCountiesEl=document.getElementById('counties-by-region');if(allCountiesEl){regions.forEach(r=>{const block=document.createElement('div');block.className='region-county-block';block.innerHTML=`<div class="region-county-header"><div class="region-county-header-dot" style="background:${r.color}"></div>${r.name} <span style="font-size:0.8rem;color:var(--text-mid);font-weight:400;margin-left:0.5rem;">(${r.counties.length} counties)</span></div><div class="region-county-list">${r.counties.map(c=>`<div class="county-chip" style="border:1px solid ${r.color}33;color:${r.color};">${c}</div>`).join('')}</div>`;allCountiesEl.appendChild(block);});}
 const tooltip=document.getElementById('tooltip');
+let svg,project;
 if(document.getElementById('ga-map')){
-fetch('https://cdn.jsdelivr.net/npm/us-atlas@3/counties-10m.json').then(r=>r.json()).then(us=>{const svg=document.getElementById('ga-map');if(!svg)return;const countyNames={'13001':'Appling','13003':'Atkinson','13005':'Bacon','13007':'Baker','13009':'Baldwin','13011':'Banks','13013':'Barrow','13015':'Bartow','13017':'Ben Hill','13019':'Berrien','13021':'Bibb','13023':'Bleckley','13025':'Brantley','13027':'Brooks','13029':'Bryan','13031':'Bulloch','13033':'Burke','13035':'Butts','13037':'Calhoun','13039':'Camden','13043':'Candler','13045':'Carroll','13047':'Catoosa','13049':'Charlton','13051':'Chatham','13053':'Chattahoochee','13055':'Chattooga','13057':'Cherokee','13059':'Clarke','13061':'Clay','13063':'Clayton','13065':'Clinch','13067':'Cobb','13069':'Coffee','13071':'Colquitt','13073':'Columbia','13075':'Cook','13077':'Coweta','13079':'Crawford','13081':'Crisp','13083':'Dade','13085':'Dawson','13087':'DeKalb','13089':'Decatur','13091':'Dodge','13093':'Dooly','13095':'Dougherty','13097':'Douglas','13099':'Early','13101':'Echols','13103':'Effingham','13105':'Elbert','13107':'Emanuel','13109':'Evans','13111':'Fannin','13113':'Fayette','13115':'Floyd','13117':'Forsyth','13119':'Franklin','13121':'Fulton','13123':'Gilmer','13125':'Glascock','13127':'Glynn','13129':'Gordon','13131':'Grady','13133':'Greene','13135':'Gwinnett','13137':'Habersham','13139':'Hall','13141':'Hancock','13143':'Haralson','13145':'Harris','13147':'Hart','13149':'Heard','13151':'Henry','13153':'Houston','13155':'Irwin','13157':'Jackson','13159':'Jasper','13161':'Jeff Davis','13163':'Jefferson','13165':'Jenkins','13167':'Johnson','13169':'Jones','13171':'Lamar','13173':'Lanier','13175':'Laurens','13177':'Lee','13179':'Liberty','13181':'Lincoln','13183':'Long','13185':'Lowndes','13187':'Lumpkin','13189':'Macon','13191':'Madison','13193':'Marion','13195':'McDuffie','13197':'McIntosh','13199':'Meriwether','13201':'Miller','13205':'Mitchell','13207':'Monroe','13209':'Montgomery','13211':'Morgan','13213':'Murray','13215':'Muscogee','13217':'Newton','13219':'Oconee','13221':'Oglethorpe','13223':'Paulding','13225':'Peach','13227':'Pickens','13229':'Pierce','13231':'Pike','13233':'Polk','13235':'Pulaski','13237':'Putnam','13239':'Quitman','13241':'Rabun','13243':'Randolph','13245':'Richmond','13247':'Rockdale','13249':'Schley','13251':'Screven','13253':'Seminole','13255':'Spalding','13257':'Stephens','13259':'Stewart','13261':'Sumter','13263':'Talbot','13265':'Taliaferro','13267':'Tattnall','13269':'Taylor','13271':'Telfair','13273':'Terrell','13275':'Thomas','13277':'Tift','13279':'Toombs','13281':'Towns','13283':'Treutlen','13285':'Troup','13287':'Turner','13289':'Twiggs','13291':'Union','13293':'Upson','13295':'Walker','13297':'Walton','13299':'Ware','13301':'Warren','13303':'Washington','13305':'Wayne','13307':'Webster','13309':'Wheeler','13311':'White','13313':'Whitfield','13315':'Wilcox','13317':'Wilkes','13319':'Wilkinson','13321':'Worth'};
+fetch('https://cdn.jsdelivr.net/npm/us-atlas@3/counties-10m.json').then(r=>r.json()).then(us=>{svg=document.getElementById('ga-map');if(!svg)return;const countyNames={'13001':'Appling','13003':'Atkinson','13005':'Bacon','13007':'Baker','13009':'Baldwin','13011':'Banks','13013':'Barrow','13015':'Bartow','13017':'Ben Hill','13019':'Berrien','13021':'Bibb','13023':'Bleckley','13025':'Brantley','13027':'Brooks','13029':'Bryan','13031':'Bulloch','13033':'Burke','13035':'Butts','13037':'Calhoun','13039':'Camden','13043':'Candler','13045':'Carroll','13047':'Catoosa','13049':'Charlton','13051':'Chatham','13053':'Chattahoochee','13055':'Chattooga','13057':'Cherokee','13059':'Clarke','13061':'Clay','13063':'Clayton','13065':'Clinch','13067':'Cobb','13069':'Coffee','13071':'Colquitt','13073':'Columbia','13075':'Cook','13077':'Coweta','13079':'Crawford','13081':'Crisp','13083':'Dade','13085':'Dawson','13087':'DeKalb','13089':'Decatur','13091':'Dodge','13093':'Dooly','13095':'Dougherty','13097':'Douglas','13099':'Early','13101':'Echols','13103':'Effingham','13105':'Elbert','13107':'Emanuel','13109':'Evans','13111':'Fannin','13113':'Fayette','13115':'Floyd','13117':'Forsyth','13119':'Franklin','13121':'Fulton','13123':'Gilmer','13125':'Glascock','13127':'Glynn','13129':'Gordon','13131':'Grady','13133':'Greene','13135':'Gwinnett','13137':'Habersham','13139':'Hall','13141':'Hancock','13143':'Haralson','13145':'Harris','13147':'Hart','13149':'Heard','13151':'Henry','13153':'Houston','13155':'Irwin','13157':'Jackson','13159':'Jasper','13161':'Jeff Davis','13163':'Jefferson','13165':'Jenkins','13167':'Johnson','13169':'Jones','13171':'Lamar','13173':'Lanier','13175':'Laurens','13177':'Lee','13179':'Liberty','13181':'Lincoln','13183':'Long','13185':'Lowndes','13187':'Lumpkin','13189':'Macon','13191':'Madison','13193':'Marion','13195':'McDuffie','13197':'McIntosh','13199':'Meriwether','13201':'Miller','13205':'Mitchell','13207':'Monroe','13209':'Montgomery','13211':'Morgan','13213':'Murray','13215':'Muscogee','13217':'Newton','13219':'Oconee','13221':'Oglethorpe','13223':'Paulding','13225':'Peach','13227':'Pickens','13229':'Pierce','13231':'Pike','13233':'Polk','13235':'Pulaski','13237':'Putnam','13239':'Quitman','13241':'Rabun','13243':'Randolph','13245':'Richmond','13247':'Rockdale','13249':'Schley','13251':'Screven','13253':'Seminole','13255':'Spalding','13257':'Stephens','13259':'Stewart','13261':'Sumter','13263':'Talbot','13265':'Taliaferro','13267':'Tattnall','13269':'Taylor','13271':'Telfair','13273':'Terrell','13275':'Thomas','13277':'Tift','13279':'Toombs','13281':'Towns','13283':'Treutlen','13285':'Troup','13287':'Turner','13289':'Twiggs','13291':'Union','13293':'Upson','13295':'Walker','13297':'Walton','13299':'Ware','13301':'Warren','13303':'Washington','13305':'Wayne','13307':'Webster','13309':'Wheeler','13311':'White','13313':'Whitfield','13315':'Wilcox','13317':'Wilkes','13319':'Wilkinson','13321':'Worth'};
 const geometries=us.objects.counties.geometries.filter(g=>String(g.id).startsWith('13'));
 const lonMin=-85.6,lonMax=-80.8,latMin=30.35,latMax=35.01,mapW=960,mapH=580;
-function project(lon,lat){return[((lon-lonMin)/(lonMax-lonMin))*mapW,mapH-((lat-latMin)/(latMax-latMin))*mapH];}
+project=function(lon,lat){return[((lon-lonMin)/(lonMax-lonMin))*mapW,mapH-((lat-latMin)/(latMax-latMin))*mapH];};
 const transform=us.transform,scale=transform?transform.scale:[1,1],translate=transform?transform.translate:[0,0];
 function topoPoint(p){return[p[0]*scale[0]+translate[0],p[1]*scale[1]+translate[1]];}
 function arcToPath(arcIdx){let arc=us.arcs[arcIdx<0?~arcIdx:arcIdx],pts=[],x=0,y=0;arc.forEach(d=>{x+=d[0];y+=d[1];pts.push(topoPoint([x,y]));});if(arcIdx<0)pts.reverse();return pts;}
 function geomToPath(geom){if(!geom.arcs)return'';const rings=geom.type==='Polygon'?[geom.arcs]:geom.arcs;let d='';rings.forEach(polygon=>{polygon.forEach(ring=>{let pts=[];ring.forEach(arcIdx=>{pts=pts.concat(arcToPath(arcIdx));});if(pts.length){const pp=pts.map(p=>project(p[0],p[1]));d+='M'+pp[0][0].toFixed(1)+','+pp[0][1].toFixed(1);pp.slice(1).forEach(p=>{d+='L'+p[0].toFixed(1)+','+p[1].toFixed(1);});d+='Z';}});});return d;}
-geometries.forEach(geom=>{
-  const fips=String(geom.id).padStart(5,'0'),name=countyNames[fips];
-  if(!name)return;
-  const region=countyRegionMap[name.toLowerCase()];
-  const pathEl=document.createElementNS('http://www.w3.org/2000/svg','path');
-  const d=geomToPath(geom);
-  if(!d)return;
-  pathEl.setAttribute('d',d);
-  pathEl.setAttribute('data-fips',fips);
-  pathEl.setAttribute('data-name',name);
-  pathEl.classList.add('county-path');
-  if(region){pathEl.style.fill=region.color;}else{pathEl.classList.add('unserviced');}
-  pathEl.addEventListener('mousemove',e=>{
-    tooltip.style.display='block';
-    tooltip.style.left=(e.clientX+12)+'px';
-    tooltip.style.top=(e.clientY-28)+'px';
-    tooltip.innerHTML='<strong>'+name+' County</strong>'+(region?'<br/><span style="opacity:0.75;font-size:0.75rem;">'+region.name+'</span>':'<br/><span style="opacity:0.65;font-size:0.75rem;">Not currently served</span>');
-  });
-  pathEl.addEventListener('mouseleave',()=>{tooltip.style.display='none';});
-  if(region){pathEl.addEventListener('click',()=>toggleRegion(region.id));}
-  svg.appendChild(pathEl);
-});
-}).catch(()=>{
-  const svg=document.getElementById('ga-map');
-  if(svg){svg.innerHTML='<text x="480" y="290" text-anchor="middle" fill="#888" font-family="Inter,sans-serif" font-size="16">Map requires network access to load.</text>';}
-});
-} 
-// Region number label positions [longitude, latitude]
-const regionLabelPositions = {
-  r1: [-85.15, 34.15],
-  r2: [-83.75, 34.55],
-  r3: [-84.40, 33.75],
-  r4: [-84.70, 33.30],
-  r5: [-83.35, 33.90],
-  r6: [-83.55, 33.38],
-  r7: [-82.45, 33.55],
-};
-
-const regionNumbers = { r1:'1', r2:'2', r3:'3', r4:'4', r5:'5', r6:'6', r7:'7' };
-
-regions.forEach(r => {
-
-  const pos = regionLabelPositions[r.id];
-  if (!pos) return;
-
-  const projected = project(pos[0], pos[1]);
-  const px = projected[0];
-  const py = projected[1];
-
-  const circle = document.createElementNS('http://www.w3.org/2000/svg','circle');
-  circle.setAttribute('cx', px);
-  circle.setAttribute('cy', py);
-  circle.setAttribute('r', '14');
-  circle.setAttribute('fill', r.color);
-  circle.setAttribute('opacity', '0.92');
-  circle.style.pointerEvents = 'none';
-
-  svg.appendChild(circle);
-
-  const text = document.createElementNS('http://www.w3.org/2000/svg','text');
-  text.setAttribute('x', px);
-  text.setAttribute('y', py + 5);
-  text.setAttribute('text-anchor', 'middle');
-  text.setAttribute('fill', '#ffffff');
-  text.setAttribute('font-size', '13');
-  text.setAttribute('font-weight', '700');
-  text.setAttribute('font-family', 'Arial,sans-serif');
-  text.style.pointerEvents = 'none';
-
-  text.textContent = regionNumbers[r.id];
-
-  svg.appendChild(text);
-
-});// end ga-map guard
+geometries.forEach(geom=>{const fips=String(geom.id).padStart(5,'0'),name=countyNames[fips];if(!name)return;const region=countyRegionMap[name.toLowerCase()];const pathEl=document.createElementNS('http://www.w3.org/2000/svg','path');const d=geomToPath(geom);if(!d)return;pathEl.setAttribute('d',d);pathEl.setAttribute('data-fips',fips);pathEl.setAttribute('data-name',name);pathEl.classList.add('county-path');if(region){pathEl.style.fill=region.color;}else{pathEl.classList.add('unserviced');}pathEl.addEventListener('mousemove',e=>{tooltip.style.display='block';tooltip.style.left=(e.clientX+12)+'px';tooltip.style.top=(e.clientY-28)+'px';tooltip.innerHTML='<strong>'+name+' County</strong>'+(region?'<br/><span style="opacity:0.75;font-size:0.75rem;">'+region.name+'</span>':'<br/><span style="opacity:0.65;font-size:0.75rem;">Not currently served</span>');});pathEl.addEventListener('mouseleave',()=>{tooltip.style.display='none';});if(region){pathEl.addEventListener('click',()=>toggleRegion(region.id));}svg.appendChild(pathEl);});
+const regionLabelPositions={r1:[-85.15,34.15],r2:[-83.75,34.55],r3:[-84.40,33.75],r4:[-84.70,33.30],r5:[-83.35,33.90],r6:[-83.55,33.38],r7:[-82.45,33.55]};
+const regionNumbers={r1:'1',r2:'2',r3:'3',r4:'4',r5:'5',r6:'6',r7:'7'};
+regions.forEach(r=>{const pos=regionLabelPositions[r.id];if(!pos)return;const projected=project(pos[0],pos[1]);const px=projected[0],py=projected[1];const circle=document.createElementNS('http://www.w3.org/2000/svg','circle');circle.setAttribute('cx',px);circle.setAttribute('cy',py);circle.setAttribute('r','14');circle.setAttribute('fill',r.color);circle.setAttribute('opacity','0.92');circle.style.pointerEvents='none';svg.appendChild(circle);const text=document.createElementNS('http://www.w3.org/2000/svg','text');text.setAttribute('x',px);text.setAttribute('y',py+5);text.setAttribute('text-anchor','middle');text.setAttribute('fill','#ffffff');text.setAttribute('font-size','13');text.setAttribute('font-weight','700');text.setAttribute('font-family','Arial,sans-serif');text.style.pointerEvents='none';text.textContent=regionNumbers[r.id];svg.appendChild(text);});
+}).catch(()=>{const s=document.getElementById('ga-map');if(s){s.innerHTML='<text x="480" y="290" text-anchor="middle" fill="#888" font-family="Inter,sans-serif" font-size="16">Map requires network access to load.</text>';}});}
 </script>
 </body>
 </html>
