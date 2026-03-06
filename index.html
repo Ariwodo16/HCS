@@ -42,7 +42,7 @@ nav{background:var(--white);border-bottom:3px solid var(--red);position:sticky;t
 .hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.04' fill-rule='evenodd'%3E%3Ccircle cx='40' cy='40' r='2'/%3E%3C/g%3E%3C/svg%3E");}
 .hero-inner{max-width:1200px;margin:0 auto;position:relative;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;}
 .hero-tag{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);border-radius:100px;padding:0.3rem 1rem;font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:1.25rem;}
-.hero h1{font-size:clamp(2rem,4vw,3rem);font-weight:900;margin-bottom:1.25rem;}
+.hero h1{font-size:clamp(1rem,4vw,2rem);font-weight:900;margin-bottom:1.25rem;}
 .hero h1 em{font-style:normal;color:#FFD580;}
 .hero-sub{font-size:1.05rem;opacity:0.92;margin-bottom:2rem;font-weight:300;line-height:1.8;}
 .hero-ctas{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2.5rem;}
@@ -282,8 +282,8 @@ footer{background:#111;color:#ccc;padding:4rem 2rem 2rem;}
       <span class="nav-link" onclick="showPage('contact')">Contact</span>
     </div>
     <div class="nav-ctas">
-      <button class="btn-outline" onclick="showPage('contact')">Get Care Today</button>
-      <button class="btn-primary" onclick="window.location.href='tel:+14045285327'">&#128222; (404) 528-5327</button>
+      <button class="btn-outline" onclick="showPage('contact')">Get Care</button>
+      <button class="btn-primary" onclick="window.location.href='tel:+14045285327'">&#9742; (404) 528-5327</button>
     </div>
   </div>
 </nav>
@@ -334,7 +334,7 @@ footer{background:#111;color:#ccc;padding:4rem 2rem 2rem;}
       <div class="section-label">Real People. Real Care.</div>
       <h2 style="font-size:clamp(1.6rem,2.5vw,2.2rem);margin-bottom:1.25rem;">Dignity at Home,<br/>Every Single Day</h2>
       <p style="color:var(--text-mid);margin-bottom:1rem;line-height:1.85;font-size:0.95rem;">Our caregivers are trusted companions &mdash; showing up consistently, doing routines, and treating every client with the kindness and respect they deserve.</p>
-      <p style="color:var(--text-mid);margin-bottom:2.25rem;line-height:1.85;font-size:0.95rem;">Whether it&rsquo;s a grooming routine, meal prep, light housekeeping, medication reminder, or simply a watchful oversight, we believe the small moments of care are what truly make a difference.</p>
+      <p style="color:var(--text-mid);margin-bottom:2.25rem;line-height:1.85;font-size:0.95rem;">Whether it&rsquo;s a grooming routine, meal prep, light housekeeping, medication reminder, mobility assistance, or simply a watchful oversight, we believe the small moments of care are what truly make a difference.</p>
       <button class="btn-primary" onclick="showPage('about')" style="width:fit-content;padding:0.8rem 1.75rem;font-size:0.95rem;">Learn About Us &rarr;</button>
     </div>
   </div>
@@ -401,6 +401,7 @@ footer{background:#111;color:#ccc;padding:4rem 2rem 2rem;}
         <div class="info-card"><div class="info-card-icon">&#129309;</div><h3>Meet &amp; Greet</h3><p>We arrange a meet and greet with your caregiver before scheduling begins, so you feel confident and comfortable.</p></div>
         <div class="info-card"><div class="info-card-icon">&#128203;</div><h3>Personalized Plans</h3><p>Each client receives a custom care plan designed around their specific needs, preferences, and goals.</p></div>
         <div class="info-card"><div class="info-card-icon">&#128222;</div><h3>24/7 Access</h3><p>Reach us any time &mdash; day or night &mdash; by phone or text. We&rsquo;re always here when you need us.</p></div>
+        <div class="info-card"><div class="info-card-icon">&#129309;</div><h3>Client Advocacy</h3><p>We act as a dedicated advocate for every client, ensuring their voice is heard and their needs are represented.</p></div>
       </div>
     </div>
   </section>
@@ -458,7 +459,7 @@ footer{background:#111;color:#ccc;padding:4rem 2rem 2rem;}
             <div class="photo-mosaic-caption"><strong>Family Meeting</strong><span>Care coordinator with family</span></div>
           </div>
           <div class="photo-mosaic-cell">
-            <img src="independence.png" alt="Client doing daily activities"/>
+            <img src="independent.png" alt="Client doing daily activities"/>
             <div class="photo-mosaic-caption"><strong>Independence</strong><span>Daily activities</span></div>
           </div>
           <div class="photo-mosaic-cell" style="border-radius:0 0 14px 0;">
@@ -504,9 +505,9 @@ footer{background:#111;color:#ccc;padding:4rem 2rem 2rem;}
   <section class="section">
     <div class="section-inner">
       <div class="services-grid">
-        <div class="service-card"><div class="service-card-img"><img src="grooming.jpg" alt="Personal Care" onerror="this.parentElement.innerHTML='&#129330;'"/></div><div class="service-card-body"><h3>Personal Care</h3><p>Our personal care services provide compassionate assistance with essential daily activities, helping clients maintain their health, hygiene, and independence in the comfort of their own home.</p><ul><li>Bathing &amp; grooming assistance</li><li>Dressing &amp; personal hygiene</li><li>Mobility &amp; transfer assistance</li><li>Toileting &amp; incontinence care</li><li>Medication reminders</li><li>Meal preparation</li></ul></div></div>
-        <div class="service-card"><div class="service-card-img"><img src="companion.jpg" alt="Companionship" onerror="this.parentElement.innerHTML='&#128172;'"/></div><div class="service-card-body"><h3>Companionship</h3><p>Social connection is vital to health and happiness. Our caregivers provide meaningful companionship that reduces loneliness and enriches daily life for our clients.</p><ul><li>Friendly conversation &amp; activities</li><li>Reading &amp; games</li><li>Doctor appointment accompaniment</li>li><li>Light errands &amp; appointments</li><li>Walks &amp; outings</li><li>Emotional support</li><li>Family communication support</li></ul></div></div>
-        <div class="service-card"><div class="service-card-img"><img src="nurse.jpg" alt="Skilled Nursing" onerror="this.parentElement.innerHTML='&#129658;'"/></div><div class="service-card-body"><h3>Skilled Nursing</h3><p>Our licensed nurses deliver professional medical care at home, ensuring clinical quality while keeping clients comfortable and safe in their familiar environment.</p><ul><li>Medication management</li><li>Wound care &amp; dressing changes</li><li>Vital signs monitoring</li><li>Chronic disease management</li><li>Post-hospital care support</li><li>Physician care coordination</li></ul></div></div>
+        <div class="service-card"><div class="service-card-img"><img src="grooming.jpg" alt="Personal Care" onerror="this.parentElement.innerHTML='&#129330;'"/></div><div class="service-card-body"><h3>Personal Care</h3><p>Our personal care services provide compassionate assistance with essential daily activities, helping clients maintain their health, hygiene, and independence in the comfort of their own home.</p><ul><li>Bathing &amp; Grooming Assistance</li><li>Dressing &amp; Personal Hygiene</li><li>Mobility &amp; Transfer Assistance</li><li>Toileting &amp; Incontinence Care</li><li>Medication Reminders</li><li>Meal Preparation</li><li>Light Housekeeping</li><li>Watchful Oversight</li></li></ul></div></div>
+        <div class="service-card"><div class="service-card-img"><img src="companion.jpg" alt="Companionship" onerror="this.parentElement.innerHTML='&#128172;'"/></div><div class="service-card-body"><h3>Companionship</h3><p>Social connection is vital to health and happiness. Our caregivers provide meaningful companionship that reduces loneliness and enriches daily life for our clients.</p><ul><li>Friendly conversation &amp; Activities</li><li>Reading &amp; Games</li><li>Doctor Appointment Accompaniment</li></li><li>Light Errands &amp; Appointments</li><li>Walks &amp; Outings</li><li>Emotional Support</li><li>Family Communication Support</li></ul></div></div>
+        <div class="service-card"><div class="service-card-img"><img src="nurse.jpg" alt="Skilled Nursing" onerror="this.parentElement.innerHTML='&#129658;'"/></div><div class="service-card-body"><h3>Skilled Nursing</h3><p>Our licensed nurses deliver professional medical care at home, ensuring clinical quality while keeping clients comfortable and safe in their familiar environment.</p><ul><li>Medication Management</li><li>Wound Care &amp; Dressing Changes</li><li>Vital Signs Monitoring</li><li>Health Coaching</li><li>Post-Hospital Care Support</li><li>Physician Care Coordination</li><li> General Health &amp; Supervision</li></ul></div></div>
       </div>
     </div>
   </section>
@@ -576,7 +577,6 @@ footer{background:#111;color:#ccc;padding:4rem 2rem 2rem;}
     <div><div class="map-svg-wrapper"><div class="map-title">Hover over a county for details &middot; Click a region in the legend to highlight</div><svg id="ga-map" viewBox="0 0 960 580" xmlns="http://www.w3.org/2000/svg"></svg></div></div>
     <div><div class="region-legend-panel"><div class="region-legend-header">&#128506; Regions Legend</div><div id="region-legend"></div></div><div class="county-list-panel"><div class="county-list-header">Counties in Selected Region</div><ul class="county-list" id="county-list"><li style="color:var(--text-mid);font-style:italic;padding:1rem 1.25rem;">Click a region above to see counties</li></ul></div></div>
   </div>
-  <div class="all-counties-section"><h2>All 54 Counties We Serve</h2><div class="counties-by-region" id="counties-by-region"></div></div>
   <section class="cta-block"><h2>Call Today to Get the Help You Need</h2><p>Serving your area? Reach out and we&rsquo;ll connect you with a local care coordinator.</p><div class="cta-block-btns"><button class="btn-hero-primary" onclick="window.location.href='tel:+14045285327'">&#128222; (404) 528-5327</button><button class="btn-hero-outline" onclick="showPage('contact')">Request Free Assessment</button></div></section>
 </div>
 
@@ -654,12 +654,41 @@ footer{background:#111;color:#ccc;padding:4rem 2rem 2rem;}
           <div class="form-row"><div class="form-group"><label for="c-firstname">First Name *</label><input type="text" id="c-firstname" name="firstname" required placeholder="First name"/></div><div class="form-group"><label for="c-lastname">Last Name *</label><input type="text" id="c-lastname" name="lastname" required placeholder="Last name"/></div></div>
           <div class="form-row"><div class="form-group"><label for="c-phone">Phone Number *</label><input type="tel" id="c-phone" name="phone" required placeholder="(770) 555-0000"/></div><div class="form-group"><label for="c-email">Email Address *</label><input type="email" id="c-email" name="email" required placeholder="you@email.com"/></div></div>
           <div class="form-group"><label for="c-address">Address *</label><input type="text" id="c-address" name="address" required placeholder="Street address, City, State, ZIP"/></div>
+          <div class="form-group"><label>Are you 18 years or older? *</label><div class="radio-group"><label class="radio-option"><input type="radio" name="citizen" value="Yes" required/> Yes</label><label class="radio-option"><input type="radio" name="citizen" value="No"/> No</label></div></div>
           <div class="form-group"><label>Are you a US Citizen or Green Card Holder? *</label><div class="radio-group"><label class="radio-option"><input type="radio" name="citizen" value="Yes" required/> Yes</label><label class="radio-option"><input type="radio" name="citizen" value="No"/> No</label></div></div>
+          <div class="form-group"><label>Do you have reliable transportation? *</label><div class="radio-group"><label class="radio-option"><input type="radio" name="transportation" value="Yes" required/> Yes</label><label class="radio-option"><input type="radio" name="transportation" value="No"/> No</label></div></div>
           <div class="form-group"><label>Do you have an active driver&rsquo;s license? *</label><div class="radio-group"><label class="radio-option"><input type="radio" name="license" value="Yes" required/> Yes</label><label class="radio-option"><input type="radio" name="license" value="No"/> No</label></div></div>
           <div class="form-group"><label>Can you obtain a TB test with negative result? *</label><div class="radio-group"><label class="radio-option"><input type="radio" name="tbtest" value="Yes" required/> Yes</label><label class="radio-option"><input type="radio" name="tbtest" value="No"/> No</label></div></div>
-          <div class="form-group"><label>Can you complete a CPR course and obtain the certificate? *</label><div class="radio-group"><label class="radio-option"><input type="radio" name="cpr" value="Yes" required/> Yes</label><label class="radio-option"><input type="radio" name="cpr" value="No"/> No</label></div></div>
+          <div class="form-group"><label>Can you complete a CPR course and obtain the certificate? *</label><div class="radio-group"><label class="radio-option"><input type="radio" name="cpr" value="Yes" required onchange="document.getElementById('cpr-note').style.display='none'"/> Yes</label><label class="radio-option"><input type="radio" name="cpr" value="No" onchange="document.getElementById('cpr-note').style.display='block'"/> No</label></div>
+          <div id="cpr-note" style="display:none; margin-top:0.6rem; padding:0.65rem 0.9rem; background:#fff8f0; border-left:3px solid #D4943A; border-radius:4px; font-size:0.85rem; color:#555;">
+            You can obtain your CPR certification at <a href="https://www.nationalcprfoundation.com" target="_blank" style="color:#C0272D; font-weight:600;">nationalcprfoundation.com</a> for $12.95. <em>We do not reimburse this cost.</em>
+          </div>
+          </div>
           <div class="form-group"><label>Would you pass a background check? *</label><div class="radio-group"><label class="radio-option"><input type="radio" name="bgcheck" value="Yes" required/> Yes</label><label class="radio-option"><input type="radio" name="bgcheck" value="No"/> No</label></div></div>
           <div class="form-group"><label>Do you have prior experience working with the elderly and/or people with disabilities? *</label><div class="radio-group"><label class="radio-option"><input type="radio" name="experience" value="Yes" required/> Yes</label><label class="radio-option"><input type="radio" name="experience" value="No"/> No</label></div></div>
+          <div class="form-group">
+  <label>Availability *</label>
+  <div class="checkbox-group" style="display:flex; flex-wrap:wrap; gap:0.6rem;">
+    <label class="radio-option"><input type="checkbox" name="availability" value="Monday"/> Monday</label>
+    <label class="radio-option"><input type="checkbox" name="availability" value="Tuesday"/> Tuesday</label>
+    <label class="radio-option"><input type="checkbox" name="availability" value="Wednesday"/> Wednesday</label>
+    <label class="radio-option"><input type="checkbox" name="availability" value="Thursday"/> Thursday</label>
+    <label class="radio-option"><input type="checkbox" name="availability" value="Friday"/> Friday</label>
+    <label class="radio-option"><input type="checkbox" name="availability" value="Saturday"/> Saturday</label>
+    <label class="radio-option"><input type="checkbox" name="availability" value="Sunday"/> Sunday</label>
+  </div>
+</div>
+
+<div class="form-group">
+  <label>How far are you willing to travel to work? *</label>
+  <div class="checkbox-group" style="display:flex; flex-wrap:wrap; gap:0.6rem;">
+    <label class="radio-option"><input type="checkbox" name="travel_distance" value="10 miles"/> Up to 10 mi</label>
+    <label class="radio-option"><input type="checkbox" name="travel_distance" value="20 miles"/> Up to 20 mi</label>
+    <label class="radio-option"><input type="checkbox" name="travel_distance" value="30 miles"/> Up to 30 mi</label>
+    <label class="radio-option"><input type="checkbox" name="travel_distance" value="40 miles"/> Up to 40 mi</label>
+    <label class="radio-option"><input type="checkbox" name="travel_distance" value="40+ miles"/> 40+ mi</label>
+  </div>
+</div>
           <div class="form-group"><label for="c-position">Position Applying For</label><select id="c-position" name="position"><option value="">Select a position...</option><option>Personal Care Aide</option><option>Certified Nursing Aide (CNA)</option><option>Licensed Practical Nurse (LPN)</option><option>Registered Nurse (RN)</option><option>Case Workers</option></select></div>
           <div class="form-group"><label for="c-message">Tell us a bit about yourself (optional)</label><textarea id="c-message" name="message" placeholder="Share your experience, availability, or anything else you'd like us to know..."></textarea></div>
           <button type="submit" class="btn-submit">Submit Application &rarr;</button>
@@ -683,6 +712,19 @@ footer{background:#111;color:#ccc;padding:4rem 2rem 2rem;}
           <form class="form-grid" id="contact-form" onsubmit="handleContactSubmit(event)" action="https://api.web3forms.com/submit" method="POST"><input type="hidden" name="access_key" value="15fe735a-ee7b-491a-aa4d-f42b0d797e60"/><input type="hidden" name="subject" value="New Contact Request - Home Care Solutions"/><input type="hidden" name="redirect" value="false"/>
             <div class="form-row"><div class="form-group"><label for="ct-firstname">First Name *</label><input type="text" id="ct-firstname" name="firstname" required placeholder="First name"/></div><div class="form-group"><label for="ct-lastname">Last Name *</label><input type="text" id="ct-lastname" name="lastname" required placeholder="Last name"/></div></div>
             <div class="form-row"><div class="form-group"><label for="ct-phone">Phone Number *</label><input type="tel" id="ct-phone" name="phone" required placeholder="(770) 555-0000"/></div><div class="form-group"><label for="ct-email">Email Address *</label><input type="email" id="ct-email" name="email" required placeholder="you@email.com"/></div></div>
+            <div class="form-group">
+  <label>Which program are you interested in? *</label>
+  <small>Hover over the program to see what each offers.</small>
+  <select name="program_interest" required>
+    <option value="" disabled selected>Select a program</option>
+    <option value="Private Care" title="Private pay home care services not covered by Medicaid or insurance.">Private Care</option>
+    <option value="CCSP" title="Medicaid waiver program providing home and community-based services as an alternative to nursing home care.">Community Care Service Program (CCSP)</option>
+    <option value="SOURCE" title="Medicaid waiver combining primary care and home/community-based services for elderly or disabled individuals.">Service Options for Using Resources in the Community Environment (SOURCE)</option>
+    <option value="SFC" title="Allows a family member or close friend to be paid as a caregiver for a Medicaid-eligible individual.">Structured Family Care (SFC)</option>
+    <option value="IDD" title="Supports individuals with intellectual and developmental disabilities to live independently in their community.">Intellectual and Developmental Disabilities (IDD)</option>
+    <option value="ICWP" title="Medicaid waiver for adults with significant physical disabilities to receive home and community-based care.">Independent Care Waiver Program (ICWP)</option>
+  </select>
+</div>
             <div class="form-group"><label for="ct-message">How can we be of service to you? *</label><textarea id="ct-message" name="message" required placeholder="Tell us about your care needs, questions, or how we can help..."></textarea></div>
             <button type="submit" class="btn-submit">Submit &rarr;</button>
             <p style="font-size:0.8rem;color:var(--text-light);text-align:center;margin-top:-0.5rem;">We will contact you within 48 hours.</p>
@@ -692,11 +734,10 @@ footer{background:#111;color:#ccc;padding:4rem 2rem 2rem;}
         <div>
           <div class="contact-info-box">
             <h3>Contact Information</h3>
-            <div class="contact-info-item"><div class="contact-info-icon">&#128222;</div><div><div class="contact-info-label">Phone</div><div class="contact-info-value"><a href="tel:+14045285327" style="color:white;">(404) 528-5327</a></div></div></div>
-            <div class="contact-info-item"><div class="contact-info-icon">&#9993;&#65039;</div><div><div class="contact-info-label">Email</div><div class="contact-info-value">homecaresolutionsllc&#64;gmail&#46;com</div></div></div>
-            <div class="contact-info-item"><div class="contact-info-icon">&#128205;</div><div><div class="contact-info-label">Office Location</div><div class="contact-info-value">Duluth, GA 30096</div></div></div>
-            <div class="contact-info-item"><div class="contact-info-icon">&#128336;</div><div><div class="contact-info-label">Office Hours</div><div class="contact-info-value">Mon&ndash;Fri: 8am&ndash;6pm<br/>Sat: 9am&ndash;2pm</div></div></div>
-            <div class="response-note">&#128332; <strong>We respond within 48 hours.</strong><br/>For urgent care needs, please call us directly at (404) 528-5327.</div>
+            <div class="contact-info-item"><div class="contact-info-icon">&#9742;</div><div><div class="contact-info-label">Phone</div><div class="contact-info-value"><a href="tel:+14045285327" style="color:white;">(404) 528-5327</a></div></div></div>
+            <div class="contact-info-item"><div class="contact-info-icon">&#128231;</div><div><div class="contact-info-label">Email</div><div class="contact-info-value">homecaresolutionsllc&#64;gmail&#46;com</div></div></div>
+            <div class="contact-info-item"><div class="contact-info-icon">&#128205;</div><div><div class="contact-info-label">Office Location</div><div class="contact-info-value"><a href="https://www.google.com/maps/dir/?api=1&destination=5555+Windward+Pkwy+Duluth+GA+30096" target="_blank" style="color:inherit; text-decoration:underline;">3235 Satellite Blvd, Ste 300, Bldg 400, Duluth, GA 30096</a></div></div></div>            <div class="contact-info-item"><div class="contact-info-icon">&#128336;</div><div><div class="contact-info-label">Office Hours</div><div class="contact-info-value">Mon&ndash;Fri: 9am&ndash;5pm<br/>After Hours: Call or Text the number below</div></div></div>
+            <div class="response-note">&#128332; <strong>We respond within 48 hours.</strong><br/>For urgent care needs, please call or text us directly at (404) 528-5327.</div>
           </div>
           <div style="background:var(--light-gray);border-radius:12px;padding:1.75rem;margin-top:1.5rem;">
             <h3 style="font-size:1rem;margin-bottom:1rem;">What to Expect</h3>
@@ -722,7 +763,7 @@ footer{background:#111;color:#ccc;padding:4rem 2rem 2rem;}
     <div class="footer-col"><h4>Services</h4><ul class="footer-links"><li><span onclick="showPage('services')">Personal Care</span></li><li><span onclick="showPage('services')">Companionship</span></li><li><span onclick="showPage('services')">Skilled Nursing</span></li></ul></div>
     <div class="footer-col"><h4>Why Choose Us</h4><ul class="footer-links"><li><span>Background Checked Aides</span></li><li><span>Meet &amp; Greet Before Scheduling</span></li><li><span>24/7 Call or Text Access</span></li><li><span>Personalized Care Plans</span></li><li><span>Equal Opportunity Employer</span></li></ul></div>
   </div>
-  <div class="footer-bottom"><span>&copy; 2025 Home Care Solutions. All rights reserved. &middot; Duluth, GA &middot; Equal Opportunity Employer</span><span style="color:#555;">Serving seniors and adults with disabilities across Georgia</span></div>
+  <div class="footer-bottom"><span>&copy; 2025 Home Care Solutions. All rights reserved. &middot; Duluth, Georgia &middot; Equal Opportunity Employer</span><span style="color:#555;">Serving seniors and adults with disabilities across Georgia</span></div>
 </footer>
 
 <script>
@@ -745,8 +786,57 @@ function handleCareersSubmit(e){
     .then(d=>{if(d.success){form.style.display='none';document.getElementById('careers-success').classList.add('show');}else{alert('Something went wrong. Please call us at (404) 528-5327.');}})
     .catch(()=>alert('Something went wrong. Please call us at (404) 528-5327.'));
 }
-const regions=[{id:'r1',name:'Region 1: Metro Atlanta',color:'#C0272D',counties:['Fulton','DeKalb','Gwinnett','Cobb','Clayton','Rockdale','Newton','Walton','Barrow','Cherokee'],starred:['Fulton','DeKalb','Gwinnett']},{id:'r2',name:'Region 2: North Georgia',color:'#3B82A0',counties:['Hall','Forsyth','Dawson','Lumpkin','White','Habersham','Banks','Jackson','Madison','Elbert'],starred:['Hall','Forsyth']},{id:'r3',name:'Region 3: West Georgia',color:'#2E7D52',counties:['Douglas','Carroll','Paulding','Haralson','Polk','Floyd','Bartow','Gordon','Murray','Whitfield'],starred:['Douglas','Carroll']},{id:'r4',name:'Region 4: East Georgia',color:'#7B5EA7',counties:['Columbia','Richmond','Burke','Jefferson','Emanuel','Jenkins','Screven','Effingham','Chatham'],starred:['Columbia','Richmond','Chatham']},{id:'r5',name:'Region 5: Central Georgia',color:'#D4943A',counties:['Bibb','Houston','Peach','Crawford','Jones','Baldwin','Putnam','Jasper','Butts','Spalding'],starred:['Bibb','Houston']},{id:'r6',name:'Region 6: South Metro',color:'#1E5BA8',counties:['Henry','Fayette','Coweta','Heard','Troup','Meriwether','Pike','Upson','Lamar','Monroe'],starred:['Henry','Fayette','Coweta']},{id:'r7',name:'Region 7: South Georgia',color:'#5A7A3A',counties:['Lowndes','Valdosta','Colquitt','Thomas','Grady','Brooks','Echols','Clinch','Ware'],starred:['Lowndes']}];
-const countyRegionMap={};regions.forEach(r=>r.counties.forEach(c=>{countyRegionMap[c.toLowerCase()]=r;}));
+const regions = [
+{
+id:'r1',
+name:'Northwest Georgia',
+color:'#C0272D',
+counties:['Bartow', 'Chattooga', 'Floyd', 'Gordon', 'Haralson', 'Paulding', 'Pickens', 'Polk'],
+starred:['Polk']
+},
+{
+id:'r2',
+name:'Georgia Mountains',
+color:'#3B82A0',
+counties:['Hall','Forsyth','Dawson','Lumpkin','White','Habersham','Banks','Franklin','Hart','Stephens'],
+starred:['Hall','Forsyth']
+},
+{
+id:'r3',
+name:'Atlanta Regional',
+color:'#2E7D52',
+counties:['Gwinnett','Dekalb','Cobb','Fulton','Clayton','Cherokee','Henry','Rockdale','Douglas','Fayette'],
+starred:['Gwinnett','Cobb','Fulton','Dekalb']
+},
+{
+id:'r4',
+name:'Three Rivers',
+color:'#7B5EA7',
+counties:['Butts','Carroll','Coweta','Spalding'],
+starred:['Coweta']
+},
+{
+id:'r5',
+name:'Northeast Georgia',
+color:'#D4943A',
+counties:['Barrow','Clarke','Elbert','Greene','Jackson','Jasper','Madison','Morgan','Newton','Oconee','Oglethorpe','Walton'],
+starred:['Jasper','Oglethorpe']
+},
+{
+id:'r6',
+name:'Middle Georgia',
+color:'#1E5BA8',
+counties:['Putnam'],
+starred:[]
+},
+{
+id:'r7',
+name:'Central Savannah',
+color:'#5A7A3A',
+counties:['Columbia','Glasscock','Hancock','Lincoln','McDuffie','Richmond','Taliaferro','Warren','Wilkes'],
+starred:['Columbia']
+}
+];const countyRegionMap={};regions.forEach(r=>r.counties.forEach(c=>{countyRegionMap[c.toLowerCase()]=r;}));
 const legendEl=document.getElementById('region-legend');let activeRegion=null;
 if(legendEl){regions.forEach(r=>{const div=document.createElement('div');div.className='region-item';div.id='legend-'+r.id;div.innerHTML=`<div class="region-dot" style="background:${r.color}"></div><span class="region-name">${r.name}</span><span class="region-count">${r.counties.length}</span>`;div.addEventListener('click',()=>toggleRegion(r.id));legendEl.appendChild(div);});}
 function toggleRegion(rid){document.querySelectorAll('.region-item').forEach(el=>el.classList.remove('active'));if(activeRegion===rid){activeRegion=null;highlightCounties(null);updateCountyList(null);}else{activeRegion=rid;document.getElementById('legend-'+rid).classList.add('active');highlightCounties(rid);updateCountyList(rid);}}
@@ -789,7 +879,54 @@ geometries.forEach(geom=>{
   const svg=document.getElementById('ga-map');
   if(svg){svg.innerHTML='<text x="480" y="290" text-anchor="middle" fill="#888" font-family="Inter,sans-serif" font-size="16">Map requires network access to load.</text>';}
 });
-} // end ga-map guard
+} 
+// Region number label positions [longitude, latitude]
+const regionLabelPositions = {
+  r1: [-85.15, 34.15],
+  r2: [-83.75, 34.55],
+  r3: [-84.40, 33.75],
+  r4: [-84.70, 33.30],
+  r5: [-83.35, 33.90],
+  r6: [-83.55, 33.38],
+  r7: [-82.45, 33.55],
+};
+
+const regionNumbers = { r1:'1', r2:'2', r3:'3', r4:'4', r5:'5', r6:'6', r7:'7' };
+
+regions.forEach(r => {
+
+  const pos = regionLabelPositions[r.id];
+  if (!pos) return;
+
+  const projected = project(pos[0], pos[1]);
+  const px = projected[0];
+  const py = projected[1];
+
+  const circle = document.createElementNS('http://www.w3.org/2000/svg','circle');
+  circle.setAttribute('cx', px);
+  circle.setAttribute('cy', py);
+  circle.setAttribute('r', '14');
+  circle.setAttribute('fill', r.color);
+  circle.setAttribute('opacity', '0.92');
+  circle.style.pointerEvents = 'none';
+
+  svg.appendChild(circle);
+
+  const text = document.createElementNS('http://www.w3.org/2000/svg','text');
+  text.setAttribute('x', px);
+  text.setAttribute('y', py + 5);
+  text.setAttribute('text-anchor', 'middle');
+  text.setAttribute('fill', '#ffffff');
+  text.setAttribute('font-size', '13');
+  text.setAttribute('font-weight', '700');
+  text.setAttribute('font-family', 'Arial,sans-serif');
+  text.style.pointerEvents = 'none';
+
+  text.textContent = regionNumbers[r.id];
+
+  svg.appendChild(text);
+
+});// end ga-map guard
 </script>
 </body>
 </html>
