@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="robots" content="noindex, nofollow"/>
+<title>Onboarding Admin | Home Care Solutions</title>
+<link rel="icon" href="../../logo.png"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="../onboarding.css"/>
+<style>.view{display:none;}.view.show{display:block;}</style>
+</head>
+<body>
+<header class="topbar"><div class="topbar-inner">
+  <a class="brand" href="../../"><img src="../../logo.png" alt="Home Care Solutions logo"/><div><strong>Home Care Solutions</strong><span>Office tools</span></div></a>
+  <span class="topbar-tag">&#128274; Onboarding Admin</span>
+</div></header>
+<section class="hero-band"><div class="hero-band-inner">
+  <h1>Onboarding Submissions</h1>
+  <p>Encrypted new-hire packets. Packets can only be opened in this browser with your passphrase.</p>
+</div></section>
+
+<main class="wrap">
+
+  <!-- LOGIN -->
+  <div class="panel view" id="v-login">
+    <div class="panel-head"><h2>Sign In</h2></div>
+    <div class="panel-body"><form class="narrow form-grid" id="login-form" autocomplete="on">
+      <div class="form-group"><label for="l-email">Email</label><input id="l-email" type="email" required autocomplete="username"/></div>
+      <div class="form-group"><label for="l-pass">Password</label><input id="l-pass" type="password" required autocomplete="current-password"/></div>
+      <button class="btn block" type="submit" id="l-btn">Sign In</button>
+      <div class="msg err" id="l-msg"></div>
+    </form></div>
+  </div>
+
+  <!-- SETUP -->
+  <div class="panel view" id="v-setup">
+    <div class="panel-head"><h2>Activate Online Onboarding</h2><button class="btn quiet sm" data-signout>Sign out</button></div>
+    <div class="panel-body"><form class="narrow form-grid" id="setup-form" autocomplete="off">
+      <p class="muted">Create the passphrase that unlocks every onboarding packet. New hires&rsquo; browsers encrypt their packets so that <b>only this passphrase</b> can open them.</p>
+      <div class="warn-box" style="margin-bottom:0;"><b>Write this passphrase down and store it safely.</b> It cannot be reset or recovered &mdash; not by Home Care Solutions, Draux, or Supabase. If it&rsquo;s lost, existing packets can&rsquo;t be opened.</div>
+      <div class="form-group"><label for="s-pass">Passphrase <span class="hint">(at least 12 characters &mdash; a short sentence works well)</span></label><input id="s-pass" type="password" required minlength="12" autocomplete="new-password"/></div>
+      <div class="form-group"><label for="s-pass2">Confirm passphrase</label><input id="s-pass2" type="password" required minlength="12" autocomplete="new-password"/></div>
+      <label class="check-line" style="margin-top:0;"><input type="checkbox" id="s-ack" required/><span>I&rsquo;ve stored this passphrase somewhere safe and understand it can&rsquo;t be recovered.</span></label>
+      <button class="btn block" type="submit" id="s-btn">Activate</button>
+      <div class="msg err" id="s-msg"></div>
+    </form></div>
+  </div>
+
+  <!-- MAIN -->
+  <div class="panel view" id="v-main">
+    <div class="panel-head">
+      <div><h2>Submissions</h2><div class="muted" id="who"></div></div>
+      <div style="display:flex;gap:0.5rem;align-items:center;"><button class="btn quiet sm" id="refresh">&#8635; Refresh</button><button class="btn quiet sm" data-signout>Sign out</button></div>
+    </div>
+    <div class="panel-body">
+      <form class="unlock-bar" id="unlock-form" autocomplete="off">
+        <div class="form-group"><label for="u-pass">Passphrase <span class="status-pill locked" id="lock-pill">&#128274; Locked</span></label><input id="u-pass" type="password" placeholder="Enter passphrase to open packets" autocomplete="off"/></div>
+        <button class="btn" type="submit" id="u-btn">Unlock</button>
+      </form>
+      <div class="msg err" id="u-msg" style="margin:-0.5rem 0 1rem;"></div>
+      <div style="overflow-x:auto;"><table class="subs">
+        <thead><tr><th>Submitted</th><th>Employee</th><th>Packet</th><th>Reference</th><th></th></tr></thead>
+        <tbody id="rows"></tbody>
+      </table></div>
+      <div class="empty" id="empty" style="display:none;">No submissions yet. Share <b>hcsga.org/onboarding</b> with new hires.</div>
+      <details style="margin-top:2rem;"><summary class="muted" style="cursor:pointer;font-weight:600;">Change passphrase</summary>
+        <form class="form-grid narrow" id="change-form" style="margin-top:1rem;" autocomplete="off">
+          <div class="form-group"><label for="c-old">Current passphrase</label><input id="c-old" type="password" required/></div>
+          <div class="form-group"><label for="c-new">New passphrase <span class="hint">(12+ characters)</span></label><input id="c-new" type="password" required minlength="12" autocomplete="new-password"/></div>
+          <div class="form-group"><label for="c-new2">Confirm new passphrase</label><input id="c-new2" type="password" required minlength="12" autocomplete="new-password"/></div>
+          <button class="btn outline" type="submit" id="c-btn">Update passphrase</button>
+          <div class="msg" id="c-msg"></div>
+        </form>
+      </details>
+    </div>
+  </div>
+</main>
+
+<dialog class="confirm" id="confirm-dlg">
+  <h3>Delete this submission?</h3>
+  <p id="confirm-text">This permanently removes the encrypted packet. Download it first if you need a copy.</p>
+  <div class="row"><button class="btn quiet sm" value="cancel" id="confirm-no">Cancel</button><button class="btn sm" id="confirm-yes">Delete</button></div>
+</dialog>
+
+<footer class="foot">Home Care Solutions LLC &middot; Office use only</footer>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.2/dist/umd/supabase.js"></script>
+<script src="../config.js"></script>
+<script src="../hcs-crypto.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="robots" content="noindex, nofollow"/>
+<title>New Hire Onboarding | Home Care Solutions</title>
+<link rel="icon" href="../logo.png"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="onboarding.css"/>
+</head>
+<body>
+<header class="topbar"><div class="topbar-inner">
+  <a class="brand" href="../"><img src="../logo.png" alt="Home Care Solutions logo"/><div><strong>Home Care Solutions</strong><span>54 counties in Georgia</span></div></a>
+  <span class="topbar-tag">&#128274; New Hire Onboarding</span>
+</div></header>
+
+<section class="hero-band"><div class="hero-band-inner">
+  <h1>Welcome to the Team</h1>
+  <p>Complete your onboarding paperwork online. It takes about 20&ndash;25 minutes. Have your bank routing &amp; account numbers and Social Security number handy.</p>
+</div></section>
+
+<main class="wrap">
+<div class="app-shell" id="app-shell">
+  <div class="app-head">
+    <div class="app-head-top"><div><h3>Onboarding Packet</h3><p>Fields marked <strong>*</strong> are required. Progress is saved on this device (sensitive numbers are never saved).</p></div><span class="app-time">&#9201; ~20 min</span></div>
+    <ol class="stepper" id="ob-stepper" style="--steps:8">
+      <li>Start</li><li>Contact</li><li>Agreements</li><li>Policies</li><li>Direct Deposit</li><li>Background</li><li>Tax Form</li><li>Sign</li>
+    </ol>
+  </div>
+
+  <form id="ob-form" novalidate autocomplete="on" onsubmit="return false;">
+  <input type="checkbox" name="botcheck" class="hp-field" tabindex="-1" autocomplete="off"/>
+  <div class="app-body">
+
+  <!-- 0 START -->
+  <section class="app-step" data-step="0">
+    <div class="step-kicker">Step 1 of 8</div><h3 class="step-title">Let&rsquo;s Get Started</h3>
+    <p class="step-sub">Choose how you were hired. If you&rsquo;re not sure, ask your coordinator before continuing.</p>
+    <div class="type-cards">
+      <label class="type-card"><input type="radio" name="packet" value="employee" required/><strong>Employee</strong><span>You&rsquo;ll be paid as a W-2 employee with taxes withheld.</span><em>Form W-4</em></label>
+      <label class="type-card"><input type="radio" name="packet" value="contractor"/><strong>Independent Contractor</strong><span>You&rsquo;ll be paid as a 1099 contractor without tax withholding.</span><em>Form W-9</em></label>
+    </div>
+    <div class="sub-head">Your Legal Name</div>
+    <div class="form-grid">
+      <div class="form-row-name">
+        <div class="form-group"><label for="f-first">First name <span class="req">*</span></label><input id="f-first" name="first" required autocomplete="given-name"/></div>
+        <div class="form-group"><label for="f-mi">Middle</label><input id="f-mi" name="middle" autocomplete="additional-name" placeholder="Optional"/></div>
+        <div class="form-group"><label for="f-last">Last name <span class="req">*</span></label><input id="f-last" name="last" required autocomplete="family-name"/></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label for="f-dob">Date of birth <span class="req">*</span></label><input id="f-dob" name="dob" type="date" required autocomplete="bday"/></div>
+        <div class="form-group"><label for="f-position">Position</label><select id="f-position" name="position"><option>Personal Care Aide (PCA)</option><option>Certified Nursing Aide (CNA)</option><option>Licensed Practical Nurse (LPN)</option><option>Registered Nurse (RN)</option><option>Case Worker</option><option>Other</option></select></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 1 CONTACT -->
+  <section class="app-step" data-step="1">
+    <div class="step-kicker">Step 2 of 8</div><h3 class="step-title">Contact &amp; Emergency Info</h3>
+    <p class="step-sub">We&rsquo;ll use this across your forms so you only type it once.</p>
+    <div class="form-grid">
+      <div class="form-group"><label for="f-street">Street address <span class="req">*</span></label><input id="f-street" name="street" required autocomplete="street-address" placeholder="Street and apartment #"/></div>
+      <div class="form-row-3">
+        <div class="form-group"><label for="f-city">City <span class="req">*</span></label><input id="f-city" name="city" required autocomplete="address-level2"/></div>
+        <div class="form-group"><label for="f-state">State <span class="req">*</span></label><input id="f-state" name="state" required maxlength="2" pattern="[A-Za-z]{2}" placeholder="GA" autocomplete="address-level1"/></div>
+        <div class="form-group"><label for="f-zip">ZIP <span class="req">*</span></label><input id="f-zip" name="zip" required inputmode="numeric" pattern="[0-9]{5}" maxlength="5" autocomplete="postal-code"/></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label for="f-phone">Cell phone <span class="req">*</span></label><input id="f-phone" name="phone" type="tel" required autocomplete="tel" placeholder="(770) 555-0000"/></div>
+        <div class="form-group"><label for="f-email">Email <span class="req">*</span></label><input id="f-email" name="email" type="email" required autocomplete="email" placeholder="you@email.com"/></div>
+      </div>
+    </div>
+    <div class="sub-head">Emergency Contact</div>
+    <div class="form-grid">
+      <div class="form-row">
+        <div class="form-group"><label for="f-ec-name">Contact name <span class="req">*</span></label><input id="f-ec-name" name="ecName" required/></div>
+        <div class="form-group"><label for="f-ec-rel">Relationship <span class="req">*</span></label><input id="f-ec-rel" name="ecRel" required placeholder="e.g. Spouse, Parent"/></div>
+      </div>
+      <div class="form-row"><div class="form-group"><label for="f-ec-phone">Contact phone <span class="req">*</span></label><input id="f-ec-phone" name="ecPhone" type="tel" required placeholder="(770) 555-0000"/></div><div></div></div>
+    </div>
+  </section>
+
+  <!-- 2 AGREEMENTS -->
+  <section class="app-step" data-step="2">
+    <div class="step-kicker">Step 3 of 8</div><h3 class="step-title">Review &amp; Agree</h3>
+    <p class="step-sub">Open each document, read it, then check the box to agree. You&rsquo;ll sign everything once at the end.</p>
+    <div class="progress-line"><span><b id="agree-count">0</b> of <span id="agree-total">7</span> agreed</span><button type="button" class="btn-ghost" id="expand-next">Open next &darr;</button></div>
+    <div id="docs-list"></div>
+  </section>
+
+  <!-- 3 POLICIES -->
+  <section class="app-step" data-step="3">
+    <div class="step-kicker">Step 4 of 8</div><h3 class="step-title">Company Policies</h3>
+    <p class="step-sub" id="policies-intro"></p>
+    <div class="initials-bar">
+      <div class="form-group"><label for="f-initials">Your initials <span class="req">*</span></label><input id="f-initials" name="initials" required maxlength="4" pattern="[A-Za-z.]{2,4}" style="text-transform:uppercase;font-family:'Merriweather',serif;font-style:italic;font-size:1.05rem;"/></div>
+      <p>Your initials are placed next to each policy you agree to below, exactly like initialing a paper form.</p>
+    </div>
+    <div id="policies-list"></div>
+  </section>
+
+  <!-- 4 DIRECT DEPOSIT -->
+  <section class="app-step" data-step="4">
+    <div class="step-kicker">Step 5 of 8</div><h3 class="step-title">Direct Deposit</h3>
+    <p class="step-sub">Where should we send your pay?</p>
+    <div class="lock-note"><span>&#128274;</span><span><b>Encrypted before it leaves your device.</b> Bank and Social Security numbers are locked so only Home Care Solutions&rsquo; office can open them, and they&rsquo;re never saved in your browser.</span></div>
+    <div class="form-grid">
+      <div class="form-group"><label>Account type <span class="req">*</span></label>
+        <div class="chip-set"><label><input type="radio" name="ddType" value="Checking" required/><span>Checking</span></label><label><input type="radio" name="ddType" value="Savings"/><span>Savings</span></label></div>
+        <span class="hint" style="font-size:0.74rem;color:var(--text-light);">Bring a voided check (checking) or a routing &amp; account printout (savings) to orientation.</span>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label for="f-bank">Bank / credit union name <span class="req">*</span></label><input id="f-bank" name="bankName" required/></div>
+        <div class="form-group"><label for="f-bank-addr">Bank address <span class="hint">(branch city is fine)</span></label><input id="f-bank-addr" name="bankAddr"/></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label for="f-routing">Routing number <span class="req">*</span></label><input id="f-routing" name="routing" class="mono" required inputmode="numeric" maxlength="9" pattern="[0-9]{9}" autocomplete="off" data-sensitive/><span class="field-err" id="err-routing">That routing number doesn&rsquo;t look valid &mdash; please double-check it.</span></div>
+        <div class="form-group"><label for="f-account">Account number <span class="req">*</span></label><input id="f-account" name="account" class="mono" required inputmode="numeric" pattern="[0-9]{4,17}" maxlength="17" autocomplete="off" data-sensitive/></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label for="f-account2">Confirm account number <span class="req">*</span></label><input id="f-account2" name="account2" class="mono" required inputmode="numeric" maxlength="17" autocomplete="off" data-sensitive/><span class="field-err" id="err-account2">Account numbers don&rsquo;t match.</span></div>
+        <div class="form-group"><label for="f-ssn">Social Security number <span class="req">*</span></label><input id="f-ssn" name="ssn" class="mono" required inputmode="numeric" maxlength="11" pattern="[0-9]{3}-?[0-9]{2}-?[0-9]{4}" placeholder="123-45-6789" autocomplete="off" data-sensitive/></div>
+      </div>
+      <div class="q-row"><span class="q-text">Are you the account holder?</span><span class="yn"><label><input type="radio" name="ddHolder" value="Yes" required data-reveal="rv-holder"/><span>Yes</span></label><label><input type="radio" name="ddHolder" value="No" data-reveal="rv-holder"/><span>No</span></label></span></div>
+      <div class="reveal" id="rv-holder" data-when="No">
+        <div class="form-group" style="margin-top:0.75rem;"><label for="f-holder">Name of the account holder <span class="req">*</span></label><input id="f-holder" name="holderName" data-required-when-shown/></div>
+        <label class="check-line"><input type="checkbox" name="holderAgree" value="1" data-required-when-shown/><span>I agree to have my funds deposited into this account. <span class="req" style="color:var(--red)">*</span></span></label>
+      </div>
+      <div class="form-group"><label for="f-paystub">Email for paystub delivery</label><input id="f-paystub" name="paystubEmail" type="email" placeholder="Defaults to your email"/></div>
+    </div>
+    <details class="doc" style="margin-top:1.25rem;"><summary class="doc-head" style="list-style:none;"><span class="doc-title">Authorization for direct deposit, pay card or paper check <small>Tap to read &mdash; you&rsquo;ll sign this at the end</small></span><span class="doc-chev">&#9660;</span></summary><div class="doc-text" id="dd-auth-text"></div></details>
+  </section>
+
+  <!-- 5 BACKGROUND -->
+  <section class="app-step" data-step="5">
+    <div class="step-kicker">Step 6 of 8</div><h3 class="step-title">Background Check Consent</h3>
+    <p class="step-sub">Georgia Department of Community Health &mdash; Acknowledgement of Applicant&rsquo;s Non-Criminal Justice Privacy Rights and Consent.</p>
+    <div class="doc-text" style="border:1px solid var(--border);border-radius:12px;max-height:none;margin-bottom:1.25rem;">
+      <p>I hereby authorize the Georgia Department of Community Health (DCH), Office of Inspector General, to receive any criminal history record information pertaining to me which may be in the files of any state or local criminal justice agency in Georgia. I understand a State and Federal fingerprint criminal background check will be conducted. By signing, I am indicating that I have read and understand the terms and conditions of the Non-Criminal Justice Applicant&rsquo;s Privacy Rights and Policy Act Statements.</p>
+      <p style="margin-bottom:0;font-size:0.78rem;color:var(--text-mid);">Your name, date of birth, address, email and phone from earlier steps are filled in for you. Facility: Home Care Solutions LLC, 3235 Satellite Blvd, Duluth, GA 30096.</p>
+    </div>
+    <div class="form-grid">
+      <div class="form-group"><label for="f-dch1">Section I &mdash; Applicant type <span class="req">*</span></label>
+        <select id="f-dch1" name="dch1" required><option value="">Select&hellip;</option><option value="Applicant Employee">Applicant for Employment / Direct Access Employee (Facility)</option><option value="Contractor">Contractor / Direct Access (Facility)</option><option value="Non-Employee">Non-Employee (Facility Volunteer)</option><option value="Owner">Owner (Facility)</option></select></div>
+      <div class="sub-head" style="margin-bottom:0;">Section II &mdash; Georgia Caregiver Portal</div>
+      <p class="muted" style="margin-top:-0.5rem;">The Caregiver Portal only lists people who passed screening. Family employers can use it to check eligibility before hiring caregivers for elderly family members. Choose one:</p>
+      <div class="form-group">
+        <label class="check-line" style="margin-top:0;"><input type="radio" name="dch2Portal" value="Agree" required/><span><b>I agree</b> to the results of my background check determination being available to family employers in the Georgia Caregiver Portal.</span></label>
+        <label class="check-line"><input type="radio" name="dch2Portal" value="Licensed Only"/><span>I am seeking employment <b>only</b> by licensed healthcare employers. I do <b>not</b> want or agree to the results being available to family employers.</span></label>
+      </div>
+      <div class="form-group"><label for="f-dch2">Section II &mdash; Applicant type <span class="hint">(only if fingerprinted as part of facility licensure)</span></label>
+        <select id="f-dch2" name="dch2"><option value="">Not applicable</option><option value="Applicant Employee">Applicant for Employment / Direct Access Employee (Licensed Facility)</option><option value="Contractor">Contractor / Direct Access Employee (Licensed Facility)</option><option value="Non-Employee">Non-Employee (Volunteer at Licensed Facility)</option></select></div>
+    </div>
+  </section>
+
+  <!-- 6 TAX -->
+  <section class="app-step" data-step="6">
+    <div class="step-kicker">Step 7 of 8</div><h3 class="step-title" id="tax-title">Tax Form</h3>
+    <p class="step-sub" id="tax-sub"></p>
+    <div id="tax-w4">
+      <div class="form-group"><label>Step 1(c) &mdash; Filing status <span class="req">*</span></label>
+        <label class="check-line" style="margin-top:0.2rem;"><input type="radio" name="w4Status" value="single" data-req-tax="w4"/><span><b>Single</b> or Married filing separately</span></label>
+        <label class="check-line" style="margin-top:0.4rem;"><input type="radio" name="w4Status" value="mfj"/><span><b>Married filing jointly</b> or Qualifying surviving spouse</span></label>
+        <label class="check-line" style="margin-top:0.4rem;"><input type="radio" name="w4Status" value="hoh"/><span><b>Head of household</b> (only if unmarried and you pay more than half the costs of keeping up a home for yourself and a qualifying individual)</span></label>
+      </div>
+      <div class="warn-box" style="margin-top:1.25rem;">Complete Steps 2&ndash;4 <b>only if they apply to you</b>. Otherwise skip to the exemption question. For the most accurate withholding, use the IRS estimator at <a href="https://www.irs.gov/W4App" target="_blank" rel="noopener">irs.gov/W4App</a>.</div>
+      <div class="sub-head">Step 2 &mdash; Multiple jobs or spouse works</div>
+      <label class="check-line" style="margin-top:0;"><input type="checkbox" name="w4TwoJobs" value="1"/><span>There are only two jobs total (you and/or your spouse) &mdash; check the box in Step 2(c). Do the same on the W-4 for the other job.</span></label>
+      <div class="sub-head">Step 3 &mdash; Claim dependent and other credits <span style="text-transform:none;letter-spacing:0;font-weight:500;color:var(--text-light)">(income $200,000 or less / $400,000 if married filing jointly)</span></div>
+      <div class="form-row-3">
+        <div class="form-group"><label for="f-w4-kids">Qualifying children under 17</label><input id="f-w4-kids" name="w4Kids" type="number" min="0" step="1" placeholder="0"/><span class="hint" id="w4-3a">&times; $2,200 = $0</span></div>
+        <div class="form-group"><label for="f-w4-deps">Other dependents</label><input id="f-w4-deps" name="w4Deps" type="number" min="0" step="1" placeholder="0"/><span class="hint" id="w4-3b">&times; $500 = $0</span></div>
+        <div class="form-group"><label for="f-w4-other">Other credits ($)</label><input id="f-w4-other" name="w4OtherCredits" type="number" min="0" step="1" placeholder="0"/><span class="hint" id="w4-3">Step 3 total: $0</span></div>
+      </div>
+      <div class="sub-head">Step 4 &mdash; Other adjustments (optional)</div>
+      <div class="form-row-3">
+        <div class="form-group"><label for="f-w4-4a">4(a) Other income ($)</label><input id="f-w4-4a" name="w4OtherIncome" type="number" min="0" step="1"/></div>
+        <div class="form-group"><label for="f-w4-4b">4(b) Deductions ($)</label><input id="f-w4-4b" name="w4Deductions" type="number" min="0" step="1"/></div>
+        <div class="form-group"><label for="f-w4-4c">4(c) Extra withholding / pay period ($)</label><input id="f-w4-4c" name="w4Extra" type="number" min="0" step="1"/></div>
+      </div>
+      <div class="sub-head">Exemption</div>
+      <label class="check-line" style="margin-top:0;"><input type="checkbox" name="w4Exempt" value="1"/><span>I claim exemption from withholding for 2026, and I certify that I meet <b>both</b> of the conditions for exemption. I understand I will need to submit a new Form W-4 for 2027.</span></label>
+    </div>
+    <div id="tax-w9">
+      <div class="form-grid">
+        <div class="form-group"><label for="f-w9-name">Line 1 &mdash; Name (as shown on your income tax return) <span class="req">*</span></label><input id="f-w9-name" name="w9Name" data-req-tax="w9"/></div>
+        <div class="form-group"><label for="f-w9-biz">Line 2 &mdash; Business name / disregarded entity name <span class="hint">(if different from above)</span></label><input id="f-w9-biz" name="w9Business"/></div>
+        <div class="form-group"><label for="f-w9-class">Line 3a &mdash; Federal tax classification <span class="req">*</span></label>
+          <select id="f-w9-class" name="w9Class" data-req-tax="w9"><option value="Individual">Individual / sole proprietor</option><option value="C Corp">C corporation</option><option value="S Corp">S corporation</option><option value="Partnership">Partnership</option><option value="Trust Estate">Trust / estate</option><option value="LLC">LLC</option><option value="Other">Other</option></select></div>
+        <div class="reveal" id="rv-w9-llc" style="padding:0;"><div class="form-group"><label for="f-w9-llc">LLC tax classification <span class="req">*</span></label><select id="f-w9-llc" name="w9LlcCode"><option value="">Select&hellip;</option><option value="C">C &mdash; C corporation</option><option value="S">S &mdash; S corporation</option><option value="P">P &mdash; Partnership</option></select></div></div>
+        <div class="reveal" id="rv-w9-other" style="padding:0;"><div class="form-group"><label for="f-w9-other">Other classification <span class="req">*</span></label><input id="f-w9-other" name="w9Other"/></div></div>
+        <label class="check-line reveal" id="rv-w9-3b" style="padding:0;"><input type="checkbox" name="w9Foreign" value="1"/><span>Line 3b &mdash; I have foreign partners, owners, or beneficiaries (partnerships, trusts/estates, or LLCs taxed as partnerships only).</span></label>
+        <div class="form-row">
+          <div class="form-group"><label for="f-w9-exempt">Exempt payee code <span class="hint">(if any)</span></label><input id="f-w9-exempt" name="w9ExemptPayee" maxlength="4"/></div>
+          <div class="form-group"><label for="f-w9-fatca">FATCA exemption code <span class="hint">(if any)</span></label><input id="f-w9-fatca" name="w9Fatca" maxlength="4"/></div>
+        </div>
+        <div class="form-group"><label>Part I &mdash; Taxpayer identification number <span class="req">*</span></label>
+          <div class="chip-set"><label><input type="radio" name="w9TinType" value="SSN" data-req-tax="w9"/><span>Social Security number</span></label><label><input type="radio" name="w9TinType" value="EIN"/><span>Employer ID number (EIN)</span></label></div>
+          <span class="hint" id="w9-ssn-note" style="font-size:0.76rem;color:var(--text-light);">Uses the SSN you entered on the Direct Deposit step.</span>
+        </div>
+        <div class="reveal" id="rv-w9-ein" style="padding:0;"><div class="form-group"><label for="f-w9-ein">EIN <span class="req">*</span></label><input id="f-w9-ein" name="w9Ein" class="mono" inputmode="numeric" maxlength="10" pattern="[0-9]{2}-?[0-9]{7}" placeholder="12-3456789" autocomplete="off" data-sensitive/></div></div>
+      </div>
+      <p class="muted" style="margin-top:1rem;">Under penalties of perjury, by signing you certify that: (1) the number shown is your correct taxpayer identification number; (2) you are not subject to backup withholding; (3) you are a U.S. citizen or other U.S. person; and (4) any FATCA code entered is correct. Cross out item 2 by contacting the office if the IRS has notified you that you are subject to backup withholding.</p>
+    </div>
+  </section>
+
+  <!-- 7 SIGN -->
+  <section class="app-step" data-step="7">
+    <div class="step-kicker">Step 8 of 8</div><h3 class="step-title">Review &amp; Sign</h3>
+    <p class="step-sub">Check your details, then sign once to complete every form in your packet.</p>
+    <div class="review" id="ob-review"></div>
+    <div class="attest" id="sign-attest"></div>
+    <div class="form-grid">
+      <div class="form-row">
+        <div class="form-group"><label for="f-sig">Type your full legal name to sign <span class="req">*</span></label><input id="f-sig" name="signature" required autocomplete="off" style="font-family:'Merriweather',serif;font-style:italic;font-size:1.1rem;"/><span class="field-err" id="err-sig">Please type your name exactly as entered in Step 1.</span></div>
+        <div class="form-group"><label for="f-sigdate">Date</label><input id="f-sigdate" name="sigDate" readonly/></div>
+      </div>
+    </div>
+    <label class="check-line"><input type="checkbox" name="esignConsent" value="1" required/><span>I agree to sign electronically. My typed name is my legal signature and will be applied to each form in this packet that requires my signature, with the same effect as a handwritten signature.</span></label>
+    <div class="submit-status" id="submit-status" aria-live="polite"><ol>
+      <li data-s="prep">Preparing your forms</li><li data-s="encrypt">Encrypting on this device</li><li data-s="upload">Uploading securely</li><li data-s="notify">Notifying the office</li>
+    </ol></div>
+  </section>
+
+  </div>
+  <div class="app-nav">
+    <button type="button" class="btn-back" id="ob-back">&larr; Back</button>
+    <span class="app-save-note" id="ob-save-note"></span>
+    <button type="button" class="btn-next" id="ob-next">Continue &rarr;</button>
+  </div>
+  </form>
+
+  <div class="app-done" id="ob-done">
+    <div class="done-ico">&#10003;</div>
+    <h3>Onboarding Complete</h3>
+    <p>Thank you! Your paperwork was encrypted and sent to the Home Care Solutions office. Reference <b id="done-ref"></b>.</p>
+    <p style="margin-top:0.75rem;">Please bring your driver&rsquo;s license, Social Security card, TB test results (within 12 months), CPR certification, and a voided check to orientation. The office will complete the witness and notary portion of the Abuse Statement with you.</p>
+    <div style="margin-top:1.5rem;display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap;">
+      <a class="btn" id="done-download" download>Download a copy for your records</a>
+      <a class="btn quiet" href="../">Back to hcsga.org</a>
+    </div>
+  </div>
+</div>
+</main>
+<footer class="foot">&copy; Home Care Solutions LLC &middot; 3235 Satellite Blvd, Bldg 400, Ste 300, Duluth, GA 30096 &middot; (404) 528-5327</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.117.2/dist/umd/supabase.js"></script>
+<script src="config.js"></script>
+<script src="docs.js"></script>
+<script src="hcs-crypto.js"></script>
+<script src="portal.js"></script>
+</body>
+</html>
